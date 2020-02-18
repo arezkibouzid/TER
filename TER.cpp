@@ -33,14 +33,8 @@ Mat classifier(cv::Mat& img, cTracker2& test, int codif);
 
 Point GetCentroid(Mat& img) {
 
-   
-
     Moments m = moments(img, true);
    return  Point(m.m10 / m.m00, m.m01 / m.m00);
-
-   
-
-
 
 }
 
@@ -165,10 +159,7 @@ vector<double> GFD(Mat& img, int m ,int n) {
 int main()
 {
     capture();
-
     filter();
-
-
     namedWindow("threshold_frame", WINDOW_AUTOSIZE);
     imshow("threshold_frame", threshold_frame);
 
@@ -178,39 +169,18 @@ int main()
         std::cout << vc.at(i) << ' ';
     }
 
-  
-    
-
+ 
     //cTracker2 test = cTracker2(0, 1);
-
 
     //test.extractBlobs(filter_frame);
 
-
-
-
-
-
     //cout << test.zonesCount() << endl;
-
-    
-
 
 
     //namedWindow("res", WINDOW_AUTOSIZE);
     //imshow("res", classifier(threshold_frame, test, 0));
     //namedWindow("res1", WINDOW_AUTOSIZE);
     //imshow("res1", classifier(threshold_frame, test, 100));
-
-
-
-
-
-
-
-
-
-
 
     
 
@@ -279,10 +249,10 @@ void capture() {
 }
 
 
-// capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
+
 void filter() {
 
-
+    // capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
     cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
     GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
     if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
