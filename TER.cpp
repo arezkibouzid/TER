@@ -44,6 +44,33 @@ Point GetCentroid(Mat& img) {
 
 }
 
+
+double ManhattanDistance(vector<double>& a, vector<double>& b) {
+
+    double dist = 0;
+    int i;
+    for (i = 0; i < min(a.size(),b.size()); i++)
+    {
+        dist += abs(a.at(i) - b.at(i));
+
+    }
+    int j = i;
+    while (i < a.size())
+    {
+        dist += abs(a.at(i));
+        i++;
+    }
+
+    while (j < b.size())
+    {
+        dist += abs(b.at(j));
+        j++;
+    }
+
+    return dist;
+
+}
+
 vector<double> GFD(Mat& img, int m ,int n) {
 
 
@@ -86,12 +113,13 @@ vector<double> GFD(Mat& img, int m ,int n) {
                     if (theta < 0) theta += 2 * M_PI;
 
                     
+                    cout << to_string(img.at<uchar>(Point(x, y)));
                     tempR = img.at<uchar>(Point(x,y))*std::cos(2 * M_PI * rad * (radius /  maxRad) + ang * theta);
-                    tempI = -1*img.at<uchar>(Point(x,y))*std::sin(2 * M_PI * rad * (radius / maxRad) + ang * theta);
+                    tempI = img.at<uchar>(Point(x,y))*std::sin(2 * M_PI * rad * (radius / maxRad) + ang * theta);
 
                 
                     FR.at(rad).at(ang)+= tempR;
-                    FI.at(rad).at(ang)+= tempI;
+                    FI.at(rad).at(ang)-= tempI;
 
                   
 
