@@ -41,6 +41,9 @@
     <Image Include="C:\Users\Arezki Bouzid\Desktop\testgfd.PNG">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+    <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre - Copie.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cDisjointSet.h">

@@ -6,14 +6,16 @@
 #include "D:\workspace\TER\TER\cBlob.h"
 #include"math.h"
 
-
 #define M_PI 3.14159265358979323846
+
+
 using namespace std;
 using namespace cv;
 
 
 
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame;
+Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2;
 
 bool balance_flag = false;
 int kernel_size = 3;
@@ -21,9 +23,10 @@ int block_size = 3;
 int c = 0;
 double segma = 0;
 string path_image = "C:/Users/Arezki Bouzid/Desktop/Sans titre.png";
+string path_image2 = "C:/Users/Arezki Bouzid/Desktop/Sans titre - Copie.png";
 
-void capture();
-void filter();
+void capture(Mat& capture_frame,string path);
+void filter(Mat& capture_frame,Mat& threshold_frame);
 
 Mat& filterFrame();
 Mat& gaussianFrame();
@@ -34,6 +37,7 @@ Mat classifier(cv::Mat& img, cTracker2& test, int codif);
 Point GetCentroid(Mat& img) {
 
     Moments m = moments(img, true);
+   
    return  Point(m.m10 / m.m00, m.m01 / m.m00);
 
 }
@@ -94,20 +98,20 @@ vector<double> GFD(Mat& img, int m ,int n) {
 
         for (int ang = 0; ang < n; ang++)
         {
-
-            for (int x = p.x; x < img.size().width; x++)
+            // a verifier  x and y
+            for (int x = 0; x < img.size().width; x++)
             {       
                
-                for (int y = p.y; y < img.size().height; y++)
+                for (int y = 0; y < img.size().height; y++)
                 {
 
                     
                     radius = sqrt(std::pow(x - p.x, 2) + std::pow(y - p.y, 2));
-                    theta = atan2((x - p.x), (y - p.y));
+                    theta = atan2((y - p.y), (x - p.x));
                     if (theta < 0) theta += 2 * M_PI;
 
                     
-                    cout << to_string(img.at<uchar>(Point(x, y)));
+                    //cout << to_string(img.at<uchar>(Point(x, y)));
                     tempR = img.at<uchar>(Point(x,y))*std::cos(2 * M_PI * rad * (radius /  maxRad) + ang * theta);
                     tempI = img.at<uchar>(Point(x,y))*std::sin(2 * M_PI * rad * (radius / maxRad) + ang * theta);
 
@@ -126,7 +130,8 @@ vector<double> GFD(Mat& img, int m ,int n) {
                
         }
     }
-
+    
+   
  
     
 
@@ -158,16 +163,33 @@ vector<double> GFD(Mat& img, int m ,int n) {
 }
 int main()
 {
-    capture();
-    filter();
+    capture(capture_frame,path_image);
+    filter(capture_frame,threshold_frame);
+
+    capture(capture_frame2,path_image2);
+    filter(capture_frame2,threshold_frame2);
+    
+
+
+
     namedWindow("threshold_frame", WINDOW_AUTOSIZE);
     imshow("threshold_frame", threshold_frame);
 
-    vector<double> vc= GFD(threshold_frame, 3, 50);
 
-    for (int i = 0; i < vc.size(); i++) {
+    namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
+    imshow("threshold_frame2", threshold_frame2);
+
+    vector<double> vc= GFD(threshold_frame, 10, 10);
+    vector<double> vc2 = GFD(threshold_frame2, 10, 10);
+
+
+
+    double dist = ManhattanDistance(vc, vc2);
+
+    cout << dist << endl;
+  /*  for (int i = 0; i < vc.size(); i++) {
         std::cout << vc.at(i) << ' ';
-    }
+    }*/
 
  
     //cTracker2 test = cTracker2(0, 1);
@@ -242,22 +264,24 @@ cv::Mat classifier(cv::Mat& img, cTracker2& test, int codif) {
 
 }
 
-void capture() {
+void capture(Mat& capture_frame,string path) {
 
-    capture_frame = imread(path_image);
+    capture_frame = imread(path);
 
 }
 
 
 
-void filter() {
+void filter(Mat& capture_frame, Mat& threshold_frame) {
 
     // capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
-    cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
-    GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
-    if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
-    threshold(gaussian_frame, threshold_frame, 10, 255, cv::THRESH_BINARY);
+    cvtColor(capture_frame, capture_frame, COLOR_BGR2GRAY);
+    //GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
+   // if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
+    threshold(capture_frame, threshold_frame, 10, 255, cv::THRESH_BINARY);
     //imwrite("./threshold_frame.jpg", threshold_frame);
+
+   
 
 }
 
