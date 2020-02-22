@@ -258,6 +258,8 @@ Mat centreObject(Mat& img) {
     
    
        Point state = GetCentroid(dist);
+
+      
         width = dist.size().width;
         height = dist.size().height;
     
@@ -265,7 +267,7 @@ Mat centreObject(Mat& img) {
     int delta_x = round(width / 2 - state.x);
     int delta_max = max(abs(delta_y), abs(delta_x));
        
-    colonne = cv::Mat::zeros(dist.size().height, 1, type);
+    colonne = cv::Mat::zeros(height, 1, type);
     for (int i = 0; i < delta_max + 10; i++) {
         hconcat(dist, colonne, dist);
         hconcat(colonne, dist, dist);
@@ -281,7 +283,7 @@ Mat centreObject(Mat& img) {
      }
 
 
-        circshift(dist, Point(delta_y, delta_x));
+        circshift(dist, Point(delta_x, delta_y));
 
 
 
@@ -319,7 +321,7 @@ int main()
     namedWindow("centreObject", WINDOW_NORMAL);
     imshow("centreObject", dist);
    
-   // vector<double> vc = GFD(dist, 10, 10);
+    vector<double> vc = GFD(dist, 10, 10);
 
    // for (int i = 0; i < vc.size(); i++) {
      //          std::cout << vc.at(i) << ' ';
