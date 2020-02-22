@@ -22,7 +22,7 @@ int kernel_size = 3;
 int block_size = 3;
 int c = 0;
 double segma = 0;
-string path_image = "C:/Users/Arezki Bouzid/Desktop/Sans titre.png";
+string path_image = "C:/Users/Arezki Bouzid/Desktop/plz.png";
 string path_image2 = "C:/Users/Arezki Bouzid/Desktop/Sans titre - Copie.png";
 
 void capture(Mat& capture_frame,string path);
@@ -73,6 +73,8 @@ vector<double> GFD(Mat& img, int m ,int n) {
 
 
     Point p = GetCentroid(img);
+
+
 
     // a verifier 
     double maxRad = sqrt(std::pow(p.x, 2) + std::pow(p.y, 2));
@@ -161,8 +163,132 @@ vector<double> GFD(Mat& img, int m ,int n) {
 
 
 }
+
+
+
+void circshift(Mat& out, const Point& delta)
+{
+    Size sz = out.size();
+
+    
+    assert(sz.height > 0 && sz.width > 0);
+  
+
+    if ((sz.height == 1 && sz.width == 1) || (delta.x == 0 && delta.y == 0))
+        return;
+
+  
+    int x = delta.x;
+    int y = delta.y;
+    if (x > 0) x = x % sz.width;
+    if (y > 0) y = y % sz.height;
+    if (x < 0) x = x % sz.width + sz.width;
+    if (y < 0) y = y % sz.height + sz.height;
+
+
+    
+    vector<Mat> planes;
+    split(out, planes);
+
+    for (size_t i = 0; i < planes.size(); i++)
+    {
+        
+        Mat tmp0, tmp1, tmp2, tmp3;
+        Mat q0(planes[i], Rect(0, 0, sz.width, sz.height - y));
+        Mat q1(planes[i], Rect(0, sz.height - y, sz.width, y));
+        q0.copyTo(tmp0);
+        q1.copyTo(tmp1);
+        tmp0.copyTo(planes[i](Rect(0, y, sz.width, sz.height - y)));
+        tmp1.copyTo(planes[i](Rect(0, 0, sz.width, y)));
+
+       
+        Mat q2(planes[i], Rect(0, 0, sz.width - x, sz.height));
+        Mat q3(planes[i], Rect(sz.width - x, 0, x, sz.height));
+        q2.copyTo(tmp2);
+        q3.copyTo(tmp3);
+        tmp2.copyTo(planes[i](Rect(x, 0, sz.width - x, sz.height)));
+        tmp3.copyTo(planes[i](Rect(0, 0, x, sz.height)));
+    }
+
+    merge(planes, out);
+}
+
+Mat centreObject(Mat& img) {
+
+    int width = img.size().width;
+    int height = img.size().height;
+    auto type = img.type();
+    //***** ligne ***
+    Mat ligne = cv::Mat::zeros(1, width, type);
+    Mat colonne = cv::Mat::zeros(height,1, type);
+    
+
+    Mat dist=img;
+
+    int temp = std::max(width, height)- std::min(width, height) * 0.5;
+    
+    if (height < width) {
+        
+       
+        if ((temp % 1) > 0) {
+            hconcat(img, colonne, dist);
+        }
+
+        for (int i = 0; i < round(temp) - 1; i++)
+        {
+            dist.push_back(ligne);
+        }
+       
+        
+    }
+    else if (width < height) {
+        
+
+        if ((temp % 1) > 0) dist.push_back(ligne);
+        
+        for (int i = 0; i < round(temp)-1; i++)
+        {
+            hconcat(img,colonne, dist);
+        }
+        
+    }
+
+
+   
+       Point state = GetCentroid(dist);
+        width = dist.size().width;
+        height = dist.size().height;
+    
+    int delta_y = round(height / 2 - state.y);
+    int delta_x = round(width / 2 - state.x);
+    int delta_max = max(abs(delta_y), abs(delta_x));
+
+
+    for (int i = 0; i < delta_max + 10; i++) hconcat(img, colonne, dist);
+
+
+     ligne = cv::Mat::zeros(1, dist.size().width, type);
+
+   
+    for (int i = 0; i < delta_max + 10; i++) dist.push_back(ligne);
+
+
+        circshift(dist, Point(delta_y, delta_x));
+
+
+
+
+    return dist;
+
+
+}
+
+
+
 int main()
 {
+
+  
     capture(capture_frame,path_image);
     filter(capture_frame,threshold_frame);
 
@@ -172,24 +298,42 @@ int main()
 
 
 
-    namedWindow("threshold_frame", WINDOW_AUTOSIZE);
+    namedWindow("threshold_frame", WINDOW_NORMAL);
     imshow("threshold_frame", threshold_frame);
 
+    
 
-    namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
-    imshow("threshold_frame2", threshold_frame2);
-
-    vector<double> vc= GFD(threshold_frame, 10, 10);
-    vector<double> vc2 = GFD(threshold_frame2, 10, 10);
+    Mat dist = centreObject(threshold_frame);
 
 
+    namedWindow("centreObject", WINDOW_NORMAL);
+    imshow("centreObject", dist);
+   
+    vector<double> vc = GFD(dist, 10, 10);
 
-    double dist = ManhattanDistance(vc, vc2);
+   // for (int i = 0; i < vc.size(); i++) {
+     //          std::cout << vc.at(i) << ' ';
+     //}
 
-    cout << dist << endl;
-  /*  for (int i = 0; i < vc.size(); i++) {
-        std::cout << vc.at(i) << ' ';
-    }*/
+
+
+
+   
+
+  //  namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
+ //   imshow("threshold_frame2", threshold_frame2);
+
+ //   vector<double> vc= GFD(threshold_frame, 10, 10);
+//    vector<double> vc2 = GFD(threshold_frame2, 10, 10);
+
+
+
+//    double dist = ManhattanDistance(vc, vc2);
+
+//    cout << dist << endl;
+ //   for (int i = 0; i < vc.size(); i++) {
+ //       std::cout << vc.at(i) << ' ';
+  //  }
 
  
     //cTracker2 test = cTracker2(0, 1);
