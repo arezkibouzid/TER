@@ -2,9 +2,11 @@
 #include<iostream>
 #include<string>
 
+
 #include "D:\workspace\TER\TER\cTracker2.h"
 #include "D:\workspace\TER\TER\cBlob.h"
 #include"math.h"
+
 
 #define M_PI 3.14159265358979323846
 
@@ -23,7 +25,7 @@ int block_size = 3;
 int c = 0;
 double segma = 0;
 string path_image = "C:/Users/Arezki Bouzid/Desktop/plz.png";
-string path_image2 = "C:/Users/Arezki Bouzid/Desktop/Sans titre - Copie.png";
+string path_image2 = "C:/Users/Arezki Bouzid/Desktop/plz - Copie (2).png";
 
 void capture(Mat& capture_frame,string path);
 void filter(Mat& capture_frame,Mat& threshold_frame);
@@ -42,6 +44,54 @@ Point GetCentroid(Mat& img) {
 
 }
 
+vector<Point> GetExtrema(Mat& img) {
+
+
+    // Find contours
+    vector<vector<Point>> cnts;
+  
+    cv::findContours(img, cnts,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    
+    //cnts = imutils.grab_contours(cnts);
+    //auto c = std::max(cnts, contourArea);
+    if (cnts.size() > 1) cout << "plusieurs contours";
+
+    int min_x = cnts.at(0).at(0).x;
+    int max_x = min_x;
+
+    int min_y = cnts.at(0).at(0).y;
+    int max_y = min_y;
+    Point left;
+    Point top;
+    Point right;
+    Point bottom;
+
+ 
+    for (Point p : cnts.at(0))
+    {
+        
+        if (min_x > p.x) { left = p;  min_x = p.x;  }
+        if (min_y > p.y) { top = p;  min_y = p.y; }
+        if (max_x < p.x) { right = p;  max_x = p.x; }
+        if (max_y < p.y) { bottom = p;  max_y = p.y; }
+    }
+    vector<Point> extrema;
+    extrema.push_back(left);
+    extrema.push_back(top);
+    extrema.push_back(right);
+    extrema.push_back(bottom);
+
+    return extrema;
+
+        
+}
+
+double distance(Point p1, Point p2)
+{
+    double res;
+    res = sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p1.y));
+    return res;
+}
 
 double ManhattanDistance(vector<double>& a, vector<double>& b) {
 
@@ -72,18 +122,27 @@ double ManhattanDistance(vector<double>& a, vector<double>& b) {
 vector<double> GFD(Mat& img, int m ,int n) {
 
 
-    Point p = GetCentroid(img);
+    Point Centroid = GetCentroid(img);
 
 
+    vector<Point> extrema = GetExtrema(img);
 
     // a verifier 
-    double maxRad = sqrt(std::pow(p.x, 2) + std::pow(p.y, 2));
+    double maxRad = 0;
+
+    for (Point p : extrema) {
+
+        maxRad = (maxRad < distance(Centroid,p)) ? distance(Centroid,p) : maxRad;
+
+
+    }
+   
 
 
     cout << "width" << img.size().width << endl;
     cout << "height" << img.size().height << endl;
 
-    cout << p << endl;
+    cout << Centroid << endl;
 
     double radius, tempR, tempI;
     double theta;
@@ -108,8 +167,8 @@ vector<double> GFD(Mat& img, int m ,int n) {
                 {
 
                     
-                    radius = sqrt(std::pow(x - p.x, 2) + std::pow(y - p.y, 2));
-                    theta = atan2((y - p.y), (x - p.x));
+                    radius = sqrt(std::pow(x - Centroid.x, 2) + std::pow(y - Centroid.y, 2));
+                    theta = atan2((y - Centroid.y), (x - Centroid.x));
                     if (theta < 0) theta += 2 * M_PI;
 
                     
@@ -302,8 +361,8 @@ int main()
     capture(capture_frame,path_image);
     filter(capture_frame,threshold_frame);
 
-    //capture(capture_frame2,path_image2);
-    //filter(capture_frame2,threshold_frame2);
+    capture(capture_frame2,path_image2);
+    filter(capture_frame2,threshold_frame2);
     
 
 
@@ -311,38 +370,34 @@ int main()
     namedWindow("threshold_frame", WINDOW_NORMAL);
     imshow("threshold_frame", threshold_frame);
 
+    namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
+    imshow("threshold_frame2", threshold_frame2);
+
     
   
     Mat dist = centreObject(threshold_frame);
+    Mat dist2 = centreObject(threshold_frame2);
 
    
 
 
     namedWindow("centreObject", WINDOW_NORMAL);
     imshow("centreObject", dist);
-   
-    vector<double> vc = GFD(dist, 10, 10);
+    namedWindow("centreObject2", WINDOW_NORMAL);
+    imshow("centreObject2", dist2);
 
-   // for (int i = 0; i < vc.size(); i++) {
-     //          std::cout << vc.at(i) << ' ';
-     //}
-
+ 
+ 
 
 
-
-   
-
-  //  namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
- //   imshow("threshold_frame2", threshold_frame2);
-
- //   vector<double> vc= GFD(threshold_frame, 10, 10);
-//    vector<double> vc2 = GFD(threshold_frame2, 10, 10);
+    vector<double> vc= GFD(threshold_frame, 10, 10);
+    vector<double> vc2 = GFD(threshold_frame2, 10, 10);
 
 
 
-//    double dist = ManhattanDistance(vc, vc2);
+  double diste = ManhattanDistance(vc, vc2);
 
-//    cout << dist << endl;
+    cout << diste << endl;
  //   for (int i = 0; i < vc.size(); i++) {
  //       std::cout << vc.at(i) << ' ';
   //  }
