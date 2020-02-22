@@ -218,23 +218,25 @@ Mat centreObject(Mat& img) {
     int width = img.size().width;
     int height = img.size().height;
     auto type = img.type();
-    //***** ligne ***
+    
+
+
     Mat ligne = cv::Mat::zeros(1, width, type);
     Mat colonne = cv::Mat::zeros(height,1, type);
     
 
     Mat dist=img;
 
-    int temp = std::max(width, height)- std::min(width, height) * 0.5;
+    int temp = std::max(width, height)-std::min(width, height) * 0.5;
     
     if (height < width) {
         
        
         if ((temp % 1) > 0) {
-            hconcat(img, colonne, dist);
+            hconcat(dist, colonne, dist);
         }
 
-        for (int i = 0; i < round(temp) - 1; i++)
+        for (int i = 0; i < round(temp) ; i++)
         {
             dist.push_back(ligne);
         }
@@ -246,14 +248,14 @@ Mat centreObject(Mat& img) {
 
         if ((temp % 1) > 0) dist.push_back(ligne);
         
-        for (int i = 0; i < round(temp)-1; i++)
+        for (int i = 0; i < round(temp); i++)
         {
-            hconcat(img,colonne, dist);
+            hconcat(dist,colonne, dist);
         }
         
     }
 
-
+    
    
        Point state = GetCentroid(dist);
         width = dist.size().width;
@@ -262,15 +264,21 @@ Mat centreObject(Mat& img) {
     int delta_y = round(height / 2 - state.y);
     int delta_x = round(width / 2 - state.x);
     int delta_max = max(abs(delta_y), abs(delta_x));
+       
+    colonne = cv::Mat::zeros(dist.size().height, 1, type);
+    for (int i = 0; i < delta_max + 10; i++) {
+        hconcat(dist, colonne, dist);
+        hconcat(colonne, dist, dist);
+    }
 
-
-    for (int i = 0; i < delta_max + 10; i++) hconcat(img, colonne, dist);
-
-
+   
      ligne = cv::Mat::zeros(1, dist.size().width, type);
 
    
-    for (int i = 0; i < delta_max + 10; i++) dist.push_back(ligne);
+     for (int i = 0; i < delta_max + 10; i++) {
+         vconcat(ligne, dist, dist);
+         dist.push_back(ligne);
+     }
 
 
         circshift(dist, Point(delta_y, delta_x));
@@ -292,8 +300,8 @@ int main()
     capture(capture_frame,path_image);
     filter(capture_frame,threshold_frame);
 
-    capture(capture_frame2,path_image2);
-    filter(capture_frame2,threshold_frame2);
+    //capture(capture_frame2,path_image2);
+    //filter(capture_frame2,threshold_frame2);
     
 
 
@@ -302,14 +310,16 @@ int main()
     imshow("threshold_frame", threshold_frame);
 
     
-
+  
     Mat dist = centreObject(threshold_frame);
+
+   
 
 
     namedWindow("centreObject", WINDOW_NORMAL);
     imshow("centreObject", dist);
    
-    vector<double> vc = GFD(dist, 10, 10);
+   // vector<double> vc = GFD(dist, 10, 10);
 
    // for (int i = 0; i < vc.size(); i++) {
      //          std::cout << vc.at(i) << ' ';
