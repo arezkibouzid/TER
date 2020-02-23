@@ -390,8 +390,8 @@ int main()
  
 
 
-    vector<double> vc= GFD(threshold_frame, 10, 10);
-    vector<double> vc2 = GFD(threshold_frame2, 10, 10);
+    vector<double> vc= GFD(dist, 10, 10);
+    vector<double> vc2 = GFD(dist2, 10, 10);
 
 
 

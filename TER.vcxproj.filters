@@ -26,22 +26,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\test\test\Lenna.jpg">
-      <Filter>Fichiers de ressources</Filter>
-    </Image>
     <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre.png">
-      <Filter>Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="C:\Users\Arezki Bouzid\Desktop\rouge.png">
       <Filter>Fichiers de ressources</Filter>
     </Image>
     <Image Include="threshold_frame.jpg">
       <Filter>Fichiers de ressources</Filter>
     </Image>
-    <Image Include="C:\Users\Arezki Bouzid\Desktop\testgfd.PNG">
+    <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre - Copie.png">
       <Filter>Fichiers de ressources</Filter>
     </Image>
-    <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre - Copie.png">
+    <Image Include="C:\Users\Arezki Bouzid\Desktop\plz.PNG">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="C:\Users\Arezki Bouzid\Desktop\plz - Copie (2).PNG">
       <Filter>Fichiers de ressources</Filter>
     </Image>
   </ItemGroup>

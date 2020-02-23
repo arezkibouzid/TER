@@ -164,11 +164,10 @@
     <ClCompile Include="TER.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\test\test\Lenna.jpg" />
-    <Image Include="C:\Users\Arezki Bouzid\Desktop\rouge.png" />
+    <Image Include="C:\Users\Arezki Bouzid\Desktop\plz - Copie (2).PNG" />
+    <Image Include="C:\Users\Arezki Bouzid\Desktop\plz.PNG" />
     <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre - Copie.png" />
     <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre.png" />
-    <Image Include="C:\Users\Arezki Bouzid\Desktop\testgfd.PNG" />
     <Image Include="threshold_frame.jpg" />
   </ItemGroup>
   <ItemGroup>
