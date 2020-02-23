@@ -17,7 +17,10 @@ using namespace cv;
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame,centredImage;
 Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
 
+Mat Matlabled;
 vector<CC> composants;
+
+vector<double> vectC;
 
 bool balance_flag = false;
 int kernel_size = 3;
@@ -264,11 +267,11 @@ void centreObject(Mat& img, Mat& centredImage) {
 }
 
 
-vector<double> GFD(Mat& img, Mat& centredImage, int m ,int n) {
+vector<double>& GFD(CC& composant, Mat& centredImage, int m ,int n) {
 
 
 
-    centreObject(img, centredImage);
+    centreObject(composant.getMat(), centredImage);
    
     
   
@@ -335,7 +338,7 @@ vector<double> GFD(Mat& img, Mat& centredImage, int m ,int n) {
     
 
     int taille = (m) * (n);
-    vector<double> FD(taille);
+    vectC.resize(taille);
     double DC;
 
     for (int rad = 0; rad < m; rad++)
@@ -346,17 +349,17 @@ vector<double> GFD(Mat& img, Mat& centredImage, int m ,int n) {
                 
                 DC = sqrt(std::pow(FR.at(0).at(0),2) + std::pow(FR.at(0).at(0),2));
                 
-                FD.at(0)= DC /( M_PI * std::pow(maxRad,2));
+                vectC.at(0)= DC /( M_PI * std::pow(maxRad,2));
             }
             else {
                 int pos = rad * n + ang;
-                FD.at(pos) = sqrt(std::pow(FR.at(rad).at(ang),2) + std::pow(FI.at(rad).at(ang),2)) / DC;
+                vectC.at(pos) = sqrt(std::pow(FR.at(rad).at(ang),2) + std::pow(FI.at(rad).at(ang),2)) / DC;
             }
                
         }
     }
 
-    return FD;
+    return vectC;
 
 
 }
@@ -371,33 +374,58 @@ int main()
     filter(capture_frame,threshold_frame);
 
 
-    connectedComponentsVector(threshold_frame,composants);
 
 
-   
+    //capture(capture_frame2, path_image2);
+    //filter(capture_frame2, threshold_frame2);
 
+    namedWindow("threshold_frame", WINDOW_NORMAL);
+    imshow("threshold_frame", threshold_frame);
 
-
-   // capture(capture_frame2,path_image2);
-    //filter(capture_frame2,threshold_frame2);
-    
-
-
-
-
-   // namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
+    //namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
     //imshow("threshold_frame2", threshold_frame2);
 
 
-    //vector<double> vc= GFD(threshold_frame, centredImage, 3, 10);
-    //vector<double> vc2 = GFD(threshold_frame2, centredImage2, 3, 10);
 
-    //namedWindow("centredImage", WINDOW_NORMAL);
-    //imshow("centredImage", centredImage);
-    namedWindow("centredImage22", WINDOW_NORMAL);
-    imshow("centredImage22", composants.at(0).getMat());
-    namedWindow("centredImage2", WINDOW_NORMAL);
-    imshow("centredImage2", composants.at(1).getMat());
+    connectedComponentsVector(threshold_frame,composants);
+
+
+
+
+
+    vector<vector<double>> vecteursCar;
+    vector<double>& ptr_vect = GFD(composants.at(0), centredImage2, 3, 10);;
+
+    namedWindow("composantCentred11", WINDOW_NORMAL);
+    imshow("composantCentred11", centredImage2);
+
+    for (int i = 1; i < composants.size(); i++)
+    {
+        
+       ptr_vect=GFD(composants.at(i), centredImage, 3, 10);
+
+       namedWindow("composantCentred22", WINDOW_NORMAL);
+       imshow("composantCentred22",centredImage);
+
+       vecteursCar.push_back(ptr_vect);
+            
+    }
+
+
+    cout << composants.size();
+
+    namedWindow("composants11", WINDOW_NORMAL);
+    imshow("composants11", composants.at(0).getMat());
+    namedWindow("composants22", WINDOW_NORMAL);
+    imshow("composants22", composants.at(1).getMat());
+  
+
+
+
+  
+
+
+   
 
 
 
@@ -412,11 +440,6 @@ int main()
  
   
 
-
-    //namedWindow("res", WINDOW_AUTOSIZE);
-    //imshow("res", classifier(threshold_frame, test, 0));
-   // namedWindow("res1", WINDOW_AUTOSIZE);
-    //imshow("res1", classifier(threshold_frame, test, 1));
 
     
 
@@ -446,9 +469,8 @@ void CcToMat(CC cc, Mat& threshold_frame , Mat& img) {
         {
 
 
-            
-
-                row_ptr[y - deb.y] = threshold_frame.data[y * (longeur)+x];
+            if(Matlabled.at<uint16_t>(Point(x,y)) == cc.getId_label()) row_ptr[y - deb.y] = 255;
+            else row_ptr[y - deb.y] = 0;
 
             
 
@@ -468,10 +490,10 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 
 
     Mat centroids;
-    Mat lables;
+    
 
     Mat stats;
-   connectedComponentsWithStats(threshold_frame, lables, stats, centroids, 8, CV_16U);
+   connectedComponentsWithStats(threshold_frame, Matlabled, stats, centroids, 8, CV_16U);
 
     
     Mat m;
