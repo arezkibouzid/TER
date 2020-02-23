@@ -35,6 +35,38 @@ Mat& gaussianFrame();
 Mat& thresholdFrame();
 Mat classifier(cv::Mat& img, cTracker2& test, int codif);
 
+double distance(Point p1, Point p2)
+{
+    double res;
+    res = sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p1.y));
+    return res;
+}
+
+double ManhattanDistance(vector<double>& a, vector<double>& b) {
+
+    double dist = 0;
+    int i;
+    for (i = 0; i < min(a.size(), b.size()); i++)
+    {
+        dist += abs(a.at(i) - b.at(i));
+
+    }
+    int j = i;
+    while (i < a.size())
+    {
+        dist += abs(a.at(i));
+        i++;
+    }
+
+    while (j < b.size())
+    {
+        dist += abs(b.at(j));
+        j++;
+    }
+
+    return dist;
+
+}
 
 Point GetCentroid(Mat& img) {
 
@@ -86,38 +118,9 @@ vector<Point> GetExtrema(Mat& img) {
         
 }
 
-double distance(Point p1, Point p2)
-{
-    double res;
-    res = sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p1.y));
-    return res;
-}
 
-double ManhattanDistance(vector<double>& a, vector<double>& b) {
 
-    double dist = 0;
-    int i;
-    for (i = 0; i < min(a.size(),b.size()); i++)
-    {
-        dist += abs(a.at(i) - b.at(i));
 
-    }
-    int j = i;
-    while (i < a.size())
-    {
-        dist += abs(a.at(i));
-        i++;
-    }
-
-    while (j < b.size())
-    {
-        dist += abs(b.at(j));
-        j++;
-    }
-
-    return dist;
-
-}
 
 vector<double> GFD(Mat& img, int m ,int n) {
 
@@ -159,7 +162,7 @@ vector<double> GFD(Mat& img, int m ,int n) {
 
         for (int ang = 0; ang < n; ang++)
         {
-            // a verifier  x and y
+            
             for (int x = 0; x < img.size().width; x++)
             {       
                
@@ -293,6 +296,7 @@ Mat centreObject(Mat& img) {
        
         if ((temp % 1) > 0) {
             hconcat(dist, colonne, dist);
+            ligne = cv::Mat::zeros(1, dist.size().width, type);
         }
 
         for (int i = 0; i < round(temp) ; i++)
@@ -301,12 +305,13 @@ Mat centreObject(Mat& img) {
         }
        
         
-    }
-    else if (width < height) {
+    }else if (width < height) {
         
 
-        if ((temp % 1) > 0) dist.push_back(ligne);
-        
+        if ((temp % 1) > 0) {
+            dist.push_back(ligne);
+            colonne = cv::Mat::zeros(dist.size().height, 1, type);
+        }
         for (int i = 0; i < round(temp); i++)
         {
             hconcat(dist,colonne, dist);
