@@ -1,14 +1,10 @@
-
 #include<opencv2/opencv.hpp>
 
 using namespace std;
 using namespace cv;
 
-
 class CC
 {
-
-
 private:
 
 	Point ptr_debut;
@@ -21,7 +17,6 @@ private:
 protected:
 
 public:
-
 
 	Point getPtr_debut() { return ptr_debut; }
 	Point getCentroid() { return centroid; }
@@ -39,11 +34,4 @@ public:
 	void setdX(int x) { dX = x; }
 	void setdY(int y) { dY = y; }
 	void setMat(Mat m) { mat = m; }
-
-
-
-
-
-
 };
-
