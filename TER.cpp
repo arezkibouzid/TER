@@ -16,8 +16,8 @@ using namespace cv;
 
 
 
-Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame;
-Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2;
+Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame,centredImage;
+Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
 
 bool balance_flag = false;
 int kernel_size = 3;
@@ -180,20 +180,107 @@ double GetExtrema(Mat& img, Point& center) {
 
 
 
+void centreObject(Mat& img, Mat& centredImage) {
+
+    int width = img.size().width;
+    int height = img.size().height;
+    auto type = img.type();
 
 
-vector<double> GFD(Mat& img, int m ,int n) {
+
+    Mat ligne = cv::Mat::zeros(1, width, type);
+    Mat colonne = cv::Mat::zeros(height, 1, type);
+
+
+    centredImage = img;
+
+    int temp = std::max(width, height) - std::min(width, height) * 0.5;
+
+    if (height < width) {
+
+
+        if ((temp % 1) > 0) {
+            hconcat(centredImage, colonne, centredImage);
+            ligne = cv::Mat::zeros(1, centredImage.size().width, type);
+        }
+
+        for (int i = 0; i < round(temp); i++)
+        {
+            centredImage.push_back(ligne);
+        }
+
+
+    }
+    else if (width < height) {
+
+
+        if ((temp % 1) > 0) {
+            centredImage.push_back(ligne);
+            colonne = cv::Mat::zeros(centredImage.size().height, 1, type);
+        }
+        for (int i = 0; i < round(temp); i++)
+        {
+            hconcat(centredImage, colonne, centredImage);
+        }
+
+    }
 
 
 
-    cout << "width : " << img.size().width << endl;
-    cout << "height : " << img.size().height << endl;
+    Point state = GetCentroid(centredImage);
 
-    Point Centroid = GetCentroid(img);
+
+    width = centredImage.size().width;
+    height = centredImage.size().height;
+
+    int delta_y = round(height / 2 - state.y);
+    int delta_x = round(width / 2 - state.x);
+    int delta_max = max(abs(delta_y), abs(delta_x));
+
+    colonne = cv::Mat::zeros(height, 1, type);
+    for (int i = 0; i < delta_max + 10; i++) {
+        hconcat(centredImage, colonne, centredImage);
+        hconcat(colonne, centredImage, centredImage);
+    }
+
+
+    ligne = cv::Mat::zeros(1, centredImage.size().width, type);
+
+
+    for (int i = 0; i < delta_max + 10; i++) {
+        vconcat(ligne, centredImage, centredImage);
+        centredImage.push_back(ligne);
+    }
+
+
+    circshift(centredImage, Point(delta_x, delta_y));
+
+
+
+
+
+}
+
+
+vector<double> GFD(Mat& img,Mat& centredImage, int m ,int n) {
+
+
+
+    centreObject(img, centredImage);
+   
+    
+   
+  
+
+
+    cout << "width : " << centredImage.size().width << endl;
+    cout << "height : " << centredImage.size().height << endl;
+
+    Point Centroid = GetCentroid(centredImage);
 
     cout << Centroid << endl;
     
-    double maxRad = GetExtrema(img,Centroid);
+    double maxRad = GetExtrema(centredImage,Centroid);
 
 
     double radius, tempR, tempI;
@@ -212,10 +299,10 @@ vector<double> GFD(Mat& img, int m ,int n) {
         for (int ang = 0; ang < n; ang++)
         {
             
-            for (int x = 0; x < img.size().width; x++)
+            for (int x = 0; x < centredImage.size().width; x++)
             {       
                
-                for (int y = 0; y < img.size().height; y++)
+                for (int y = 0; y < centredImage.size().height; y++)
                 {
 
                     
@@ -224,9 +311,9 @@ vector<double> GFD(Mat& img, int m ,int n) {
                     if (theta < 0) theta += 2 * M_PI;
 
                     
-                    //cout << to_string(img.at<uchar>(Point(x, y)));
-                    tempR = img.at<uchar>(Point(x,y))*std::cos(2 * M_PI * rad * (radius /  maxRad) + ang * theta);
-                    tempI = img.at<uchar>(Point(x,y))*std::sin(2 * M_PI * rad * (radius / maxRad) + ang * theta);
+                    //cout << to_string(centredImage.at<uchar>(Point(x, y)));
+                    tempR = centredImage.at<uchar>(Point(x,y))*std::cos(2 * M_PI * rad * (radius /  maxRad) + ang * theta);
+                    tempI = centredImage.at<uchar>(Point(x,y))*std::sin(2 * M_PI * rad * (radius / maxRad) + ang * theta);
 
                 
                     FR.at(rad).at(ang)+= tempR;
@@ -279,87 +366,6 @@ vector<double> GFD(Mat& img, int m ,int n) {
 
 
 
-Mat centreObject(Mat& img) {
-
-    int width = img.size().width;
-    int height = img.size().height;
-    auto type = img.type();
-    
-
-
-    Mat ligne = cv::Mat::zeros(1, width, type);
-    Mat colonne = cv::Mat::zeros(height,1, type);
-    
-
-    Mat dist=img;
-
-    int temp = std::max(width, height)-std::min(width, height) * 0.5;
-    
-    if (height < width) {
-        
-       
-        if ((temp % 1) > 0) {
-            hconcat(dist, colonne, dist);
-            ligne = cv::Mat::zeros(1, dist.size().width, type);
-        }
-
-        for (int i = 0; i < round(temp) ; i++)
-        {
-            dist.push_back(ligne);
-        }
-       
-        
-    }else if (width < height) {
-        
-
-        if ((temp % 1) > 0) {
-            dist.push_back(ligne);
-            colonne = cv::Mat::zeros(dist.size().height, 1, type);
-        }
-        for (int i = 0; i < round(temp); i++)
-        {
-            hconcat(dist,colonne, dist);
-        }
-        
-    }
-
-    
-   
-       Point state = GetCentroid(dist);
-
-      
-        width = dist.size().width;
-        height = dist.size().height;
-    
-    int delta_y = round(height / 2 - state.y);
-    int delta_x = round(width / 2 - state.x);
-    int delta_max = max(abs(delta_y), abs(delta_x));
-       
-    colonne = cv::Mat::zeros(height, 1, type);
-    for (int i = 0; i < delta_max + 10; i++) {
-        hconcat(dist, colonne, dist);
-        hconcat(colonne, dist, dist);
-    }
-
-   
-     ligne = cv::Mat::zeros(1, dist.size().width, type);
-
-   
-     for (int i = 0; i < delta_max + 10; i++) {
-         vconcat(ligne, dist, dist);
-         dist.push_back(ligne);
-     }
-
-
-        circshift(dist, Point(delta_x, delta_y));
-
-
-
-
-    return dist;
-
-
-}
 
 
 
@@ -384,23 +390,18 @@ int main()
 
     
   
-    Mat dist = centreObject(threshold_frame);
-    Mat dist2 = centreObject(threshold_frame2);
-
-   
-
-
-    namedWindow("centreObject", WINDOW_NORMAL);
-    imshow("centreObject", dist);
-    namedWindow("centreObject2", WINDOW_NORMAL);
-    imshow("centreObject2", dist2);
 
  
  
 
 
-    vector<double> vc= GFD(dist, 3, 10);
-    vector<double> vc2 = GFD(dist2, 3, 10);
+    vector<double> vc= GFD(threshold_frame, centredImage, 3, 10);
+    vector<double> vc2 = GFD(threshold_frame2, centredImage2, 3, 10);
+
+    namedWindow("centredImage", WINDOW_NORMAL);
+    imshow("centredImage", centredImage);
+    namedWindow("centredImage2", WINDOW_NORMAL);
+    imshow("centredImage2", centredImage2);
 
 
 
