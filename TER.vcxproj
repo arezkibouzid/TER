@@ -159,8 +159,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cDisjointSet.cpp" />
-    <ClCompile Include="cTracker2.cpp" />
     <ClCompile Include="TER.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -171,9 +169,7 @@
     <Image Include="threshold_frame.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cDisjointSet.h" />
-    <ClInclude Include="cTracker2.h" />
-    <ClInclude Include="cBlob.h" />
+    <ClInclude Include="CC.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

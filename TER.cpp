@@ -1,11 +1,9 @@
 #include<opencv2/opencv.hpp>
 #include<iostream>
 #include<string>
-
-
-#include "cTracker2.h"
-#include "cBlob.h"
 #include"math.h"
+
+#include "CC.h"
 
 
 #define M_PI 3.14159265358979323846
@@ -19,12 +17,14 @@ using namespace cv;
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame,centredImage;
 Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
 
+vector<CC> composants;
+
 bool balance_flag = false;
 int kernel_size = 3;
 int block_size = 3;
 int c = 0;
 double segma = 0;
-string path_image = "plz.PNG";
+string path_image = "plz.png";
 string path_image2 = "plz - Copie (2).PNG";
 
 void capture(Mat& capture_frame,string path);
@@ -33,7 +33,9 @@ void filter(Mat& capture_frame,Mat& threshold_frame);
 Mat& filterFrame();
 Mat& gaussianFrame();
 Mat& thresholdFrame();
-Mat classifier(cv::Mat& img, cTracker2& test, int codif);
+
+
+void connectedComponentsVector(Mat& threshold_frame,vector<CC>& composants);
 
 double distance(Point& p1, Point& p2)
 {
@@ -361,11 +363,6 @@ vector<double> GFD(Mat& img, Mat& centredImage, int m ,int n) {
 
 
 
-
-
-
-
-
 int main()
 {
 
@@ -373,114 +370,137 @@ int main()
     capture(capture_frame,path_image);
     filter(capture_frame,threshold_frame);
 
-    capture(capture_frame2,path_image2);
-    filter(capture_frame2,threshold_frame2);
+
+    connectedComponentsVector(threshold_frame,composants);
+
+
+   
+
+
+
+   // capture(capture_frame2,path_image2);
+    //filter(capture_frame2,threshold_frame2);
     
 
 
 
-    namedWindow("threshold_frame", WINDOW_NORMAL);
-    imshow("threshold_frame", threshold_frame);
 
-    namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
-    imshow("threshold_frame2", threshold_frame2);
-
-    
-  
-
- 
- 
+   // namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
+    //imshow("threshold_frame2", threshold_frame2);
 
 
-    vector<double> vc= GFD(threshold_frame, centredImage, 3, 10);
-    vector<double> vc2 = GFD(threshold_frame2, centredImage2, 3, 10);
+    //vector<double> vc= GFD(threshold_frame, centredImage, 3, 10);
+    //vector<double> vc2 = GFD(threshold_frame2, centredImage2, 3, 10);
 
-    namedWindow("centredImage", WINDOW_NORMAL);
-    imshow("centredImage", centredImage);
+    //namedWindow("centredImage", WINDOW_NORMAL);
+    //imshow("centredImage", centredImage);
+    namedWindow("centredImage22", WINDOW_NORMAL);
+    imshow("centredImage22", composants.at(0).getMat());
     namedWindow("centredImage2", WINDOW_NORMAL);
-    imshow("centredImage2", centredImage2);
+    imshow("centredImage2", composants.at(1).getMat());
 
 
 
-  double diste = ManhattanDistance(vc, vc2);
+    //double diste = ManhattanDistance(vc, vc2);
 
-    cout << diste << endl;
+    //cout << diste << endl;
+
  //   for (int i = 0; i < vc.size(); i++) {
  //       std::cout << vc.at(i) << ' ';
   //  }
 
  
-    //cTracker2 test = cTracker2(0, 1);
-
-    //test.extractBlobs(filter_frame);
-
-    //cout << test.zonesCount() << endl;
+  
 
 
     //namedWindow("res", WINDOW_AUTOSIZE);
     //imshow("res", classifier(threshold_frame, test, 0));
-    //namedWindow("res1", WINDOW_AUTOSIZE);
-    //imshow("res1", classifier(threshold_frame, test, 100));
+   // namedWindow("res1", WINDOW_AUTOSIZE);
+    //imshow("res1", classifier(threshold_frame, test, 1));
 
     
 
     waitKey(0);
+
     return 0;
+ 
 }
 
+void CcToMat(CC cc, Mat& threshold_frame , Mat& img) {
+
+    int width = cc.getdX();
+    int height = cc.getdY();
+
+    img = cv::Mat(width, height, CV_8UC1);
+
+    int longeur = threshold_frame.size().width;
 
 
+    Point deb = cc.getPtr_debut();
 
-cv::Mat classifier(cv::Mat& img, cTracker2& test, int codif) {
-
-
-
-
-    Mat res;
-    int height = test.getBlobs()[codif].max.y;
-    int longeur = img.size().width;
-    int width = test.getBlobs()[codif].max.x;
-    int minY = test.getBlobs()[codif].min.y;
-    int minX = test.getBlobs()[codif].min.x;
-    int maxY = test.getBlobs()[codif].max.y;
-    int maxX = test.getBlobs()[codif].max.x;
-
-    //+2 pour le decalager
-    res = cv::Mat(width - minX, height - minY, CV_8UC1);
-
-    for (int x = minX; x < maxX; ++x)
+    for (int x = deb.x ; x < deb.x + width; ++x)
     {
-        uchar* row_ptr = res.ptr<uchar>(x - minX);
+        uchar* row_ptr = img.ptr<uchar>(x - deb.x);
 
-
-        for (int y = minY; y < maxY; ++y)
+        for (int y = deb.y ; y < deb.y + height; ++y)
         {
-            if (test.getlabels()[y * (longeur)+x]->i == codif) {
-
-                //+2 pour le decalager
-                row_ptr[y - minY] = 0;
-                //if (x == minX && y == minY) row_ptr[y-minY] = 0;
-                //if (x == maxX && y == maxY) row_ptr[y-minY] = 0;
-
-                //if (x == test.getBlobs()[codif].location.x && y == test.getBlobs()[codif].location.y) row_ptr[y-minY] = 0;
-            }
-            else  row_ptr[y - minY] = 255;
 
 
+            
 
+                row_ptr[y - deb.y] = threshold_frame.data[y * (longeur)+x];
 
+            
 
         }
     }
 
 
 
-    res = res.t();
-    return res;
+    img = img.t();
+
+   
+
+}
+
+void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
+
+
+
+    Mat centroids;
+    Mat lables;
+
+    Mat stats;
+   connectedComponentsWithStats(threshold_frame, lables, stats, centroids, 8, CV_16U);
+
+    
+    Mat m;
+    for (int i = 0; i < stats.rows; i++)
+    {
+        CC composant;
+        composant.setId_label(i);
+        composant.setdX(stats.at<int>(i, 2));
+        composant.setdY(stats.at<int>(i, 3));
+        Point centroid(centroids.at<double>(i, 0), centroids.at<double>(i, 1));
+        composant.setCentroid(centroid);
+        composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
+
+        CcToMat(composant, threshold_frame, m);
+        
+        composant.setMat(m);
+        
+        composants.push_back(composant);
+
+
+    }
+    
+   
 
 
 
 }
+
+
 
 void capture(Mat& capture_frame,string path) {
 
@@ -493,10 +513,10 @@ void capture(Mat& capture_frame,string path) {
 void filter(Mat& capture_frame, Mat& threshold_frame) {
 
     // capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
-    cvtColor(capture_frame, capture_frame, COLOR_BGR2GRAY);
-    //GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
+    cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
+   GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
    // if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
-    threshold(capture_frame, threshold_frame, 10, 255, cv::THRESH_BINARY);
+    threshold(gaussian_frame, threshold_frame, 10, 255, cv::THRESH_BINARY);
     //imwrite("./threshold_frame.jpg", threshold_frame);
 
    
