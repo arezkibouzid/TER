@@ -449,14 +449,14 @@ int main()
  
 }
 
-void CcToMat(CC cc, Mat& threshold_frame , Mat& img) {
+void CcToMat(CC cc, Mat& img) {
 
     int width = cc.getdX();
     int height = cc.getdY();
 
     img = cv::Mat(width, height, CV_8UC1);
 
-    int longeur = threshold_frame.size().width;
+    int longeur = Matlabled.size().width;
 
 
     Point deb = cc.getPtr_debut();
@@ -507,7 +507,7 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
         composant.setCentroid(centroid);
         composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
 
-        CcToMat(composant, threshold_frame, m);
+        CcToMat(composant, m);
         
         composant.setMat(m);
         
