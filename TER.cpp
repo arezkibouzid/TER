@@ -19,6 +19,7 @@ Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_fr
 
 Mat Matlabled;
 vector<CC> composants;
+vector<vector<double>> vecteursCar;
 
 vector<double> vectC;
 
@@ -267,7 +268,7 @@ void centreObject(Mat& img, Mat& centredImage) {
 }
 
 
-vector<double>& GFD(CC& composant, Mat& centredImage, int m ,int n) {
+void GFD(CC& composant, Mat& centredImage, int m ,int n) {
 
 
 
@@ -359,12 +360,32 @@ vector<double>& GFD(CC& composant, Mat& centredImage, int m ,int n) {
         }
     }
 
-    return vectC;
+ 
 
 
 }
 
 
+void pushAllVectsCar() {
+
+
+    
+    vector<double>& ptr_vect = vectC;
+
+
+
+    for (int i = 0; i < composants.size(); i++)
+    {
+
+        GFD(composants.at(i), centredImage, 3, 10);
+
+        namedWindow("composantCentred" + i, WINDOW_NORMAL);
+        imshow("composantCentred" + i, centredImage);
+
+        vecteursCar.push_back(ptr_vect);
+
+    }
+}
 
 int main()
 {
@@ -392,50 +413,27 @@ int main()
 
 
 
-
-    vector<vector<double>> vecteursCar;
-    vector<double>& ptr_vect = GFD(composants.at(0), centredImage2, 3, 10);;
-
-    namedWindow("composantCentred11", WINDOW_NORMAL);
-    imshow("composantCentred11", centredImage2);
-
-    for (int i = 1; i < composants.size(); i++)
-    {
-        
-       ptr_vect=GFD(composants.at(i), centredImage, 3, 10);
-
-       namedWindow("composantCentred22", WINDOW_NORMAL);
-       imshow("composantCentred22",centredImage);
-
-       vecteursCar.push_back(ptr_vect);
-            
-    }
-
-
-    cout << composants.size();
-
     namedWindow("composants11", WINDOW_NORMAL);
     imshow("composants11", composants.at(0).getMat());
     namedWindow("composants22", WINDOW_NORMAL);
     imshow("composants22", composants.at(1).getMat());
-  
 
 
 
-  
+    pushAllVectsCar();
 
 
+
+
+    for (int i = 0; i < vecteursCar.size()-1; i++)
+    {
+        double diste = ManhattanDistance(vecteursCar.at(i), vecteursCar.at(i+1));
+
+        cout << diste<< endl;
+    }
    
 
 
-
-    //double diste = ManhattanDistance(vc, vc2);
-
-    //cout << diste << endl;
-
- //   for (int i = 0; i < vc.size(); i++) {
- //       std::cout << vc.at(i) << ' ';
-  //  }
 
  
   
