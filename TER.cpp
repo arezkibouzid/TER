@@ -24,8 +24,8 @@ int kernel_size = 3;
 int block_size = 3;
 int c = 0;
 double segma = 0;
-string path_image = "plz.png";
-string path_image2 = "plz - Copie (2).png";
+string path_image = "plz.PNG";
+string path_image2 = "plz - Copie (2).PNG";
 
 void capture(Mat& capture_frame,string path);
 void filter(Mat& capture_frame,Mat& threshold_frame);
