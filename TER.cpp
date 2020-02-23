@@ -123,7 +123,7 @@ Point GetCentroid(Mat& img) {
 
 }
 
-vector<Point> GetExtrema(Mat& img) {
+double GetExtrema(Mat& img, Point& center) {
 
 
     // Find contours
@@ -165,7 +165,15 @@ vector<Point> GetExtrema(Mat& img) {
     extrema.push_back(righttop);
     */
  
-    return cnts.at(0);
+    double maxRad = 0;
+    for (Point p : cnts.at(0)) {
+
+        if (maxRad < distance(center, p))  maxRad = distance(center, p);
+
+
+    }
+
+    return maxRad;
 
         
 }
@@ -177,30 +185,16 @@ vector<Point> GetExtrema(Mat& img) {
 vector<double> GFD(Mat& img, int m ,int n) {
 
 
+
+    cout << "width : " << img.size().width << endl;
+    cout << "height : " << img.size().height << endl;
+
     Point Centroid = GetCentroid(img);
 
-
-    vector<Point> extrema = GetExtrema(img);
-
-    // a verifier 
-    double maxRad = 0;
-
-    for (Point p : extrema) {
-        
-        if(maxRad < distance(Centroid,p))  maxRad=distance(Centroid,p);
-
-        img.at<uchar>(p) = 255;
-       
-
-
-    }
-   
-
-
-    cout << "width" << img.size().width << endl;
-    cout << "height" << img.size().height << endl;
-
     cout << Centroid << endl;
+    
+    double maxRad = GetExtrema(img,Centroid);
+
 
     double radius, tempR, tempI;
     double theta;
