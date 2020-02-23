@@ -35,7 +35,7 @@ Mat& gaussianFrame();
 Mat& thresholdFrame();
 Mat classifier(cv::Mat& img, cTracker2& test, int codif);
 
-double distance(Point p1, Point p2)
+double distance(Point& p1, Point& p2)
 {
     double res;
     res = sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p1.y));
@@ -262,17 +262,14 @@ void centreObject(Mat& img, Mat& centredImage) {
 }
 
 
-vector<double> GFD(Mat& img,Mat& centredImage, int m ,int n) {
+vector<double> GFD(Mat& img, Mat& centredImage, int m ,int n) {
 
 
 
     centreObject(img, centredImage);
    
     
-   
   
-
-
     cout << "width : " << centredImage.size().width << endl;
     cout << "height : " << centredImage.size().height << endl;
 
