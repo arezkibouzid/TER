@@ -3,8 +3,8 @@
 #include<string>
 
 
-#include "D:\workspace\TER\TER\cTracker2.h"
-#include "D:\workspace\TER\TER\cBlob.h"
+#include "cTracker2.h"
+#include "cBlob.h"
 #include"math.h"
 
 
@@ -24,8 +24,8 @@ int kernel_size = 3;
 int block_size = 3;
 int c = 0;
 double segma = 0;
-string path_image = "C:/Users/Arezki Bouzid/Desktop/plz.png";
-string path_image2 = "C:/Users/Arezki Bouzid/Desktop/plz - Copie (2).png";
+string path_image = "plz.png";
+string path_image2 = "plz - Copie (2).png";
 
 void capture(Mat& capture_frame,string path);
 void filter(Mat& capture_frame,Mat& threshold_frame);

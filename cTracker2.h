@@ -1,7 +1,7 @@
 #include<vector>
 #include<opencv2/opencv.hpp>
-#include "D:\workspace\TER\TER\cBlob.h"
-#include "D:\workspace\TER\TER\cDisjointSet.h"
+#include "cBlob.h"
+#include "cDisjointSet.h"
 
 using namespace std;
 using namespace cv;

@@ -1,4 +1,4 @@
-#include "D:\workspace\TER\TER\ctracker2.h"
+#include "ctracker2.h"
 
 #include<opencv2/opencv.hpp>
 #include<iostream>
