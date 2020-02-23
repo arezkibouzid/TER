@@ -2,11 +2,9 @@
 #include<iostream>
 #include<string>
 #include"math.h"
-
 #include "CC.h"
 
-
-#define M_PI 3.14159265358979323846
+#define M_PI 3.14159265358979323846 
 
 
 using namespace std;
@@ -17,10 +15,17 @@ using namespace cv;
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame,centredImage;
 Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
 
+
+//matrice avec des label des composants connexes
 Mat Matlabled;
+
+// vecteur des composants connexes
 vector<CC> composants;
+
+// vecteur des gfd (vecteurs des caracteristiques)
 vector<vector<double>> vecteursCar;
 
+// variable tompon 
 vector<double> vectC;
 
 bool balance_flag = false;
@@ -28,18 +33,47 @@ int kernel_size = 3;
 int block_size = 3;
 int c = 0;
 double segma = 0;
+
 string path_image = "plz.png";
 string path_image2 = "plz - Copie (2).PNG";
 
-void capture(Mat& capture_frame,string path);
-void filter(Mat& capture_frame,Mat& threshold_frame);
-
-Mat& filterFrame();
-Mat& gaussianFrame();
-Mat& thresholdFrame();
 
 
-void connectedComponentsVector(Mat& threshold_frame,vector<CC>& composants);
+void capture(Mat& capture_frame, string path) {
+
+    capture_frame = imread(path);
+
+}
+
+
+
+void filter(Mat& capture_frame, Mat& threshold_frame) {
+
+    // capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
+    cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
+    GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
+    // if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
+    threshold(gaussian_frame, threshold_frame, 10, 255, cv::THRESH_BINARY);
+    //imwrite("./threshold_frame.jpg", threshold_frame);
+
+
+
+}
+
+
+
+cv::Mat& filterFrame() {
+    return filter_frame;
+}
+
+cv::Mat& gaussianFrame() {
+    return gaussian_frame;
+}
+
+cv::Mat& thresholdFrame() {
+    return threshold_frame;
+}
+
 
 double distance(Point& p1, Point& p2)
 {
@@ -124,67 +158,10 @@ void circshift(Mat& out, const Point& delta)
 Point GetCentroid(Mat& img) {
 
     Moments m = moments(img, true);
-   
-   return  Point(m.m10 / m.m00, m.m01 / m.m00);
+
+    return  Point(m.m10 / m.m00, m.m01 / m.m00);
 
 }
-
-double GetExtrema(Mat& img, Point& center) {
-
-
-    // Find contours
-    vector<vector<Point>> cnts;
-  
-    cv::findContours(img, cnts,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
-    
-    //cnts = imutils.grab_contours(cnts);
-    //auto c = std::max(cnts, contourArea);
-    if (cnts.size() > 1) cout << "plusieurs contours";
-
-    /*int min_x = cnts.at(0).at(0).x;
-    int max_x = min_x;
-
-    int min_y = cnts.at(0).at(0).y;
-    int max_y = min_y;
-    Point lefttop;
-    Point leftbottom;
-    Point rightbottom;
-    Point righttop;
-
-
-    for (Point p : cnts.at(0))
-    {
-        
-        if (min_x >= p.x && min_y >= p.y) { lefttop = p;  min_x = p.x;  min_y = p.y; }
-        if (min_x >= p.x && min_y < p.y) { leftbottom = p;  min_y = p.y; min_x = p.x;}
-        if (max_x <= p.x && max_y <= p.y) { rightbottom = p;  max_x = p.x;  max_y = p.y;}
-        if (max_x <= p.x && max_y > p.y) { righttop = p;  max_y = p.y; max_x = p.x;}
-    }
-    cout << lefttop;
-    cout << leftbottom;
-    cout << rightbottom;
-    cout << righttop;
-    vector<Point> extrema;
-    extrema.push_back(lefttop);
-    extrema.push_back(leftbottom);
-    extrema.push_back(rightbottom);
-    extrema.push_back(righttop);
-    */
- 
-    double maxRad = 0;
-    for (Point p : cnts.at(0)) {
-
-        if (maxRad < distance(center, p))  maxRad = distance(center, p);
-
-
-    }
-
-    return maxRad;
-
-        
-}
-
-
 
 void centreObject(Mat& img, Mat& centredImage) {
 
@@ -265,6 +242,140 @@ void centreObject(Mat& img, Mat& centredImage) {
 
 
 
+}
+
+
+void CcToMat(CC cc, Mat& img) {
+
+    int width = cc.getdX();
+    int height = cc.getdY();
+
+    img = cv::Mat(width, height, CV_8UC1);
+
+    int longeur = Matlabled.size().width;
+
+
+    Point deb = cc.getPtr_debut();
+
+    for (int x = deb.x; x < deb.x + width; ++x)
+    {
+        uchar* row_ptr = img.ptr<uchar>(x - deb.x);
+
+        for (int y = deb.y; y < deb.y + height; ++y)
+        {
+
+
+            if (Matlabled.at<uint16_t>(Point(x, y)) == cc.getId_label()) row_ptr[y - deb.y] = 255;
+            else row_ptr[y - deb.y] = 0;
+
+
+
+        }
+    }
+
+
+
+    img = img.t();
+
+
+
+}
+
+void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
+
+
+
+    Mat centroids;
+
+
+    Mat stats;
+    connectedComponentsWithStats(threshold_frame, Matlabled, stats, centroids, 8, CV_16U);
+
+
+    Mat m;
+    for (int i = 0; i < stats.rows; i++)
+    {
+        CC composant;
+        composant.setId_label(i);
+        composant.setdX(stats.at<int>(i, 2));
+        composant.setdY(stats.at<int>(i, 3));
+        Point centroid(centroids.at<double>(i, 0), centroids.at<double>(i, 1));
+        composant.setCentroid(centroid);
+        composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
+
+        CcToMat(composant, m);
+
+        composant.setMat(m);
+
+        composants.push_back(composant);
+
+
+    }
+
+
+
+
+
+}
+
+
+
+
+//still background
+
+double GetExtrema(Mat& img, Point& center) {
+
+
+    // Find contours
+    vector<vector<Point>> cnts;
+  
+    cv::findContours(img, cnts,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    
+    //cnts = imutils.grab_contours(cnts);
+    //auto c = std::max(cnts, contourArea);
+    if (cnts.size() > 1) cout << "plusieurs contours";
+
+    /*int min_x = cnts.at(0).at(0).x;
+    int max_x = min_x;
+
+    int min_y = cnts.at(0).at(0).y;
+    int max_y = min_y;
+    Point lefttop;
+    Point leftbottom;
+    Point rightbottom;
+    Point righttop;
+
+
+    for (Point p : cnts.at(0))
+    {
+        
+        if (min_x >= p.x && min_y >= p.y) { lefttop = p;  min_x = p.x;  min_y = p.y; }
+        if (min_x >= p.x && min_y < p.y) { leftbottom = p;  min_y = p.y; min_x = p.x;}
+        if (max_x <= p.x && max_y <= p.y) { rightbottom = p;  max_x = p.x;  max_y = p.y;}
+        if (max_x <= p.x && max_y > p.y) { righttop = p;  max_y = p.y; max_x = p.x;}
+    }
+    cout << lefttop;
+    cout << leftbottom;
+    cout << rightbottom;
+    cout << righttop;
+    vector<Point> extrema;
+    extrema.push_back(lefttop);
+    extrema.push_back(leftbottom);
+    extrema.push_back(rightbottom);
+    extrema.push_back(righttop);
+    */
+ 
+    double maxRad = 0;
+    for (Point p : cnts.at(0)) {
+
+        if (maxRad < distance(center, p))  maxRad = distance(center, p);
+
+
+    }
+
+    return maxRad;
+
+        
 }
 
 
@@ -366,7 +477,7 @@ void GFD(CC& composant, Mat& centredImage, int m ,int n) {
 }
 
 
-void pushAllVectsCar() {
+void CalculateGfdAndPushAllVectsCar(int m , int n) {
 
 
     
@@ -377,7 +488,7 @@ void pushAllVectsCar() {
     for (int i = 0; i < composants.size(); i++)
     {
 
-        GFD(composants.at(i), centredImage, 3, 10);
+        GFD(composants.at(i), centredImage, m, n);
 
         namedWindow("composantCentred" + i, WINDOW_NORMAL);
         imshow("composantCentred" + i, centredImage);
@@ -420,7 +531,7 @@ int main()
 
 
 
-    pushAllVectsCar();
+    CalculateGfdAndPushAllVectsCar(3,10);
 
 
 
@@ -447,112 +558,3 @@ int main()
  
 }
 
-void CcToMat(CC cc, Mat& img) {
-
-    int width = cc.getdX();
-    int height = cc.getdY();
-
-    img = cv::Mat(width, height, CV_8UC1);
-
-    int longeur = Matlabled.size().width;
-
-
-    Point deb = cc.getPtr_debut();
-
-    for (int x = deb.x ; x < deb.x + width; ++x)
-    {
-        uchar* row_ptr = img.ptr<uchar>(x - deb.x);
-
-        for (int y = deb.y ; y < deb.y + height; ++y)
-        {
-
-
-            if(Matlabled.at<uint16_t>(Point(x,y)) == cc.getId_label()) row_ptr[y - deb.y] = 255;
-            else row_ptr[y - deb.y] = 0;
-
-            
-
-        }
-    }
-
-
-
-    img = img.t();
-
-   
-
-}
-
-void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
-
-
-
-    Mat centroids;
-    
-
-    Mat stats;
-   connectedComponentsWithStats(threshold_frame, Matlabled, stats, centroids, 8, CV_16U);
-
-    
-    Mat m;
-    for (int i = 0; i < stats.rows; i++)
-    {
-        CC composant;
-        composant.setId_label(i);
-        composant.setdX(stats.at<int>(i, 2));
-        composant.setdY(stats.at<int>(i, 3));
-        Point centroid(centroids.at<double>(i, 0), centroids.at<double>(i, 1));
-        composant.setCentroid(centroid);
-        composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
-
-        CcToMat(composant, m);
-        
-        composant.setMat(m);
-        
-        composants.push_back(composant);
-
-
-    }
-    
-   
-
-
-
-}
-
-
-
-void capture(Mat& capture_frame,string path) {
-
-    capture_frame = imread(path);
-
-}
-
-
-
-void filter(Mat& capture_frame, Mat& threshold_frame) {
-
-    // capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
-    cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
-   GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
-   // if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
-    threshold(gaussian_frame, threshold_frame, 10, 255, cv::THRESH_BINARY);
-    //imwrite("./threshold_frame.jpg", threshold_frame);
-
-   
-
-}
-
-
-
-cv::Mat& filterFrame() {
-    return filter_frame;
-}
-
-cv::Mat& gaussianFrame() {
-    return gaussian_frame;
-}
-
-cv::Mat& thresholdFrame() {
-    return threshold_frame;
-}
