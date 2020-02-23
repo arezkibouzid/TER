@@ -68,6 +68,53 @@ double ManhattanDistance(vector<double>& a, vector<double>& b) {
 
 }
 
+void circshift(Mat& out, const Point& delta)
+{
+    Size sz = out.size();
+
+
+    assert(sz.height > 0 && sz.width > 0);
+
+
+    if ((sz.height == 1 && sz.width == 1) || (delta.x == 0 && delta.y == 0))
+        return;
+
+
+    int x = delta.x;
+    int y = delta.y;
+    if (x > 0) x = x % sz.width;
+    if (y > 0) y = y % sz.height;
+    if (x < 0) x = x % sz.width + sz.width;
+    if (y < 0) y = y % sz.height + sz.height;
+
+
+
+    vector<Mat> planes;
+    split(out, planes);
+
+    for (size_t i = 0; i < planes.size(); i++)
+    {
+
+        Mat tmp0, tmp1, tmp2, tmp3;
+        Mat q0(planes[i], Rect(0, 0, sz.width, sz.height - y));
+        Mat q1(planes[i], Rect(0, sz.height - y, sz.width, y));
+        q0.copyTo(tmp0);
+        q1.copyTo(tmp1);
+        tmp0.copyTo(planes[i](Rect(0, y, sz.width, sz.height - y)));
+        tmp1.copyTo(planes[i](Rect(0, 0, sz.width, y)));
+
+
+        Mat q2(planes[i], Rect(0, 0, sz.width - x, sz.height));
+        Mat q3(planes[i], Rect(sz.width - x, 0, x, sz.height));
+        q2.copyTo(tmp2);
+        q3.copyTo(tmp3);
+        tmp2.copyTo(planes[i](Rect(x, 0, sz.width - x, sz.height)));
+        tmp3.copyTo(planes[i](Rect(0, 0, x, sz.height)));
+    }
+
+    merge(planes, out);
+}
+
 Point GetCentroid(Mat& img) {
 
     Moments m = moments(img, true);
@@ -88,32 +135,37 @@ vector<Point> GetExtrema(Mat& img) {
     //auto c = std::max(cnts, contourArea);
     if (cnts.size() > 1) cout << "plusieurs contours";
 
-    int min_x = cnts.at(0).at(0).x;
+    /*int min_x = cnts.at(0).at(0).x;
     int max_x = min_x;
 
     int min_y = cnts.at(0).at(0).y;
     int max_y = min_y;
-    Point left;
-    Point top;
-    Point right;
-    Point bottom;
+    Point lefttop;
+    Point leftbottom;
+    Point rightbottom;
+    Point righttop;
 
- 
+
     for (Point p : cnts.at(0))
     {
         
-        if (min_x > p.x) { left = p;  min_x = p.x;  }
-        if (min_y > p.y) { top = p;  min_y = p.y; }
-        if (max_x < p.x) { right = p;  max_x = p.x; }
-        if (max_y < p.y) { bottom = p;  max_y = p.y; }
+        if (min_x >= p.x && min_y >= p.y) { lefttop = p;  min_x = p.x;  min_y = p.y; }
+        if (min_x >= p.x && min_y < p.y) { leftbottom = p;  min_y = p.y; min_x = p.x;}
+        if (max_x <= p.x && max_y <= p.y) { rightbottom = p;  max_x = p.x;  max_y = p.y;}
+        if (max_x <= p.x && max_y > p.y) { righttop = p;  max_y = p.y; max_x = p.x;}
     }
+    cout << lefttop;
+    cout << leftbottom;
+    cout << rightbottom;
+    cout << righttop;
     vector<Point> extrema;
-    extrema.push_back(left);
-    extrema.push_back(top);
-    extrema.push_back(right);
-    extrema.push_back(bottom);
-
-    return extrema;
+    extrema.push_back(lefttop);
+    extrema.push_back(leftbottom);
+    extrema.push_back(rightbottom);
+    extrema.push_back(righttop);
+    */
+ 
+    return cnts.at(0);
 
         
 }
@@ -134,8 +186,11 @@ vector<double> GFD(Mat& img, int m ,int n) {
     double maxRad = 0;
 
     for (Point p : extrema) {
+        
+        if(maxRad < distance(Centroid,p))  maxRad=distance(Centroid,p);
 
-        maxRad = (maxRad < distance(Centroid,p)) ? distance(Centroid,p) : maxRad;
+        img.at<uchar>(p) = 255;
+       
 
 
     }
@@ -228,52 +283,7 @@ vector<double> GFD(Mat& img, int m ,int n) {
 
 
 
-void circshift(Mat& out, const Point& delta)
-{
-    Size sz = out.size();
 
-    
-    assert(sz.height > 0 && sz.width > 0);
-  
-
-    if ((sz.height == 1 && sz.width == 1) || (delta.x == 0 && delta.y == 0))
-        return;
-
-  
-    int x = delta.x;
-    int y = delta.y;
-    if (x > 0) x = x % sz.width;
-    if (y > 0) y = y % sz.height;
-    if (x < 0) x = x % sz.width + sz.width;
-    if (y < 0) y = y % sz.height + sz.height;
-
-
-    
-    vector<Mat> planes;
-    split(out, planes);
-
-    for (size_t i = 0; i < planes.size(); i++)
-    {
-        
-        Mat tmp0, tmp1, tmp2, tmp3;
-        Mat q0(planes[i], Rect(0, 0, sz.width, sz.height - y));
-        Mat q1(planes[i], Rect(0, sz.height - y, sz.width, y));
-        q0.copyTo(tmp0);
-        q1.copyTo(tmp1);
-        tmp0.copyTo(planes[i](Rect(0, y, sz.width, sz.height - y)));
-        tmp1.copyTo(planes[i](Rect(0, 0, sz.width, y)));
-
-       
-        Mat q2(planes[i], Rect(0, 0, sz.width - x, sz.height));
-        Mat q3(planes[i], Rect(sz.width - x, 0, x, sz.height));
-        q2.copyTo(tmp2);
-        q3.copyTo(tmp3);
-        tmp2.copyTo(planes[i](Rect(x, 0, sz.width - x, sz.height)));
-        tmp3.copyTo(planes[i](Rect(0, 0, x, sz.height)));
-    }
-
-    merge(planes, out);
-}
 
 Mat centreObject(Mat& img) {
 
@@ -395,8 +405,8 @@ int main()
  
 
 
-    vector<double> vc= GFD(dist, 10, 10);
-    vector<double> vc2 = GFD(dist2, 10, 10);
+    vector<double> vc= GFD(dist, 3, 10);
+    vector<double> vc2 = GFD(dist2, 3, 10);
 
 
 
