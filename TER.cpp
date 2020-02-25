@@ -1,11 +1,10 @@
 #include<opencv2/opencv.hpp>
 #include<iostream>
 #include<string>
-#include"math.h"
 #include <fstream>
-#include "CC.h"
-
 #include <filesystem>
+#include"math.h"
+#include "CC.h"
 
 #define M_PI 3.14159265358979323846
 
@@ -423,7 +422,7 @@ int main()
 	return 0;
 }
 
-void func(CC& composant, Mat& sub) {
+void drawComposant(CC& composant, Mat& sub) {
 	//Mat sub = cv::Mat::zeros(100, 82, CV_8UC1);
 
 	for (int x = composant.getPtr_debut().x; x < composant.getPtr_debut().x + composant.getdX(); ++x)
@@ -436,10 +435,10 @@ void func(CC& composant, Mat& sub) {
 	}
 }
 
-void func2(vector<CC>& composantsDejaclassifier, Mat& sub) {
+void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
 	for (CC composant : composantsDejaclassifier)
 	{
-		func(composant, sub);
+		drawComposant(composant, sub);
 	}
 }
 
