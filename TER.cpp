@@ -23,6 +23,7 @@ Mat Matlabled;
 vector<CC> composants;
 
 // vecteur des gfd (vecteurs des caracteristiques)
+vector<vector<double>> vecteursCarPrim;
 vector<vector<double>> vecteursCar;
 
 // variable tompon
@@ -472,7 +473,7 @@ void readOrLoad(int m, int n, String Extension) {
 					vect.push_back(stod(token));
 					str.erase(0, pos + delimiter.length());
 				}
-				vecteursCar.push_back(vect);
+				vecteursCarPrim.push_back(vect);
 			}
 			else
 			{
@@ -495,7 +496,7 @@ void readOrLoad(int m, int n, String Extension) {
 				outfile << str;
 
 				outfile.close();
-				vecteursCar.push_back(ptr_vect);
+				vecteursCarPrim.push_back(ptr_vect);
 			}
 		}
 		else
@@ -519,7 +520,7 @@ void readOrLoad(int m, int n, String Extension) {
 			outfile << str;
 
 			outfile.close();
-			vecteursCar.push_back(ptr_vect);
+			vecteursCarPrim.push_back(ptr_vect);
 		}
 	}
 }
