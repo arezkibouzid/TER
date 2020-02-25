@@ -2,17 +2,21 @@
 #include<iostream>
 #include<string>
 #include"math.h"
+#include <fstream>
 #include "CC.h"
+
+#include <filesystem>
 
 #define M_PI 3.14159265358979323846
 
 using namespace std;
 using namespace cv;
+namespace fs = std::filesystem;
 
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame, centredImage;
 Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
 
-//matrice avec des label des composants connexes
+//matrice avec des labels des composants connexes
 Mat Matlabled;
 
 // vecteur des composants connexes
@@ -36,6 +40,13 @@ string path_image2 = "plz - Copie (2).PNG";
 void capture(Mat& capture_frame, string path) {
 	capture_frame = imread(path);
 }
+
+inline bool exists(const std::string& name) {
+	struct stat buffer;
+	return (stat(name.c_str(), &buffer) == 0);
+}
+void readOrLoad(int m, int n, String Extension);
+void symbolTocomposantGfd(Mat& mat, int m, int n);
 
 void filter(Mat& capture_frame, Mat& threshold_frame) {
 	// capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
@@ -131,12 +142,13 @@ void circshift(Mat& out, const Point& delta)
 Point GetCentroid(Mat& img) {
 	Moments m = moments(img, true);
 
-	return  Point(m.m10 / m.m00, m.m01 / m.m00);
+	return  Point((int)m.m10 / m.m00, (int)m.m01 / m.m00);
 }
 
 void centreObject(Mat& img, Mat& centredImage) {
 	int width = img.size().width;
 	int height = img.size().height;
+
 	auto type = img.type();
 
 	Mat ligne = cv::Mat::zeros(1, width, type);
@@ -144,7 +156,7 @@ void centreObject(Mat& img, Mat& centredImage) {
 
 	centredImage = img;
 
-	int temp = std::max(width, height) - std::min(width, height) * 0.5;
+	int temp = (int)std::max(width, height) - std::min(width, height) * 0.5;
 
 	if (height < width) {
 		if ((temp % 1) > 0) {
@@ -230,7 +242,7 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 		composant.setId_label(i);
 		composant.setdX(stats.at<int>(i, 2));
 		composant.setdY(stats.at<int>(i, 3));
-		Point centroid(centroids.at<double>(i, 0), centroids.at<double>(i, 1));
+		Point centroid((int)centroids.at<double>(i, 0), (int)centroids.at<double>(i, 1));
 		composant.setCentroid(centroid);
 		composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
 
@@ -295,7 +307,7 @@ void GFD(CC& composant, Mat& centredImage, int m, int n) {
 
 	cout << "width : " << centredImage.size().width << endl;
 	cout << "height : " << centredImage.size().height << endl;
-
+	cout << centredImage;
 	Point Centroid = GetCentroid(centredImage);
 
 	cout << Centroid << endl;
@@ -334,6 +346,7 @@ void GFD(CC& composant, Mat& centredImage, int m, int n) {
 	}
 
 	int taille = (m) * (n);
+	vectC.clear();
 	vectC.resize(taille);
 	double DC;
 
@@ -369,7 +382,7 @@ void CalculateGfdAndPushAllVectsCar(int m, int n) {
 }
 
 int main()
-{
+{/*
 	capture(capture_frame, path_image);
 	filter(capture_frame, threshold_frame);
 
@@ -389,6 +402,10 @@ int main()
 	namedWindow("composants22", WINDOW_NORMAL);
 	imshow("composants22", composants.at(1).getMat());
 
+	sub = sub.t();
+	namedWindow("sub", WINDOW_NORMAL);
+	imshow("sub", sub);
+
 	CalculateGfdAndPushAllVectsCar(3, 10);
 
 	for (int i = 0; i < vecteursCar.size() - 1; i++)
@@ -396,9 +413,130 @@ int main()
 		double diste = ManhattanDistance(vecteursCar.at(i), vecteursCar.at(i + 1));
 
 		cout << diste << endl;
-	}
+	}*/
+
+	readOrLoad(3, 10, ".png");
 
 	waitKey(0);
 
 	return 0;
+}
+
+void func(CC& composant, Mat& sub) {
+	//Mat sub = cv::Mat::zeros(100, 82, CV_8UC1);
+
+	for (int x = composant.getPtr_debut().x; x < composant.getPtr_debut().x + composant.getdX(); ++x)
+	{
+		uchar* row_ptr = sub.ptr<uchar>(x);
+		for (int y = composant.getPtr_debut().y; y < composant.getPtr_debut().y + composant.getdY(); ++y)
+		{
+			if (composant.getMat().at<uchar>(Point(x - composant.getPtr_debut().x, y - composant.getPtr_debut().y)) == 255) row_ptr[y] = 255;
+		}
+	}
+}
+
+void func2(vector<CC>& composantsDejaclassifier, Mat& sub) {
+	for (CC composant : composantsDejaclassifier)
+	{
+		func(composant, sub);
+	}
+}
+
+void classification() {
+}
+
+void readOrLoad(int m, int n, String Extension) {
+	for (auto& p : fs::directory_iterator("Symboles")) {
+		String path = "Symboles/" + p.path().filename().string() + "\/" + p.path().filename().string();
+		if (exists(path + ".txt")) {
+			std::ifstream file(path + ".txt");
+
+			std::string str;
+
+			std::getline(file, str);
+			std::istringstream iss(str);
+			int a, b;
+
+			if (!(iss >> a >> b)) { break; }
+
+			if (a == m & b == n) {
+				std::getline(file, str);
+
+				int pos = 0;
+				std::string token;
+				string delimiter = " ";
+				vector<double> vect;
+
+				while ((pos = str.find(delimiter)) != std::string::npos) {
+					token = str.substr(0, pos);
+					vect.push_back(stod(token));
+					str.erase(0, pos + delimiter.length());
+				}
+				vecteursCar.push_back(vect);
+			}
+			else
+			{
+				std::ofstream outfile(path + ".txt");
+				int a = 0;
+				int b = 0;
+				outfile << m << " " << n << std::endl;
+
+				Mat symbole;
+				capture(symbole, path + Extension);
+
+				symbolTocomposantGfd(symbole, m, n);
+
+				String str;
+				vector<double>& ptr_vect = vectC;
+				for (int i = 0; i < vectC.size(); i++)
+				{
+					str += to_string(ptr_vect.at(i)) + " ";
+				}
+				outfile << str;
+
+				outfile.close();
+				vecteursCar.push_back(ptr_vect);
+			}
+		}
+		else
+		{
+			std::ofstream outfile(path + ".txt");
+			int a = 0;
+			int b = 0;
+			outfile << m << " " << n << std::endl;
+
+			Mat symbole;
+			capture(symbole, path + Extension);
+
+			symbolTocomposantGfd(symbole, m, n);
+
+			String str;
+			vector<double>& ptr_vect = vectC;
+			for (int i = 0; i < vectC.size(); i++)
+			{
+				str += to_string(ptr_vect.at(i)) + " ";
+			}
+			outfile << str;
+
+			outfile.close();
+			vecteursCar.push_back(ptr_vect);
+		}
+	}
+}
+
+void symbolTocomposantGfd(Mat& mat, int m, int n) {
+	Mat symbolecentred;
+
+	filter(mat, mat);
+
+	CC composant;
+	composant.setId_label(0);
+	composant.setdX(mat.size().width);
+	composant.setdY(mat.size().height);
+	Point centroid((int)mat.size().width / 2, (int)mat.size().height / 2);
+	composant.setCentroid(centroid);
+	composant.setPtr_debut(Point(0, 0));
+	composant.setMat(mat);
+
+	GFD(composant, symbolecentred, m, n); //vectC
 }
