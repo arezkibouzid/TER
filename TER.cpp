@@ -11,6 +11,11 @@
 using namespace std;
 using namespace cv;
 namespace fs = std::filesystem;
+using namespace cv::ml;
+
+Mat train_data;
+Mat train_labels;
+Mat test_data;
 
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame, centredImage;
 Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
@@ -22,11 +27,11 @@ Mat Matlabled;
 vector<CC> composants;
 
 // vecteur des gfd (vecteurs des caracteristiques)
-vector<vector<double>> vecteursCarPrim;
-vector<vector<double>> vecteursCar;
+vector<vector<float>> vecteursCarPrim;
+vector<vector<float>> vecteursCar;
 
 // variable tompon
-vector<double> vectC;
+vector<float> vectC;
 
 bool balance_flag = false;
 int kernel_size = 3;
@@ -76,7 +81,7 @@ double distance(Point& p1, Point& p2)
 	return res;
 }
 
-double ManhattanDistance(vector<double>& a, vector<double>& b) {
+double ManhattanDistance(vector<float>& a, vector<float>& b) {
 	double dist = 0;
 	int i;
 	for (i = 0; i < min(a.size(), b.size()); i++)
@@ -125,15 +130,19 @@ void circshift(Mat& out, const Point& delta)
 		Mat q1(planes[i], Rect(0, sz.height - y, sz.width, y));
 		q0.copyTo(tmp0);
 		q1.copyTo(tmp1);
-		tmp0.copyTo(planes[i](Rect(0, y, sz.width, sz.height - y)));
-		tmp1.copyTo(planes[i](Rect(0, 0, sz.width, y)));
+		if (tmp0.size() != Size(0, 0))
+			tmp0.copyTo(planes[i](Rect(0, y, sz.width, sz.height - y)));
+		if (tmp1.size() != Size(0, 0))
+			tmp1.copyTo(planes[i](Rect(0, 0, sz.width, y)));
 
 		Mat q2(planes[i], Rect(0, 0, sz.width - x, sz.height));
 		Mat q3(planes[i], Rect(sz.width - x, 0, x, sz.height));
 		q2.copyTo(tmp2);
 		q3.copyTo(tmp3);
-		tmp2.copyTo(planes[i](Rect(x, 0, sz.width - x, sz.height)));
-		tmp3.copyTo(planes[i](Rect(0, 0, x, sz.height)));
+		if (tmp2.size() != Size(0, 0))
+			tmp2.copyTo(planes[i](Rect(x, 0, sz.width - x, sz.height)));
+		if (tmp3.size() != Size(0, 0))
+			tmp3.copyTo(planes[i](Rect(0, 0, x, sz.height)));
 	}
 
 	merge(planes, out);
@@ -156,7 +165,7 @@ void centreObject(Mat& img, Mat& centredImage) {
 
 	centredImage = img;
 
-	int temp = (int)std::max(width, height) - std::min(width, height) * 0.5;
+	int temp = (int)(std::max(width, height) - std::min(width, height)) * 0.5;
 
 	if (height < width) {
 		if ((temp % 1) > 0) {
@@ -166,12 +175,12 @@ void centreObject(Mat& img, Mat& centredImage) {
 
 		for (int i = 0; i < round(temp); i++)
 		{
-			centredImage.push_back(ligne);
+			vconcat(centredImage, ligne, centredImage);
 		}
 	}
 	else if (width < height) {
 		if ((temp % 1) > 0) {
-			centredImage.push_back(ligne);
+			vconcat(centredImage, ligne, centredImage);
 			colonne = cv::Mat::zeros(centredImage.size().height, 1, type);
 		}
 		for (int i = 0; i < round(temp); i++)
@@ -190,16 +199,17 @@ void centreObject(Mat& img, Mat& centredImage) {
 	int delta_max = max(abs(delta_y), abs(delta_x));
 
 	colonne = cv::Mat::zeros(height, 1, type);
+
 	for (int i = 0; i < delta_max + 10; i++) {
 		hconcat(centredImage, colonne, centredImage);
 		hconcat(colonne, centredImage, centredImage);
 	}
-
-	ligne = cv::Mat::zeros(1, centredImage.size().width, type);
+	width = centredImage.size().width;
+	ligne = cv::Mat::zeros(1, width, type);
 
 	for (int i = 0; i < delta_max + 10; i++) {
 		vconcat(ligne, centredImage, centredImage);
-		centredImage.push_back(ligne);
+		vconcat(centredImage, ligne, centredImage);
 	}
 
 	circshift(centredImage, Point(delta_x, delta_y));
@@ -307,7 +317,7 @@ void GFD(CC& composant, Mat& centredImage, int m, int n) {
 
 	cout << "width : " << centredImage.size().width << endl;
 	cout << "height : " << centredImage.size().height << endl;
-	cout << centredImage;
+
 	Point Centroid = GetCentroid(centredImage);
 
 	cout << Centroid << endl;
@@ -348,7 +358,7 @@ void GFD(CC& composant, Mat& centredImage, int m, int n) {
 	int taille = (m) * (n);
 	vectC.clear();
 	vectC.resize(taille);
-	double DC;
+	float DC;
 
 	for (int rad = 0; rad < m; rad++)
 	{
@@ -368,7 +378,7 @@ void GFD(CC& composant, Mat& centredImage, int m, int n) {
 }
 
 void CalculateGfdAndPushAllVectsCar(int m, int n) {
-	vector<double>& ptr_vect = vectC;
+	vector<float>& ptr_vect = vectC;
 
 	for (int i = 0; i < composants.size(); i++)
 	{
@@ -380,6 +390,8 @@ void CalculateGfdAndPushAllVectsCar(int m, int n) {
 		vecteursCar.push_back(ptr_vect);
 	}
 }
+
+void classification();
 
 int main()
 {/*
@@ -415,7 +427,14 @@ int main()
 		cout << diste << endl;
 	}*/
 
-	readOrLoad(3, 10, ".png");
+	readOrLoad(3, 12, ".png");
+
+	capture(capture_frame, path_image);
+	filter(capture_frame, threshold_frame);
+	connectedComponentsVector(threshold_frame, composants);
+	CalculateGfdAndPushAllVectsCar(3, 12);
+
+	classification();
 
 	waitKey(0);
 
@@ -440,9 +459,63 @@ void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
 	{
 		drawComposant(composant, sub);
 	}
+
+	sub = sub.t(); // a verifier
 }
 
 void classification() {
+	Mat row;
+	for (int i = 0; i < vecteursCarPrim.size(); i++)
+	{
+		row = cv::Mat(1, vecteursCarPrim.at(i).size(), CV_32F);
+
+		memcpy(row.data, vecteursCarPrim.at(i).data(), vecteursCarPrim.at(i).size() * sizeof(float));
+
+		train_data.push_back(row);
+
+		train_labels.push_back(i);
+	}
+
+	for (int i = 0; i < vecteursCar.size(); i++)
+	{
+		row = cv::Mat(1, vecteursCar.at(i).size(), CV_32F);
+
+		memcpy(row.data, vecteursCar.at(i).data(), vecteursCar.at(i).size() * sizeof(float));
+		test_data.push_back(row);
+	}
+
+	Ptr<ml::KNearest> knn = ml::KNearest::create();
+	knn->train(train_data, ml::ROW_SAMPLE, train_labels);
+
+	for (int i = 0; i < test_data.rows; i++)
+	{
+		Mat res, neighbours, dist;
+
+		// predict on majority of k(vecteursCarPrim.size()) neighbours:
+
+		knn->findNearest(test_data.row(i), vecteursCarPrim.size(), res, neighbours, dist);
+
+		int p = (int)res.at<float>(0);
+
+		cout << "composnat :" << i << " prediction :" << p << " voisins:" << neighbours << "dist :" << dist << endl;
+	}
+	cout << ManhattanDistance(vecteursCar.at(1), vecteursCarPrim.at(0)) << endl;
+	cout << ManhattanDistance(vecteursCar.at(1), vecteursCarPrim.at(1));
+
+	/*flann::Index flann_index(flann_m, flann::LinearIndexParams());
+	flann_index.save("flann_index.fln");
+
+	Matrix<float> samplesMatrix((float*)flann_m.data, flann_m.rows, flann_m.cols);
+	//Index<cvflann::ChiSquareDistance<float>> flann_index(samplesMatrix, cvflann::LinearIndexParams());
+	Index<cvflann::L1<float>> flann_index(samplesMatrix, cvflann::LinearIndexParams());
+	flann_index.buildIndex();
+
+	cv::Mat1i ind(flann_m.rows, K);
+	CV_Assert(ind.isContinuous());
+	cvflann::Matrix<int> nresps((int*)ind.data, ind.rows, ind.cols);
+	cvflann::Matrix<float> dist(new float[flann_m.rows * K], flann_m.rows, K);
+
+	flann_index.knnSearch(samplesMatrix, nresps, dist, K, SearchParams(64));*/
 }
 
 void readOrLoad(int m, int n, String Extension) {
@@ -465,7 +538,7 @@ void readOrLoad(int m, int n, String Extension) {
 				int pos = 0;
 				std::string token;
 				string delimiter = " ";
-				vector<double> vect;
+				vector<float> vect;
 
 				while ((pos = str.find(delimiter)) != std::string::npos) {
 					token = str.substr(0, pos);
@@ -487,7 +560,7 @@ void readOrLoad(int m, int n, String Extension) {
 				symbolTocomposantGfd(symbole, m, n);
 
 				String str;
-				vector<double>& ptr_vect = vectC;
+				vector<float>& ptr_vect = vectC;
 				for (int i = 0; i < vectC.size(); i++)
 				{
 					str += to_string(ptr_vect.at(i)) + " ";
@@ -511,7 +584,7 @@ void readOrLoad(int m, int n, String Extension) {
 			symbolTocomposantGfd(symbole, m, n);
 
 			String str;
-			vector<double>& ptr_vect = vectC;
+			vector<float>& ptr_vect = vectC;
 			for (int i = 0; i < vectC.size(); i++)
 			{
 				str += to_string(ptr_vect.at(i)) + " ";
@@ -530,7 +603,7 @@ void symbolTocomposantGfd(Mat& mat, int m, int n) {
 	filter(mat, mat);
 
 	CC composant;
-	composant.setId_label(0);
+	composant.setId_label(-1);
 	composant.setdX(mat.size().width);
 	composant.setdY(mat.size().height);
 	Point centroid((int)mat.size().width / 2, (int)mat.size().height / 2);
