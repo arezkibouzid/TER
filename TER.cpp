@@ -20,6 +20,11 @@ Mat test_data;
 Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame, centredImage;
 Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
 
+vector<vector<CC>> matriceCompClassifier;
+
+// vecteur des symoboles
+vector<String> items;
+
 //matrice avec des labels des composants connexes
 Mat Matlabled;
 
@@ -518,8 +523,7 @@ void drawComposant(CC& composant, Mat& sub) {
 }
 
 void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
-	// i=0 => background
-	for (int i = 1; i < composantsDejaclassifier.size(); i++)
+	for (int i = 0; i < composantsDejaclassifier.size(); i++)
 	{
 		drawComposant(composantsDejaclassifier.at(i), sub);
 	}
@@ -529,24 +533,63 @@ void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
 
 void classification() {
 	std::ofstream out("./resultat.txt");
+
+	double min;
+	int symbole;
+	double dist;
+
+	matriceCompClassifier.clear();
+	int N = vecteursCarPrim.size();
+	int C = 1;
+	matriceCompClassifier.resize(N, std::vector<CC>(C));
+
 	for (int i = 0; i < vecteursCar.size(); i++)
 	{
 		cout << "composant_" << i + 1 << " =>";
-		cout << " Cercle : " << ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(0));
-
-		cout << " | Rectangl H: " << ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(1));
-		cout << " | Rectangl V: " << ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(2)) << endl;
 		out << "composant_" << i + 1 << " =>";
-		out << " Cercle : " << ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(0));
+		symbole = 0;
+		min = ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(0));
+		cout << items.at(0) << " " << min << " | ";
+		out << items.at(0) << " " << min << " | ";
+		for (int j = 1; j < vecteursCarPrim.size(); j++) {
+			dist = ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(j));
 
-		out << " | Rectangl H: " << ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(1));
-		out << " | Rectangl V: " << ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(2)) << endl;
+			if (dist < min) {
+				min = dist;
+				symbole = j;
+			}
+
+			cout << items.at(j) << " " << dist << " | ";
+			out << items.at(j) << " " << dist << " | ";
+		}
+		cout << " => " << min;
+		out << " => " << min;
+
+		cout << " => " << items.at(symbole);
+		out << " => " << items.at(symbole);
+
+		cout << endl;
+		out << endl;
+
+		matriceCompClassifier.at(symbole).emplace_back(composants.at(i + 1));
+	}
+
+	Mat image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
+	for (int i = 0; i < matriceCompClassifier.size(); i++)
+	{
+		image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
+		drawComposantsClassifier(matriceCompClassifier.at(i), image);
+		imwrite("./CCs Classifier/" + items.at(i) + ".jpg", image);
 	}
 }
 
 void readOrLoad(int m, int n, String Extension) {
+	items.clear();
 	for (auto& p : fs::directory_iterator("Symboles")) {
 		String path = "Symboles/" + p.path().filename().string() + "\/" + p.path().filename().string();
+
+		items.push_back(p.path().filename().string());
+
 		if (exists(path + ".txt")) {
 			std::ifstream file(path + ".txt");
 

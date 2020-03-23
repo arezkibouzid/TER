@@ -1,77 +1,77 @@
-composant_1 => Cercle : 8.60167 | Rectangl H: 42.6637 | Rectangl V: 1283.94
-composant_2 => Cercle : 84.3489 | Rectangl H: 41.0829 | Rectangl V: 1206.73
-composant_3 => Cercle : 84.3807 | Rectangl H: 41.0078 | Rectangl V: 1207.19
-composant_4 => Cercle : 78.8095 | Rectangl H: 35.4895 | Rectangl V: 1212.61
-composant_5 => Cercle : 78.9944 | Rectangl H: 35.5127 | Rectangl V: 1212.73
-composant_6 => Cercle : 79.6474 | Rectangl H: 36.4451 | Rectangl V: 1211.5
-composant_7 => Cercle : 79.7819 | Rectangl H: 36.4501 | Rectangl V: 1211.57
-composant_8 => Cercle : 77.6743 | Rectangl H: 34.1408 | Rectangl V: 1214.14
-composant_9 => Cercle : 84.5665 | Rectangl H: 41.1627 | Rectangl V: 1206.95
-composant_10 => Cercle : 78.3229 | Rectangl H: 34.9684 | Rectangl V: 1213.33
-composant_11 => Cercle : 77.8036 | Rectangl H: 34.4857 | Rectangl V: 1213.59
-composant_12 => Cercle : 4368.68 | Rectangl H: 4320.61 | Rectangl V: 3081.44
-composant_13 => Cercle : 4368.68 | Rectangl H: 4320.61 | Rectangl V: 3081.44
-composant_14 => Cercle : 79.7402 | Rectangl H: 36.4011 | Rectangl V: 1211.5
-composant_15 => Cercle : 84.4012 | Rectangl H: 41.0007 | Rectangl V: 1207.23
-composant_16 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_17 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_18 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_19 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_20 => Cercle : 4368.68 | Rectangl H: 4320.61 | Rectangl V: 3081.44
-composant_21 => Cercle : 4368.68 | Rectangl H: 4320.61 | Rectangl V: 3081.44
-composant_22 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_23 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_24 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_25 => Cercle : 4712.86 | Rectangl H: 4665.08 | Rectangl V: 3425.83
-composant_26 => Cercle : 80.2974 | Rectangl H: 34.3268 | Rectangl V: 1212.93
-composant_27 => Cercle : 68.0471 | Rectangl H: 21.802 | Rectangl V: 1225.3
-composant_28 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_29 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_30 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_31 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_32 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_33 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_34 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_35 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_36 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_37 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_38 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_39 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_40 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_41 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_42 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_43 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_44 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_45 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_46 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_47 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_48 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_49 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_50 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_51 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_52 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_53 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_54 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_55 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_56 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_57 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_58 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_59 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_60 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_61 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_62 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_63 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_64 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_65 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_66 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_67 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_68 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_69 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_70 => Cercle : 82.4532 | Rectangl H: 36.5096 | Rectangl V: 1208.66
-composant_71 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_72 => Cercle : 99.0398 | Rectangl H: 53.3832 | Rectangl V: 1191.22
-composant_73 => Cercle : 244.408 | Rectangl H: 200.135 | Rectangl V: 1044.6
-composant_74 => Cercle : 236.202 | Rectangl H: 191.686 | Rectangl V: 1052.78
-composant_75 => Cercle : 236.202 | Rectangl H: 191.686 | Rectangl V: 1052.78
-composant_76 => Cercle : 244.408 | Rectangl H: 200.135 | Rectangl V: 1044.6
-composant_77 => Cercle : 244.408 | Rectangl H: 200.135 | Rectangl V: 1044.6
+composant_1 =>Rectangle H 42.6637 | Rectangle V 1283.94 |  => Rectangle H
+composant_2 =>Rectangle H 41.0829 | Rectangle V 1206.73 |  => Cercle
+composant_3 =>Rectangle H 41.0078 | Rectangle V 1207.19 |  => Cercle
+composant_4 =>Rectangle H 35.4895 | Rectangle V 1212.61 |  => Rectangle H
+composant_5 =>Rectangle H 35.5127 | Rectangle V 1212.73 |  => Rectangle H
+composant_6 =>Rectangle H 36.4451 | Rectangle V 1211.5 |  => Rectangle H
+composant_7 =>Rectangle H 36.4501 | Rectangle V 1211.57 |  => Rectangle H
+composant_8 =>Rectangle H 34.1408 | Rectangle V 1214.14 |  => Rectangle H
+composant_9 =>Rectangle H 41.1627 | Rectangle V 1206.95 |  => Cercle
+composant_10 =>Rectangle H 34.9684 | Rectangle V 1213.33 |  => Rectangle H
+composant_11 =>Rectangle H 34.4857 | Rectangle V 1213.59 |  => Rectangle H
+composant_12 =>Rectangle H 4320.61 | Rectangle V 3081.44 |  => Rectangle V
+composant_13 =>Rectangle H 4320.61 | Rectangle V 3081.44 |  => Rectangle V
+composant_14 =>Rectangle H 36.4011 | Rectangle V 1211.5 |  => Rectangle H
+composant_15 =>Rectangle H 41.0007 | Rectangle V 1207.23 |  => Cercle
+composant_16 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_17 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_18 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_19 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_20 =>Rectangle H 4320.61 | Rectangle V 3081.44 |  => Rectangle V
+composant_21 =>Rectangle H 4320.61 | Rectangle V 3081.44 |  => Rectangle V
+composant_22 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_23 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_24 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_25 =>Rectangle H 4665.08 | Rectangle V 3425.83 |  => Rectangle V
+composant_26 =>Rectangle H 34.3268 | Rectangle V 1212.93 |  => Rectangle H
+composant_27 =>Rectangle H 21.802 | Rectangle V 1225.3 |  => Rectangle H
+composant_28 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_29 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_30 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_31 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_32 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_33 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_34 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_35 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_36 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_37 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_38 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_39 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_40 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_41 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_42 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_43 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_44 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_45 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_46 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_47 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_48 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_49 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_50 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_51 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_52 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_53 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_54 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_55 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_56 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_57 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_58 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_59 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_60 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_61 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_62 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_63 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_64 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_65 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_66 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_67 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_68 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_69 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_70 =>Rectangle H 36.5096 | Rectangle V 1208.66 |  => Rectangle H
+composant_71 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_72 =>Rectangle H 53.3832 | Rectangle V 1191.22 |  => Cercle
+composant_73 =>Rectangle H 200.135 | Rectangle V 1044.6 |  => Cercle
+composant_74 =>Rectangle H 191.686 | Rectangle V 1052.78 |  => Cercle
+composant_75 =>Rectangle H 191.686 | Rectangle V 1052.78 |  => Cercle
+composant_76 =>Rectangle H 200.135 | Rectangle V 1044.6 |  => Cercle
+composant_77 =>Rectangle H 200.135 | Rectangle V 1044.6 |  => Cercle
