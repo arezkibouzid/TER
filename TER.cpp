@@ -41,7 +41,7 @@ double segma = 0;
 double Seuil = 100;
 int connexité = 8;
 
-string path_image = "FUN.png";
+string path_image = "FUN.tif";
 string path_image2 = "plz - Copie (2).PNG";
 
 void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub);
@@ -476,6 +476,7 @@ int main()
 
 	capture(capture_frame, path_image);
 	filter(capture_frame, threshold_frame);
+
 	connectedComponentsVector(threshold_frame, composants);
 
 	for (int i = 0; i < composants.size(); i++)
