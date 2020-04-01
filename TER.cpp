@@ -48,10 +48,10 @@ int connexité = 8;
 //
 // en moin 1 composant clasifier comme symbole qlq
 int C = 1;
-int NmbrSymbole = 4;
-int numImagesMaxParSymbole = 5;
+int NmbrSymbole = 22;
+int numImagesMaxParSymbole = 3;
 //
-string path_image = "FUN.tif";
+string path_image = "FUN2.tif";
 string path_image2 = "plz - Copie (2).PNG";
 
 void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub);
@@ -458,6 +458,12 @@ void classification();
 
 int main()
 {
+	std::error_code errorCode;
+	std::filesystem::path dir = fs::current_path();
+
+	std::filesystem::remove_all(dir / "CCs/", errorCode);
+	cout << errorCode.message() << endl;
+
 	readOrLoad(4, 9, ".png");
 
 	capture(capture_frame, path_image);
