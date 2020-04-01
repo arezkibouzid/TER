@@ -30,11 +30,11 @@ Mat Matlabled;
 // vecteur des composants connexes
 vector<CC> composants;
 
-// vecteur des gfd (vecteurs des caracteristiques)
+// vectors des gfd (vector's des characteristic)
 vector< vector<vector<float>>> vecteursCarPrim;
 vector<vector<float>> vecteursCar;
 
-// variable tompon
+// variable tampon
 vector<float> vectC;
 
 bool balance_flag = false;
@@ -46,16 +46,60 @@ double Seuil = 100;
 int connexité = 8;
 
 //
+int M = 4;
+int N = 9;
 // en moin 1 composant clasifier comme symbole qlq
 int C = 1;
 int NmbrSymbole = 22;
 int numImagesMaxParSymbole = 3;
 //
 string path_image = "FUN2.tif";
-string path_image2 = "plz - Copie (2).PNG";
 
-void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub);
+void capture(Mat& capture_frame, string path);
+inline bool exists(const std::string& name);
+void readOrLoad(int m, int n, String Extension);
+void symbolTocomposantGfd(Mat& mat, int m, int n);
+void filterNonInv(Mat& capture_frame, Mat& threshold_frame);
+void filter(Mat& capture_frame, Mat& threshold_frame);
+double distance(Point& p1, Point& p2);
+double ManhattanDistance(vector<float>& a, vector<float>& b);
+void circshift(Mat& out, const Point& delta);
+Point GetCentroid(Mat& img);
+void centreObject(Mat& img, Mat& centredImage);
+void CcToMat(CC cc, Mat& img);
+void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants);
+double GetExtrema(Mat& img, Point& center);
+vector<double> linspace(double min, double max, int n);
+
+static void meshgrid(const cv::Mat& xgv, const cv::Mat& ygv, cv::Mat1d& X, cv::Mat1d& Y);
+void GFD(CC& composant, Mat& centredImage, int m, int n);
+void CalculateGfdAndPushAllVectsCar(int m, int n);
+void classification();
+void clean_SomeShit();
+
 void drawComposant(CC& composant, Mat& sub);
+void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub);
+
+int main()
+{
+	clean_SomeShit();
+
+	readOrLoad(M, N, ".png");
+
+	capture(capture_frame, path_image);
+	filter(capture_frame, threshold_frame);
+
+	connectedComponentsVector(threshold_frame, composants);
+
+	CalculateGfdAndPushAllVectsCar(4, 9);
+
+	classification();
+
+	waitKey(0);
+
+	return 0;
+}
+
 void capture(Mat& capture_frame, string path) {
 	capture_frame = imread(path);
 }
@@ -64,8 +108,6 @@ inline bool exists(const std::string& name) {
 	struct stat buffer;
 	return (stat(name.c_str(), &buffer) == 0);
 }
-void readOrLoad(int m, int n, String Extension);
-void symbolTocomposantGfd(Mat& mat, int m, int n);
 
 void filterNonInv(Mat& capture_frame, Mat& threshold_frame) {
 	// capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
@@ -81,18 +123,6 @@ void filter(Mat& capture_frame, Mat& threshold_frame) {
 	GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
 	threshold(gaussian_frame, threshold_frame, Seuil, 255, cv::THRESH_BINARY_INV);
 	//imwrite("./bin.jpg", threshold_frame);
-}
-
-cv::Mat& filterFrame() {
-	return filter_frame;
-}
-
-cv::Mat& gaussianFrame() {
-	return gaussian_frame;
-}
-
-cv::Mat& thresholdFrame() {
-	return threshold_frame;
 }
 
 double distance(Point& p1, Point& p2)
@@ -283,11 +313,12 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 		composant.setMat(m);
 
 		composants.push_back(composant);
+
+		imwrite("./CCs/composant_" + to_string(i) + ".jpg", composant.getMat());
 	}
 }
 
 //still background
-
 double GetExtrema(Mat& img, Point& center) {
 	// Find contours
 	vector<vector<Point>> cnts;
@@ -454,37 +485,11 @@ void CalculateGfdAndPushAllVectsCar(int m, int n) {
 	}
 }
 
-void classification();
-
-int main()
-{
+void clean_SomeShit() {
 	std::error_code errorCode;
 	std::filesystem::path dir = fs::current_path();
 
 	std::filesystem::remove_all(dir / "CCs/", errorCode);
-	cout << errorCode.message() << endl;
-
-	readOrLoad(4, 9, ".png");
-
-	capture(capture_frame, path_image);
-	filter(capture_frame, threshold_frame);
-
-	connectedComponentsVector(threshold_frame, composants);
-
-	for (int i = 0; i < composants.size(); i++)
-	{
-		//namedWindow("composant : " + to_string(i), WINDOW_AUTOSIZE);
-		//imshow("composant : " + to_string(i), composants.at(i).getMat());
-		imwrite("./CCs/composant_" + to_string(i) + ".jpg", composants.at(i).getMat());
-	}
-
-	CalculateGfdAndPushAllVectsCar(4, 9);
-
-	classification();
-
-	waitKey(0);
-
-	return 0;
 }
 
 void drawComposant(CC& composant, Mat& sub) {
@@ -568,6 +573,7 @@ void classification() {
 	{
 		image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
 		drawComposantsClassifier(matriceCompClassifier.at(i), image);
+
 		imwrite("./CCs Classifier/" + items.at(i) + ".jpg", image);
 	}
 }
