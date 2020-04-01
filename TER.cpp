@@ -17,8 +17,7 @@ Mat train_data;
 Mat train_labels;
 Mat test_data;
 
-Mat capture_frame, filter_frame, balance_frame, gaussian_frame, threshold_frame, centredImage;
-Mat capture_frame2, filter_frame2, balance_frame2, gaussian_frame2, threshold_frame2, centredImage2;
+Mat capture_frame, filter_frame, gaussian_frame, threshold_frame, centredImage;
 
 vector<vector<CC>> matriceCompClassifier;
 
@@ -32,7 +31,7 @@ Mat Matlabled;
 vector<CC> composants;
 
 // vecteur des gfd (vecteurs des caracteristiques)
-vector<vector<float>> vecteursCarPrim;
+vector< vector<vector<float>>> vecteursCarPrim;
 vector<vector<float>> vecteursCar;
 
 // variable tompon
@@ -46,6 +45,12 @@ double segma = 0;
 double Seuil = 100;
 int connexité = 8;
 
+//
+// en moin 1 composant clasifier comme symbole qlq
+int C = 1;
+int NmbrSymbole = 4;
+int numImagesMaxParSymbole = 5;
+//
 string path_image = "FUN.tif";
 string path_image2 = "plz - Copie (2).PNG";
 
@@ -62,11 +67,18 @@ inline bool exists(const std::string& name) {
 void readOrLoad(int m, int n, String Extension);
 void symbolTocomposantGfd(Mat& mat, int m, int n);
 
+void filterNonInv(Mat& capture_frame, Mat& threshold_frame) {
+	// capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
+	cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
+	GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
+	threshold(gaussian_frame, threshold_frame, Seuil, 255, cv::THRESH_BINARY);
+	//imwrite("./bin.jpg", threshold_frame);
+}
+
 void filter(Mat& capture_frame, Mat& threshold_frame) {
 	// capture frame, convert to grayscale, apply Gaussian blur, apply balance (if applicable), and apply adaptive threshold method
 	cvtColor(capture_frame, filter_frame, COLOR_BGR2GRAY);
 	GaussianBlur(filter_frame, gaussian_frame, cv::Size(kernel_size, kernel_size), segma, segma);
-	// if (balance_flag) absdiff(gaussian_frame, balance_frame, gaussian_frame);
 	threshold(gaussian_frame, threshold_frame, Seuil, 255, cv::THRESH_BINARY_INV);
 	//imwrite("./bin.jpg", threshold_frame);
 }
@@ -432,6 +444,7 @@ void CalculateGfdAndPushAllVectsCar(int m, int n) {
 	// i=0 => background
 	for (int i = 1; i < composants.size(); i++)
 	{
+		cout << "calcul GFD Composant_" + to_string(i) << endl;
 		GFD(composants.at(i), centredImage, m, n);
 
 		//namedWindow("composantCentred : " + i, WINDOW_NORMAL);
@@ -444,39 +457,7 @@ void CalculateGfdAndPushAllVectsCar(int m, int n) {
 void classification();
 
 int main()
-{/*
-	capture(capture_frame, path_image);
-	filter(capture_frame, threshold_frame);
-
-	//capture(capture_frame2, path_image2);
-	//filter(capture_frame2, threshold_frame2);
-
-	namedWindow("threshold_frame", WINDOW_NORMAL);
-	imshow("threshold_frame", threshold_frame);
-
-	//namedWindow("threshold_frame2", WINDOW_AUTOSIZE);
-	//imshow("threshold_frame2", threshold_frame2);
-
-	connectedComponentsVector(threshold_frame, composants);
-
-	namedWindow("composants11", WINDOW_NORMAL);
-	imshow("composants11", composants.at(0).getMat());
-	namedWindow("composants22", WINDOW_NORMAL);
-	imshow("composants22", composants.at(1).getMat());
-
-	sub = sub.t();
-	namedWindow("sub", WINDOW_NORMAL);
-	imshow("sub", sub);
-
-	CalculateGfdAndPushAllVectsCar(3, 10);
-
-	for (int i = 0; i < vecteursCar.size() - 1; i++)
-	{
-		double diste = ManhattanDistance(vecteursCar.at(i), vecteursCar.at(i + 1));
-
-		cout << diste << endl;
-	}*/
-
+{
 	readOrLoad(4, 9, ".png");
 
 	capture(capture_frame, path_image);
@@ -494,16 +475,7 @@ int main()
 	CalculateGfdAndPushAllVectsCar(4, 9);
 
 	classification();
-	/*auto type = threshold_frame.type();
 
-	Mat Neww = cv::Mat::zeros(threshold_frame.size().height, threshold_frame.size().width, type);
-
-	drawComposantsClassifier(composants, Neww);
-
-	cout << composants.size() << " " << endl;
-
-	namedWindow("cnew", WINDOW_NORMAL);
-	imshow("cnew", Neww);*/
 	waitKey(0);
 
 	return 0;
@@ -534,13 +506,12 @@ void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
 void classification() {
 	std::ofstream out("./resultat.txt");
 
-	double min;
+	double min = 99999999;
 	int symbole;
-	double dist;
+	double dist = 999999;
 
 	matriceCompClassifier.clear();
 	int N = vecteursCarPrim.size();
-	int C = 1;
 	matriceCompClassifier.resize(N, std::vector<CC>(C));
 
 	for (int i = 0; i < vecteursCar.size(); i++)
@@ -548,13 +519,25 @@ void classification() {
 		cout << "composant_" << i + 1 << " =>";
 		out << "composant_" << i + 1 << " =>";
 		symbole = 0;
-		min = ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(0));
-		cout << items.at(0) << " " << min << " | ";
-		out << items.at(0) << " " << min << " | ";
-		for (int j = 1; j < vecteursCarPrim.size(); j++) {
-			dist = ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(j));
 
-			if (dist < min) {
+		for (int it = 0; it < vecteursCarPrim.at(0).size(); it++)
+		{
+			dist = std::min(dist, ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(0).at(it)));
+		}
+
+		cout << items.at(0) << " " << dist << " | ";
+		out << items.at(0) << " " << dist << " | ";
+
+		min = dist;
+
+		for (int j = 1; j < vecteursCarPrim.size(); j++) {
+			dist = 999999;
+			for (int it = 0; it < vecteursCarPrim.at(j).size(); it++)
+			{
+				dist = std::min(dist, ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(j).at(it)));
+			}
+
+			if (dist <= min) {
 				min = dist;
 				symbole = j;
 			}
@@ -585,36 +568,68 @@ void classification() {
 
 void readOrLoad(int m, int n, String Extension) {
 	items.clear();
+	String numS;
+	String path;
+	vecteursCarPrim.clear();
+	vecteursCarPrim.resize(NmbrSymbole, vector<std::vector<float>>(C));
 	for (auto& p : fs::directory_iterator("Symboles")) {
-		String path = "Symboles/" + p.path().filename().string() + "\/" + p.path().filename().string();
-
 		items.push_back(p.path().filename().string());
+		for (int num = 0; num < numImagesMaxParSymbole; num++)
+		{
+			numS = "_" + to_string(num);
+			path = "Symboles/" + p.path().filename().string() + "\/" + p.path().filename().string() + numS;
 
-		if (exists(path + ".txt")) {
-			std::ifstream file(path + ".txt");
+			if (!exists(path + Extension)) continue;
+			if (exists(path + ".txt")) {
+				std::ifstream file(path + ".txt");
 
-			std::string str;
+				std::string str;
 
-			std::getline(file, str);
-			std::istringstream iss(str);
-			int a, b;
-
-			if (!(iss >> a >> b)) { break; }
-
-			if (a == m & b == n) {
 				std::getline(file, str);
+				std::istringstream iss(str);
+				int a, b;
 
-				int pos = 0;
-				std::string token;
-				string delimiter = " ";
-				vector<float> vect;
+				if (!(iss >> a >> b)) { break; }
 
-				while ((pos = str.find(delimiter)) != std::string::npos) {
-					token = str.substr(0, pos);
-					vect.push_back(stod(token));
-					str.erase(0, pos + delimiter.length());
+				if (a == m & b == n) {
+					std::getline(file, str);
+
+					int pos = 0;
+					std::string token;
+					string delimiter = " ";
+					vector<float> vect;
+
+					while ((pos = str.find(delimiter)) != std::string::npos) {
+						token = str.substr(0, pos);
+						vect.push_back(stod(token));
+						str.erase(0, pos + delimiter.length());
+					}
+					vecteursCarPrim.at(items.size() - 1).emplace_back(vect);
 				}
-				vecteursCarPrim.push_back(vect);
+				else
+				{
+					std::ofstream outfile(path + ".txt");
+					int a = 0;
+					int b = 0;
+					outfile << m << " " << n << std::endl;
+
+					Mat symbole;
+					capture(symbole, path + Extension);
+
+					cout << "calcul GFD du Symbole " + items.at(items.size() - 1) << endl;
+					symbolTocomposantGfd(symbole, m, n);
+
+					String str;
+					vector<float>& ptr_vect = vectC;
+					for (int i = 0; i < vectC.size(); i++)
+					{
+						str += to_string(ptr_vect.at(i)) + " ";
+					}
+					outfile << str;
+
+					outfile.close();
+					vecteursCarPrim.at(items.size() - 1).emplace_back(ptr_vect);
+				}
 			}
 			else
 			{
@@ -626,6 +641,7 @@ void readOrLoad(int m, int n, String Extension) {
 				Mat symbole;
 				capture(symbole, path + Extension);
 
+				cout << "calcul GFD du Symbole " + items.at(items.size() - 1) << endl;
 				symbolTocomposantGfd(symbole, m, n);
 
 				String str;
@@ -637,31 +653,8 @@ void readOrLoad(int m, int n, String Extension) {
 				outfile << str;
 
 				outfile.close();
-				vecteursCarPrim.push_back(ptr_vect);
+				vecteursCarPrim.at(items.size() - 1).emplace_back(ptr_vect);
 			}
-		}
-		else
-		{
-			std::ofstream outfile(path + ".txt");
-			int a = 0;
-			int b = 0;
-			outfile << m << " " << n << std::endl;
-
-			Mat symbole;
-			capture(symbole, path + Extension);
-
-			symbolTocomposantGfd(symbole, m, n);
-
-			String str;
-			vector<float>& ptr_vect = vectC;
-			for (int i = 0; i < vectC.size(); i++)
-			{
-				str += to_string(ptr_vect.at(i)) + " ";
-			}
-			outfile << str;
-
-			outfile.close();
-			vecteursCarPrim.push_back(ptr_vect);
 		}
 	}
 }
@@ -669,7 +662,7 @@ void readOrLoad(int m, int n, String Extension) {
 void symbolTocomposantGfd(Mat& mat, int m, int n) {
 	Mat symbolecentred;
 
-	filter(mat, mat);
+	filterNonInv(mat, mat);
 
 	CC composant;
 	composant.setId_label(-1);
