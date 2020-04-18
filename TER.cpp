@@ -5,7 +5,11 @@
 #include <filesystem>
 #include"math.h"
 #include "CC.h"
+#include "FRHistogram_Desc.c"
 
+#include <stdio.h>
+
+#define _CRT_SECURE_NO_DEPRECATE
 #define M_PI 3.14159265358979323846
 
 using namespace std;
@@ -23,7 +27,8 @@ vector<vector<CC>> matriceCompClassifier;
 
 // vecteur des symoboles
 vector<String> items;
-
+// vecteur des distnaces
+vector<double> distances;
 //matrice avec des labels des composants connexes
 Mat Matlabled;
 
@@ -43,6 +48,7 @@ int block_size = 3;
 int c = 0;
 double segma = 0;
 double Seuil = 100;
+int Seuil_distance = 95;
 int connexité = 8;
 
 //
@@ -76,24 +82,31 @@ void GFD(CC& composant, Mat& centredImage, int m, int n);
 void CalculateGfdAndPushAllVectsCar(int m, int n);
 void classification();
 void clean_SomeShit();
+vector<double>::iterator closest(std::vector<double>& vec, double value);
 
 void drawComposant(CC& composant, Mat& sub);
 void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub);
 
 int main()
 {
-	clean_SomeShit();
+	char res[100] = "./Script/ress.txt";
+	char image1[100] = "./Script/A1c.pgm";
+	char image2[100] = "./Script/B1c.pgm";
+	FRHistogram(res, 180.0, 0.0, 0.0, 0.1, image1, image2);
 
-	readOrLoad(M, N, ".png");
+	return 1;
+	/*	clean_SomeShit();
 
-	capture(capture_frame, path_image);
-	filter(capture_frame, threshold_frame);
+		readOrLoad(M, N, ".png");
 
-	connectedComponentsVector(threshold_frame, composants);
+		capture(capture_frame, path_image);
+		filter(capture_frame, threshold_frame);
 
-	CalculateGfdAndPushAllVectsCar(4, 9);
+		connectedComponentsVector(threshold_frame, composants);
 
-	classification();
+		CalculateGfdAndPushAllVectsCar(4, 9);
+
+		classification();*/
 
 	waitKey(0);
 
@@ -519,6 +532,7 @@ void classification() {
 
 	double min = 99999999;
 	int symbole;
+	double max = -999999;
 	double dist = 999999;
 
 	matriceCompClassifier.clear();
@@ -529,6 +543,7 @@ void classification() {
 	{
 		cout << "composant_" << i + 1 << " =>";
 		out << "composant_" << i + 1 << " =>";
+		distances.clear();
 		symbole = 0;
 
 		for (int it = 0; it < vecteursCarPrim.at(0).size(); it++)
@@ -538,11 +553,13 @@ void classification() {
 
 		cout << items.at(0) << " " << dist << " | ";
 		out << items.at(0) << " " << dist << " | ";
-
+		distances.emplace_back(dist);
+		max = dist;
 		min = dist;
 
 		for (int j = 1; j < vecteursCarPrim.size(); j++) {
 			dist = 999999;
+
 			for (int it = 0; it < vecteursCarPrim.at(j).size(); it++)
 			{
 				dist = std::min(dist, ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(j).at(it)));
@@ -552,15 +569,20 @@ void classification() {
 				min = dist;
 				symbole = j;
 			}
+			if (max <= dist) {
+				max = dist;
+			}
 
 			cout << items.at(j) << " " << dist << " | ";
 			out << items.at(j) << " " << dist << " | ";
+			distances.emplace_back(dist);
 		}
-		cout << " => " << min;
-		out << " => " << min;
-
-		cout << " => " << items.at(symbole);
-		out << " => " << items.at(symbole);
+		std::sort(distances.begin(), distances.end());
+		vector<double>::iterator itelt = closest(distances, min + ((100 - Seuil_distance) * max / 100));
+		cout << " => " << *itelt;
+		out << " => " << *itelt;
+		cout << " => " << items.at(itelt - distances.begin());
+		out << " => " << items.at(itelt - distances.begin());
 
 		cout << endl;
 		out << endl;
@@ -576,6 +598,19 @@ void classification() {
 
 		imwrite("./CCs Classifier/" + items.at(i) + ".jpg", image);
 	}
+}
+
+vector<double>::iterator closest(std::vector<double>& vec, double value) {
+	vector<double>::iterator ite = std::find(vec.begin(), vec.end(), value);
+	if (ite != vec.end()) return ite;
+	auto const it = std::lower_bound(vec.begin(), vec.end(), value);
+	if (it == vec.end()) {
+		auto const it = std::upper_bound(vec.begin(), vec.end(), value);
+		if (it != vec.end()) return it;
+		return it;
+	}
+
+	return it;
 }
 
 void readOrLoad(int m, int n, String Extension) {

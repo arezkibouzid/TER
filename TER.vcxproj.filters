@@ -18,6 +18,9 @@
     <ClCompile Include="TER.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="FRHistogram_Desc.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="C:\Users\Arezki Bouzid\Desktop\Sans titre.png">
