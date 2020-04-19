@@ -6,11 +6,15 @@
 #include"math.h"
 #include "CC.h"
 #include "FRHistogram_Desc.c"
-
+#include <iostream>
 #include <stdio.h>
+#include <io.h>
 
 #define _CRT_SECURE_NO_DEPRECATE
 #define M_PI 3.14159265358979323846
+#define  MAX_DOUBLE 99999999999999999
+#define  MAX_WIDTH_PGM 100
+#define  MAX_HEIGHT_PGM 100
 
 using namespace std;
 using namespace cv;
@@ -39,6 +43,9 @@ vector<CC> composants;
 vector< vector<vector<float>>> vecteursCarPrim;
 vector<vector<float>> vecteursCar;
 
+// matricec dist
+vector<double**> Mat_distances;
+
 // variable tampon
 vector<float> vectC;
 
@@ -48,21 +55,29 @@ int block_size = 3;
 int c = 0;
 double segma = 0;
 double Seuil = 100;
-int Seuil_distance = 95;
+int Seuil_distance = 100;
 int connexité = 8;
+
+int numberOfDirections = 180;
+int directionsLignesDetect = 8; // 4 ou 8 (+ diago)
+double rdep = 0.0;
+double rfin = 0.0;
+double rpas = 0.1;
+double Seuil_similarity_ratio = 0.5;
 
 //
 int M = 4;
 int N = 9;
 // en moin 1 composant clasifier comme symbole qlq
 int C = 1;
-int NmbrSymbole = 22;
+int NmbrSymbole = 4;
 int numImagesMaxParSymbole = 3;
 //
-string path_image = "FUN2.tif";
+string path_image = "testRapide1.tif";
 
 void capture(Mat& capture_frame, string path);
 inline bool exists(const std::string& name);
+void funcGenerale();
 void readOrLoad(int m, int n, String Extension);
 void symbolTocomposantGfd(Mat& mat, int m, int n);
 void filterNonInv(Mat& capture_frame, Mat& threshold_frame);
@@ -76,41 +91,108 @@ void CcToMat(CC cc, Mat& img);
 void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants);
 double GetExtrema(Mat& img, Point& center);
 vector<double> linspace(double min, double max, int n);
+void generate_Mat_distances();
+
+int* near_2Composantes(int indexSymbole, int indexCCAccu);
 
 static void meshgrid(const cv::Mat& xgv, const cv::Mat& ygv, cv::Mat1d& X, cv::Mat1d& Y);
 void GFD(CC& composant, Mat& centredImage, int m, int n);
 void CalculateGfdAndPushAllVectsCar(int m, int n);
 void classification();
 void clean_SomeShit();
+void CC2PGM(CC& composant, String path);
 vector<double>::iterator closest(std::vector<double>& vec, double value);
 
+void CompClassifier2PGM(string path, string symbolename, vector<CC>& composantsDejaclassifier);
+
 void drawComposant(CC& composant, Mat& sub);
+void fill_Vector_mat_distances();
 void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub);
+double* calcul_Histogram(string path_res, string path_image1, string path_image2);
+double similarity_ratio(double* histo1, double* histo2);
+double distance2CC(CC& CC1, CC& CC2);
+void funcGenerale();
 
 int main()
 {
-	char res[100] = "./Script/ress.txt";
-	char image1[100] = "./Script/A1c.pgm";
-	char image2[100] = "./Script/B1c.pgm";
-	FRHistogram(res, 180.0, 0.0, 0.0, 0.1, image1, image2);
+	string res = "./Script/ress.txt";
+	string image1 = "./Script/A1c.pgm";
+	string image2 = "./Script/B1c.pgm";
 
-	return 1;
-	/*	clean_SomeShit();
+	double* histo = calcul_Histogram(res, image1, image2);
+	double* histo1 = calcul_Histogram(res, image2, image1);
 
-		readOrLoad(M, N, ".png");
+	cout << similarity_ratio(histo, histo1);
 
-		capture(capture_frame, path_image);
-		filter(capture_frame, threshold_frame);
+	clean_SomeShit();
 
-		connectedComponentsVector(threshold_frame, composants);
+	readOrLoad(M, N, ".png");
 
-		CalculateGfdAndPushAllVectsCar(4, 9);
+	capture(capture_frame, path_image);
+	filter(capture_frame, threshold_frame);
 
-		classification();*/
+	connectedComponentsVector(threshold_frame, composants);
+
+	CalculateGfdAndPushAllVectsCar(4, 9);
+
+	classification();
+
+	funcGenerale();
+
+	for (int index = 0; index < Mat_distances.size(); index++)
+	{
+		for (int i = 0; i < matriceCompClassifier.at(index).size(); i++)
+		{
+			cout << endl;
+			for (int j = 0; j < matriceCompClassifier.at(index).size(); j++)
+			{
+				cout << Mat_distances[index][i][j] << " ";
+			}
+		}
+	}
 
 	waitKey(0);
 
 	return 0;
+}
+
+double* calcul_Histogram(string path_res, string path_image1, string path_image2) {
+	char res[100];
+	char image1[100];
+	char image2[100];
+
+	strcpy(res, path_res.c_str());
+	strcpy(image1, path_image1.c_str());
+	strcpy(image2, path_image2.c_str());
+	double* histo = FRHistogram(res, numberOfDirections, rdep, rfin, rpas, image1, image2);
+
+	return histo;
+}
+
+double similarity_ratio(double* histo1, double* histo2) {
+	vector<double> histo_1(histo1, histo1 + numberOfDirections);
+	vector<double> histo_2(histo2, histo2 + numberOfDirections);
+	double sumMin = 0.0;
+	double sumMax = 0.0;
+
+	double max_norm_1 = 0;
+	double max_norm_2 = 0;
+	for (int i = 0; i < histo_1.size() - 1; i++)
+	{
+		max_norm_1 += max(histo_2[i], histo_2[i + 1]);
+		max_norm_2 += max(histo_1[i], histo_1[i + 1]);
+	}
+
+	double max;
+	max = std::max(max_norm_1, max_norm_2);
+
+	for (int i = 0; i < histo_1.size(); i++)
+	{
+		sumMin += min(histo_1[i] / max, histo_2[i] / max);
+		sumMax += std::max(histo_1[i] / max, histo_2[i] / max);
+	}
+
+	return sumMin / sumMax;
 }
 
 void capture(Mat& capture_frame, string path) {
@@ -503,6 +585,7 @@ void clean_SomeShit() {
 	std::filesystem::path dir = fs::current_path();
 
 	std::filesystem::remove_all(dir / "CCs/", errorCode);
+	std::filesystem::remove_all(dir / "PGM Files/", errorCode);
 }
 
 void drawComposant(CC& composant, Mat& sub) {
@@ -530,10 +613,10 @@ void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
 void classification() {
 	std::ofstream out("./resultat.txt");
 
-	double min = 99999999;
+	double min = MAX_DOUBLE;
 	int symbole;
-	double max = -999999;
-	double dist = 999999;
+	double max = -MAX_DOUBLE;
+	double dist = MAX_DOUBLE;
 
 	matriceCompClassifier.clear();
 	int N = vecteursCarPrim.size();
@@ -558,7 +641,7 @@ void classification() {
 		min = dist;
 
 		for (int j = 1; j < vecteursCarPrim.size(); j++) {
-			dist = 999999;
+			dist = MAX_DOUBLE;
 
 			for (int it = 0; it < vecteursCarPrim.at(j).size(); it++)
 			{
@@ -581,8 +664,9 @@ void classification() {
 		vector<double>::iterator itelt = closest(distances, min + ((100 - Seuil_distance) * max / 100));
 		cout << " => " << *itelt;
 		out << " => " << *itelt;
-		cout << " => " << items.at(itelt - distances.begin());
-		out << " => " << items.at(itelt - distances.begin());
+
+		cout << " => " << items.at((Seuil_distance != 100) ? (itelt - distances.begin()) : symbole);
+		out << " => " << items.at((Seuil_distance != 100) ? (itelt - distances.begin()) : symbole);
 
 		cout << endl;
 		out << endl;
@@ -593,10 +677,196 @@ void classification() {
 	Mat image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
 	for (int i = 0; i < matriceCompClassifier.size(); i++)
 	{
+		string path = "PGM Files/" + items.at(i);
+		fs::create_directories(path);
+		CompClassifier2PGM(path, items.at(i), matriceCompClassifier.at(i));
 		image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
 		drawComposantsClassifier(matriceCompClassifier.at(i), image);
-
 		imwrite("./CCs Classifier/" + items.at(i) + ".jpg", image);
+	}
+}
+
+int* near_2Composantes(int indexSymbole, int indexCCAccu) {
+	double temp = MAX_DOUBLE;
+	int pos1 = -1, pos2 = -1;
+
+	for (int j = 0; j < matriceCompClassifier.at(indexSymbole).size(); j++)
+	{
+		if (temp > Mat_distances[indexSymbole][indexCCAccu][j] && Mat_distances[indexSymbole][indexCCAccu][j] != -1) {
+			temp = Mat_distances[indexSymbole][indexCCAccu][j];
+			pos1 = j;
+		}
+	}
+
+	double min = temp;
+	temp = MAX_DOUBLE;
+
+	for (int j = 0; j < matriceCompClassifier.at(indexSymbole).size(); j++)
+	{
+		if (temp > Mat_distances[indexSymbole][indexCCAccu][j] && Mat_distances[indexSymbole][indexCCAccu][j] != -1) {
+			if (Mat_distances[indexSymbole][indexCCAccu][j] == min) {
+				if (j != pos1) {
+					temp = Mat_distances[indexSymbole][indexCCAccu][j];
+					pos2 = j;
+					break;
+				}
+				else continue;
+			}
+			else {
+				temp = Mat_distances[indexSymbole][indexCCAccu][j];
+				pos2 = j;
+			}
+		}
+	}
+
+	int* c = new int[2];
+	c[0] = pos1;
+	c[1] = pos2;
+	return c;
+}
+
+bool non_attribut_line(CC& c) {
+	if (c.getLine() == -1) return true;
+	return false;
+}
+
+void generate_Mat_distances() {
+	for (int i = 0; i < matriceCompClassifier.size(); i++)
+	{
+		Mat_distances.push_back(new double* [matriceCompClassifier.at(i).size()]);
+		for (int j = 0; j < matriceCompClassifier.at(i).size(); j++)
+		{
+			Mat_distances[i][j] = new double[matriceCompClassifier.at(i).size()];
+		}
+	}
+	fill_Vector_mat_distances();
+}
+
+double distance2CC(CC& CC1, CC& CC2) {
+	if (CC1.getMat().empty() || CC2.getMat().empty()) return -1.0;
+	Point p_debut_CC1 = CC1.getPtr_debut();
+	Point p_debut_CC2 = CC2.getPtr_debut();
+	int dx_p_debut_CC1 = CC1.getdX();
+	int dy_p_debut_CC1 = CC1.getdY();
+
+	int dx_p_debut_CC2 = CC2.getdX();
+	int dy_p_debut_CC2 = CC2.getdY();
+
+	Point p_fin_cc2_h = Point(p_debut_CC2.x + dx_p_debut_CC2, p_debut_CC2.y);
+	Point p_fin_cc2_v = Point(p_debut_CC2.x, p_debut_CC2.y + dy_p_debut_CC2);
+	Point p_fin_cc2_hv = Point(p_debut_CC2.x + dx_p_debut_CC2, p_debut_CC2.y + dy_p_debut_CC2);
+
+	Point p_fin_cc1_h = Point(p_debut_CC1.x + dx_p_debut_CC1, p_debut_CC1.y);
+	Point p_fin_cc1_v = Point(p_debut_CC1.x, p_debut_CC1.y + dy_p_debut_CC1);
+	Point p_fin_cc1_hv = Point(p_debut_CC1.x + dx_p_debut_CC1, p_debut_CC1.y + dy_p_debut_CC1);
+
+	double tab[8];
+
+	tab[0] = distance(p_debut_CC1, p_fin_cc2_h);
+	tab[1] = distance(p_debut_CC1, p_fin_cc2_v);
+	tab[2] = distance(p_fin_cc1_v, p_fin_cc2_hv);
+	tab[3] = distance(p_fin_cc1_v, p_debut_CC2);
+
+	tab[4] = distance(p_fin_cc1_h, p_debut_CC2);
+	tab[5] = distance(p_fin_cc1_h, p_fin_cc2_hv);
+
+	tab[6] = distance(p_fin_cc1_hv, p_fin_cc2_v);
+	tab[7] = distance(p_fin_cc1_hv, p_fin_cc2_h);
+
+	return *min_element(tab, tab + 8);
+}
+
+void fill_mat_distances(int index) {
+	for (int i = 0; i < matriceCompClassifier.at(index).size(); i++)
+	{
+		for (int j = 0; j < matriceCompClassifier.at(index).size(); j++)
+		{
+			Mat_distances[index][i][j] = -1;
+			if (i != j)
+				Mat_distances[index][i][j] = distance2CC(matriceCompClassifier.at(index).at(i), matriceCompClassifier.at(index).at(j));
+		}
+	}
+}
+void fill_Vector_mat_distances() {
+	for (int i = 0; i < Mat_distances.size(); i++)
+	{
+		fill_mat_distances(i);
+	}
+}
+
+bool still_CC_No_Classifie(vector<CC>& vect) {
+	for (int i = 0; i < vect.size(); i++)
+	{
+		if (vect.at(i).getLine() == -1)return true;
+	}
+	return false;
+}
+
+void classifier_ligne(vector<CC>& vect, int indexCC, int* arry, int symbole, int idline) {
+	string path_res_1 = "./PGM Files/" + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(arry[0]) + ".txt";
+	string path_res_2 = "./PGM Files/" + items.at(symbole) + "_" + to_string(arry[0]) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt";
+	string path_image_1 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(indexCC) + ".pgm";
+	string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(arry[0]) + ".pgm";
+	string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(arry[1]) + ".pgm";
+
+	if (non_attribut_line(vect.at(arry[0])) && non_attribut_line(vect.at(arry[1]))) {
+		double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
+		double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
+		double d = similarity_ratio(histo_1, histo_2);
+		if (d >= Seuil_similarity_ratio) {
+			vect.at(arry[0]).setLine(idline);
+			vect.at(arry[1]).setLine(idline);
+		}
+		else {
+			idline++;
+		}
+	}
+	else {
+		non_attribut_line(vect.at(arry[0])) ? vect.at(arry[0]).setLine(idline) : vect.at(arry[1]).setLine(idline);
+	}
+	/*if (still_CC_No_Classifie(vect)) {
+		int* arr_1 = near_2Composantes(symbole, arry[0]);
+		int* arr_2 = near_2Composantes(symbole, arry[1]);
+		classifier_ligne(vect, arry[0], arr_1, symbole, idline);
+		classifier_ligne(vect, arry[1], arr_2, symbole, idline);
+	}*/
+}
+
+void funcGenerale() {
+	generate_Mat_distances();
+
+	int numClass = 0;
+	for (int i = 0; i < matriceCompClassifier.size(); i++)
+	{
+		numClass = 0;
+		//evitre
+		for (int indexCCAccu = 1; indexCCAccu < matriceCompClassifier.at(i).size(); indexCCAccu++)
+		{
+			int* arr = near_2Composantes(i, indexCCAccu);
+
+			// still propagation
+			classifier_ligne(matriceCompClassifier.at(i), indexCCAccu, arr, i, numClass);
+			numClass++;
+		}
+	}
+}
+
+void CompClassifier2PGM(string path, string symbolename, vector<CC>& composantsDejaclassifier) {
+	for (int i = 0; i < composantsDejaclassifier.size(); i++)
+	{
+		CC2PGM(composantsDejaclassifier.at(i), path + "/" + symbolename + "_" + to_string(i) + ".pgm");
+	}
+}
+void CC2PGM(CC& composant, String path) {
+	vector<int> compression_params;
+	compression_params.push_back(IMWRITE_PXM_BINARY);
+	compression_params.push_back(0);
+	Mat dst;
+	if (!composant.getMat().empty()) {
+		Size size(MAX_WIDTH_PGM, MAX_HEIGHT_PGM);
+		resize(composant.getMat(), dst, size);
+
+		imwrite(path, dst, compression_params);
 	}
 }
 
@@ -717,6 +987,7 @@ void symbolTocomposantGfd(Mat& mat, int m, int n) {
 	composant.setdY(mat.size().height);
 	Point centroid((int)mat.size().width / 2, (int)mat.size().height / 2);
 	composant.setCentroid(centroid);
+	composant.setLine(-1);
 	composant.setPtr_debut(Point(0, 0));
 	composant.setMat(mat);
 

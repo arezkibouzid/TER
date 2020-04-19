@@ -68,6 +68,7 @@ void FRHistogram_CrispRaster(double* histogram,
 	int numberDirections, double typeForce,
 	unsigned char* imageA, unsigned char* imageB,
 	int width, int height);
+double* FRHistogram(char nameHistogramFile[100], int numberOfDirections, double rdeb, double rfin, double rpas, char nameImageA[100], char nameImageB[100]);
 static void Cree_Tab_ln(double* Tab, int Xsize);
 
 static void Bresenham_X(int x1, int y1, int x2, int y2,
@@ -2027,11 +2028,11 @@ void FRHistogram_CrispRaster(double* histogram,
 	}
 }
 
-void  FRHistogram(char nameHistogramFile[100], int numberOfDirections, double rdeb, double rfin, double rpas, char nameImageA[100], char nameImageB[100]) {
+double* FRHistogram(char nameHistogramFile[100], int numberOfDirections, double rdeb, double rfin, double rpas, char nameImageA[100], char nameImageB[100]) {
 	FILE* histogramFile;
 	unsigned char* imageA, * imageB;
 
-	int i, j, widthA, heightA, widthB, heightB, fuzzyMethod;
+	int i, j, widthA, heightA, widthB, heightB;
 	double* histogram, typeForce, p0, p1;
 	double PhiDesc[NBDesc][NBMaxDir];
 	int choice;
@@ -2085,18 +2086,25 @@ void  FRHistogram(char nameHistogramFile[100], int numberOfDirections, double rd
 
 	for (typeForce = rdeb; typeForce <= rfin; typeForce += rpas)
 	{
-		for (i = 0; i <= numberOfDirections; histogram[i++] = 0); // do while pour éviter une de plus...
+		i = 0;
+
+		do
+		{
+			histogram[i] = 0;
+			i++;
+		} while (i < numberOfDirections);
 		FRHistogram_CrispRaster(histogram, numberOfDirections, typeForce, imageA, imageB, widthA, heightA);
 		fprintf(histogramFile, "Force %lf ", typeForce);
 		fprintf(histogramFile, "NBDIR %d\n", numberOfDirections);
-		for (i = 0; i <= numberOfDirections; i++)
+		for (i = 0; i < numberOfDirections; i++)
 			fprintf(histogramFile, "%f ", histogram[i]);
 		fprintf(histogramFile, "\n");
 	}
 
 	fclose(histogramFile);
 
-	free(histogram);
+	//free(histogram);
 	free(imageA);
 	free(imageB);
+	return histogram;
 }
