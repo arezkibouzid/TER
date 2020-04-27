@@ -1,4 +1,4 @@
-composant_1 =>Cercle 41.3991 | Ractangle V Empty 54.5614 | Rectangle H 21.1924 | Rectangle V 54.5614 |  => 21.1924 => Rectangle H
-composant_2 =>Cercle 40.6507 | Ractangle V Empty 40.6507 | Rectangle H 7.50206 | Rectangle V 40.6507 |  => 7.50206 => Rectangle H
-composant_3 =>Cercle 33.9312 | Ractangle V Empty 33.9312 | Rectangle H 1.6259 | Rectangle V 33.9312 |  => 1.6259 => Rectangle H
-composant_4 =>Cercle 33.9312 | Ractangle V Empty 37.2697 | Rectangle H 3.82892 | Rectangle V 37.2697 |  => 3.82892 => Rectangle H
+composant_1 =>Cercle 40.6507 | Ractangle V Empty 40.6507 | Rectangle H 7.50206 | Rectangle V 40.6507 |  => 7.50206 => Rectangle H
+composant_2 =>Cercle 33.9312 | Ractangle V Empty 33.9312 | Rectangle H 1.6259 | Rectangle V 33.9312 |  => 1.6259 => Rectangle H
+composant_3 =>Cercle 33.9312 | Ractangle V Empty 37.2697 | Rectangle H 3.82892 | Rectangle V 37.2697 |  => 3.82892 => Rectangle H
+composant_4 =>Cercle 30.9838 | Ractangle V Empty 30.9838 | Rectangle H 4.74509 | Rectangle V 30.9838 |  => 4.74509 => Rectangle H

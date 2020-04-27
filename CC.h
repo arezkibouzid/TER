@@ -12,7 +12,6 @@ private:
 	int id_label;
 	int dX;
 	int dY;
-	int line = -1;
 	Mat mat;
 
 protected:
@@ -25,7 +24,6 @@ public:
 	int getId_label() { return id_label; }
 	int getdX() { return dX; }
 	int getdY() { return dY; }
-	int getLine() { return line; }
 
 	Mat& getMat() { return mat; }
 
@@ -35,6 +33,5 @@ public:
 	void setId_label(int id) { id_label = id; }
 	void setdX(int x) { dX = x; }
 	void setdY(int y) { dY = y; }
-	void setLine(int l) { line = l; }
 	void setMat(Mat m) { mat = m; }
 };
