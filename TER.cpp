@@ -13,8 +13,8 @@
 #define _CRT_SECURE_NO_DEPRECATE
 #define M_PI 3.14159265358979323846
 #define  MAX_DOUBLE 99999999999999999
-#define  MAX_WIDTH_PGM 100
-#define  MAX_HEIGHT_PGM 100
+#define  MAX_WIDTH_PGM 1000
+#define  MAX_HEIGHT_PGM 1000
 
 using namespace std;
 using namespace cv;
@@ -59,7 +59,7 @@ int Seuil_distance = 100;
 int connexité = 8;
 
 int numberOfDirections = 180;
-int directionsLignesDetect = 8; // 4 ou 8 (+ diago)
+
 double rdep = 0.0;
 double rfin = 0.0;
 double rpas = 0.1;
@@ -671,7 +671,9 @@ void classification() {
 	for (int i = 0; i < matriceCompClassifier.size(); i++)
 	{
 		string path = "PGM Files/" + items.at(i);
+		string path2 = path + "/Lines/";
 		fs::create_directories(path);
+		fs::create_directories(path2);
 		CompClassifier2PGM(path, items.at(i), matriceCompClassifier.at(i));
 		image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
 		drawComposantsClassifier(matriceCompClassifier.at(i), image);
@@ -682,7 +684,7 @@ void classification() {
 int* near_4Composantes(int indexSymbole, int indexCCAccu) {
 	double temp = MAX_DOUBLE;
 	int pos1 = -1, pos2 = -1, pos3 = -1, pos4 = -1;
-	double firstmin, secmin, thirdmin, fourthmin = MAX_DOUBLE;
+	double firstmin = MAX_DOUBLE, secmin = MAX_DOUBLE, thirdmin = MAX_DOUBLE, fourthmin = MAX_DOUBLE;
 
 	for (int j = 0; j < matriceCompClassifier.at(indexSymbole).size(); j++)
 	{
@@ -719,11 +721,12 @@ int* near_4Composantes(int indexSymbole, int indexCCAccu) {
 		}
 	}
 
-	int* c = new int[2];
+	int* c = new int[4];
 	c[0] = pos1;
 	c[1] = pos2;
 	c[2] = pos3;
 	c[3] = pos4;
+
 	return c;
 }
 
@@ -791,7 +794,7 @@ void fill_Vector_mat_distances() {
 	}
 }
 
-bool exist(vector<CC> vect_composants, int indexCC, int symbole) {
+bool exist(vector<CC>& vect_composants, int indexCC, int symbole) {
 	return std::find(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)) != vect_composants.end();
 }
 void classifier_ligne(int indexCC, int symbole) {
@@ -826,6 +829,8 @@ void classifier_ligne(int indexCC, int symbole) {
 			drawComposant_ligne(matriceCompClassifier.at(symbole).at(b), image, 0, 0, 255);
 			drawComposant_ligne(matriceCompClassifier.at(symbole).at(c), image, 0, 0, 255);
 
+			image = image.t();
+
 			//save .jpg
 			string name_image = items.at(symbole) + "[" + to_string(indexCC) + "_" + to_string(b) + "_" + to_string(c) + "]";
 			imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
@@ -834,18 +839,108 @@ void classifier_ligne(int indexCC, int symbole) {
 			vector<int> compression_params;
 			compression_params.push_back(IMWRITE_PXM_BINARY);
 			compression_params.push_back(0);
-			imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".pgm", image, compression_params);
+			cvtColor(image, image, COLOR_RGB2GRAY);
+			string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
+			imwrite(path + name_image + ".pgm", image, compression_params);
+
+			propagation(vect_composants, name_image, b, c, symbole);
 		}
 	}
 }
 
+void propagation(vector<CC>& vect_composants, string name_image_without_Ex, int b, int c, int symbole) {
+	int* arry_1 = near_4Composantes(symbole, b);
+	int* arry_2 = near_4Composantes(symbole, c);
+	int b, c;
+	string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
+	//priority to b
+	if (Mat_distances[symbole][b][arry_1[0]] < Mat_distances[symbole][c][arry_2[0]]) {
+		if (exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole)) {
+			b = arry_1[0]; c = arry_1[1];
+		}
+		else if (Mat_distances[symbole][b][arry_1[2]] < Mat_distances[symbole][c][arry_2[0]]) {
+			if (exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole)) {
+				b = arry_1[2]; c = arry_1[3];
+			}
+			else if (exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole))
+			{
+				b = arry_2[0]; c = arry_2[1];
+			}
+			else if (exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole))
+			{
+				b = arry_2[2]; c = arry_2[3];
+			}
+			else return;
+		}
+	}
+	//priority to c
+	else {
+		if (exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole)) {
+			b = arry_2[0]; c = arry_2[1];
+		}
+		else if (Mat_distances[symbole][b][arry_2[2]] < Mat_distances[symbole][c][arry_1[0]]) {
+			if (exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole)) {
+				b = arry_2[2]; c = arry_2[3];
+			}
+			else if (exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole))
+			{
+				b = arry_1[0]; c = arry_1[1];
+			}
+			else if (exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole))
+			{
+				b = arry_1[2]; c = arry_1[3];
+			}
+			else return;
+		}
+	}
+
+	if (b == -1 || c == -1) return;
+
+	string path_res_1 = "./PGM Files/" + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
+	string path_res_2 = "./PGM Files/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt";
+	string path_image_1 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + name_image_without_Ex + ".pgm";
+	string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
+	string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
+
+	double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
+	double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
+	double d = similarity_ratio(histo_1, histo_2);
+
+	if (d >= Seuil_similarity_ratio) {
+		//vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)), vect_composants.end());
+		vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(b)), vect_composants.end());
+		vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(c)), vect_composants.end());
+		Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+
+		// draw 3 composants
+		drawComposant_ligne(matriceCompClassifier.at(symbole).at(indexCC), image, 0, 255, 0);
+		drawComposant_ligne(matriceCompClassifier.at(symbole).at(b), image, 0, 0, 255);
+		drawComposant_ligne(matriceCompClassifier.at(symbole).at(c), image, 0, 0, 255);
+
+		image = image.t();
+
+		//save .jpg
+		string name_image = items.at(symbole) + "[" + to_string(indexCC) + "_" + to_string(b) + "_" + to_string(c) + "]";
+		imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
+
+		//save .pgm
+		vector<int> compression_params;
+		compression_params.push_back(IMWRITE_PXM_BINARY);
+		compression_params.push_back(0);
+		cvtColor(image, image, COLOR_RGB2GRAY);
+		string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
+		imwrite(path + name_image + ".pgm", image, compression_params);
+
+		propagation(vect_composants, name_image, b, c, symbole);
+	}
+}
 void drawComposant_ligne(CC& composant, Mat& sub, int r, int g, int b) {
 	for (int x = composant.getPtr_debut().x; x < composant.getPtr_debut().x + composant.getdX(); ++x)
 	{
-		Vec3b* row_ptr = sub.ptr<Vec3b>(x);
+		cv::Vec3b* row_ptr = sub.ptr<cv::Vec3b>(x);
 		for (int y = composant.getPtr_debut().y; y < composant.getPtr_debut().y + composant.getdY(); ++y)
 		{
-			if (composant.getMat().at<uchar>(Point(x - composant.getPtr_debut().x, y - composant.getPtr_debut().y)) == 255) row_ptr[y] = (r, g, b);
+			if (composant.getMat().at<uchar>(Point(x - composant.getPtr_debut().x, y - composant.getPtr_debut().y)) == 255) row_ptr[y] = cv::Vec3b(uchar(r), uchar(g), uchar(b));
 		}
 	}
 }
@@ -854,7 +949,7 @@ void funcGenerale() {
 
 	for (int i = 0; i < matriceCompClassifier.size(); i++)
 	{
-		classifier_ligne(1, i);
+		if (matriceCompClassifier.at(i).size() >= 4)classifier_ligne(1, i);
 	}
 }
 

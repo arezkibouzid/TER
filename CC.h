@@ -33,6 +33,10 @@ public:
 	void setId_label(int id) { id_label = id; }
 	void setdX(int x) { dX = x; }
 	void setdY(int y) { dY = y; }
+	bool operator ==(const CC& b) {
+		return this->ptr_debut.x == b.ptr_debut.x && this->centroid.x == b.centroid.x
+			&& this->ptr_debut.y == b.ptr_debut.y && this->centroid.y == b.centroid.y;
+	}
 
 	void setMat(Mat m) { mat = m; }
 };
