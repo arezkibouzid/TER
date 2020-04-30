@@ -402,9 +402,8 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 
 		composant.setMat(m);
 
-		composants.push_back(composant);
-
 		imwrite("./CCs/composant_" + to_string(i) + ".jpg", composant.getMat());
+		composants.push_back(composant);
 	}
 }
 
