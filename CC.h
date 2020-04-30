@@ -35,7 +35,7 @@ public:
 	void setdY(int y) { dY = y; }
 	bool operator ==(const CC& b) {
 		return this->ptr_debut.x == b.ptr_debut.x && this->centroid.x == b.centroid.x
-			&& this->ptr_debut.y == b.ptr_debut.y && this->centroid.y == b.centroid.y;
+			&& this->ptr_debut.y == b.ptr_debut.y && this->centroid.y == b.centroid.y && this->id_label == b.id_label && this->dX == b.dX && this->dY == b.dY;
 	}
 
 	void setMat(Mat m) { mat = m; }

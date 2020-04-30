@@ -64,6 +64,7 @@ double rdep = 0.0;
 double rfin = 0.0;
 double rpas = 0.1;
 double Seuil_similarity_ratio = 0.5;
+int nombre_iteration = 20;
 
 //
 int M = 4;
@@ -104,6 +105,7 @@ void classification();
 void clean_SomeShit();
 void CC2PGM(CC& composant, String path);
 vector<double>::iterator closest(std::vector<double>& vec, double value);
+int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int b, int c, int symbole);
 
 void CompClassifier2PGM(string path, string symbolename, vector<CC>& composantsDejaclassifier);
 
@@ -794,111 +796,151 @@ void fill_Vector_mat_distances() {
 	}
 }
 
-bool exist(vector<CC>& vect_composants, int indexCC, int symbole) {
-	return std::find(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)) != vect_composants.end();
+bool exist(vector<bool>& vect_composants, int indexCC, int symbole) {
+	if (indexCC == -1) return false;
+	if (indexCC > vect_composants.size()) return false;
+	return vect_composants.at(indexCC);
+}
+
+int countTrue(vector<bool>& list) {
+	int sum = 0;
+	for (bool var : list)
+	{
+		if (var) sum++;
+	}
+	return sum;
 }
 void classifier_ligne(int indexCC, int symbole) {
+	cout << "classifier_ligne";
 	vector<CC> vect_composants = matriceCompClassifier.at(symbole);
+	vector<bool> existance(vect_composants.size(), true);
 
-	if (exist(vect_composants, indexCC, symbole)) {
-		int* arry = near_4Composantes(symbole, indexCC);
-		int b, c;
+	int cpt = 0;
 
-		if (arry[0] != -1 && arry[1] != -1)
-			if (exist(vect_composants, arry[0], symbole) && exist(vect_composants, arry[1], symbole)) { b = arry[0]; c = arry[1]; }
-			else if (arry[2] != -1 && arry[3] != -1)
-				if (exist(vect_composants, arry[2], symbole) && exist(vect_composants, arry[3], symbole)) { b = arry[2]; c = arry[3]; }
+	do {
+		if (exist(existance, indexCC, symbole)) {
+			int* arry = near_4Composantes(symbole, indexCC);
 
-		string path_res_1 = "./PGM Files/" + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
-		string path_res_2 = "./PGM Files/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt";
-		string path_image_1 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(indexCC) + ".pgm";
-		string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
-		string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
+			int b = -1, c = -1;
 
-		double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
-		double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
-		double d = similarity_ratio(histo_1, histo_2);
-		if (d >= Seuil_similarity_ratio) {
-			vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)), vect_composants.end());
-			vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(b)), vect_composants.end());
-			vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(c)), vect_composants.end());
-			Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+			if (arry[0] != -1 && arry[1] != -1)
+				if (exist(existance, arry[0], symbole) && exist(existance, arry[1], symbole)) { b = arry[0]; c = arry[1]; }
+				else if (arry[2] != -1 && arry[3] != -1)
+					if (exist(existance, arry[2], symbole) && exist(existance, arry[3], symbole)) { b = arry[2]; c = arry[3]; }
 
-			// draw 3 composants
-			drawComposant_ligne(matriceCompClassifier.at(symbole).at(indexCC), image, 0, 255, 0);
-			drawComposant_ligne(matriceCompClassifier.at(symbole).at(b), image, 0, 0, 255);
-			drawComposant_ligne(matriceCompClassifier.at(symbole).at(c), image, 0, 0, 255);
+			if (b == -1 || c == -1) goto check;
 
-			image = image.t();
+			string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
+			string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt";
+			string path_image_1 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(indexCC) + ".pgm";
+			string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
+			string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
 
-			//save .jpg
-			string name_image = items.at(symbole) + "[" + to_string(indexCC) + "_" + to_string(b) + "_" + to_string(c) + "]";
-			imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
+			double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
+			double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
+			double d = similarity_ratio(histo_1, histo_2);
+			if (d >= Seuil_similarity_ratio) {
+				existance.at(indexCC) = false;
 
-			//save .pgm
-			vector<int> compression_params;
-			compression_params.push_back(IMWRITE_PXM_BINARY);
-			compression_params.push_back(0);
-			cvtColor(image, image, COLOR_RGB2GRAY);
-			string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
-			imwrite(path + name_image + ".pgm", image, compression_params);
+				existance.at(b) = false;
 
-			propagation(vect_composants, name_image, b, c, symbole);
+				existance.at(c) = false;
+
+				Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+
+				// draw 3 composants
+				drawComposant_ligne(matriceCompClassifier.at(symbole).at(indexCC), image, 0, 255, 0);
+				drawComposant_ligne(matriceCompClassifier.at(symbole).at(b), image, 0, 0, 255);
+				drawComposant_ligne(matriceCompClassifier.at(symbole).at(c), image, 0, 0, 255);
+
+				image = image.t();
+
+				//save .jpg
+				string name_image = items.at(symbole) + "[" + to_string(indexCC) + "_" + to_string(b) + "_" + to_string(c) + "]";
+				imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
+
+				//save .pgm
+				vector<int> compression_params;
+				compression_params.push_back(IMWRITE_PXM_BINARY);
+				compression_params.push_back(0);
+				cvtColor(image, image, COLOR_RGB2GRAY);
+				string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
+				imwrite(path + name_image + ".pgm", image, compression_params);
+
+				cout << "classifier_ligne";
+				int p = propagation(existance, name_image, b, c, symbole);
+				cout << "classifier_ligne";
+			}
 		}
-	}
+
+	check:
+		if (indexCC == vect_composants.size() - 1) {
+			indexCC = 1; cpt++;
+		}
+		else indexCC++;
+
+		if (cpt == nombre_iteration || countTrue(existance) <= 3) {
+			for (int i = 1; i < existance.size(); i++) {
+				if (existance.at(i)) {
+					Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+					drawComposant_ligne(matriceCompClassifier.at(symbole).at(i), image, 0, 255, 0);
+					image = image.t();
+					//save .jpg
+					string name_image = items.at(symbole) + "_" + to_string(i);
+					imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
+				}
+			}
+			return;
+		}
+	} while (countTrue(existance) >= 4);
 }
 
-void propagation(vector<CC>& vect_composants, string name_image_without_Ex, int b, int c, int symbole) {
-	int* arry_1 = near_4Composantes(symbole, b);
-	int* arry_2 = near_4Composantes(symbole, c);
-	int b, c;
+int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int B, int C, int symbole) {
+	cout << "prog";
+	int* arry_1 = near_4Composantes(symbole, B);
+	int* arry_2 = near_4Composantes(symbole, C);
+	int b = -1, c = -1;
+
 	string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
 	//priority to b
-	if (Mat_distances[symbole][b][arry_1[0]] < Mat_distances[symbole][c][arry_2[0]]) {
+
+	if (Mat_distances[symbole][B][arry_1[0]] < Mat_distances[symbole][C][arry_2[0]]) {
 		if (exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole)) {
 			b = arry_1[0]; c = arry_1[1];
 		}
-		else if (Mat_distances[symbole][b][arry_1[2]] < Mat_distances[symbole][c][arry_2[0]]) {
-			if (exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole)) {
-				b = arry_1[2]; c = arry_1[3];
-			}
-			else if (exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole))
-			{
-				b = arry_2[0]; c = arry_2[1];
-			}
-			else if (exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole))
-			{
-				b = arry_2[2]; c = arry_2[3];
-			}
-			else return;
+		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole)) {
+			b = arry_1[2]; c = arry_1[3];
 		}
+		else if (arry_2[0] != -1 && arry_2[1] != -1 && exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole)) {
+			b = arry_2[0]; c = arry_2[1];
+		}
+		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole)) {
+			b = arry_2[2]; c = arry_2[3];
+		}
+		else  return 0;
 	}
 	//priority to c
 	else {
 		if (exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole)) {
 			b = arry_2[0]; c = arry_2[1];
 		}
-		else if (Mat_distances[symbole][b][arry_2[2]] < Mat_distances[symbole][c][arry_1[0]]) {
-			if (exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole)) {
-				b = arry_2[2]; c = arry_2[3];
-			}
-			else if (exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole))
-			{
-				b = arry_1[0]; c = arry_1[1];
-			}
-			else if (exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole))
-			{
-				b = arry_1[2]; c = arry_1[3];
-			}
-			else return;
+		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole)) {
+			b = arry_2[2]; c = arry_2[3];
 		}
+		else if (arry_1[0] != -1 && arry_1[1] != -1 && exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole)) {
+			b = arry_1[0]; c = arry_1[1];
+		}
+		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole)) {
+			b = arry_1[2]; c = arry_1[3];
+		}
+		else return 0;
 	}
 
-	if (b == -1 || c == -1) return;
+	if (b == -1 || c == -1) return 0;
 
-	string path_res_1 = "./PGM Files/" + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
-	string path_res_2 = "./PGM Files/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt";
-	string path_image_1 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + name_image_without_Ex + ".pgm";
+	string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
+	string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt";
+	string path_image_1 = "./PGM Files/" + items.at(symbole) + "/Lines/" + name_image_without_Ex + ".pgm";
 	string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
 	string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
 
@@ -908,19 +950,22 @@ void propagation(vector<CC>& vect_composants, string name_image_without_Ex, int 
 
 	if (d >= Seuil_similarity_ratio) {
 		//vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)), vect_composants.end());
-		vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(b)), vect_composants.end());
-		vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(c)), vect_composants.end());
-		Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+		vect_composants.at(b) = false;
+		vect_composants.at(c) = false;
+		Mat image = imread(path + name_image_without_Ex + ".jpg");
+		image = image.t();
+
+		//mzl
 
 		// draw 3 composants
-		drawComposant_ligne(matriceCompClassifier.at(symbole).at(indexCC), image, 0, 255, 0);
+		//drawComposant_ligne(matriceCompClassifier.at(symbole).at(indexCC), image, 0, 255, 0);
 		drawComposant_ligne(matriceCompClassifier.at(symbole).at(b), image, 0, 0, 255);
 		drawComposant_ligne(matriceCompClassifier.at(symbole).at(c), image, 0, 0, 255);
 
 		image = image.t();
 
 		//save .jpg
-		string name_image = items.at(symbole) + "[" + to_string(indexCC) + "_" + to_string(b) + "_" + to_string(c) + "]";
+		string name_image = items.at(symbole) + "[" + name_image_without_Ex + "_" + to_string(b) + "_" + to_string(c) + "]";
 		imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
 
 		//save .pgm
