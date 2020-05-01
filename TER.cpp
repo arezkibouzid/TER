@@ -134,8 +134,7 @@ int main()
 
 	funcGenerale();
 
-	/*for (int index = 0; index < Mat_distances.size(); index++)
-	{
+	/*	int index = 2;
 		for (int i = 0; i < matriceCompClassifier.at(index).size(); i++)
 		{
 			cout << endl;
@@ -143,8 +142,7 @@ int main()
 			{
 				cout << Mat_distances[index][i][j] << " ";
 			}
-		}
-	}*/
+		}*/
 
 	waitKey(0);
 
@@ -683,23 +681,20 @@ void classification() {
 }
 
 int* near_4Composantes(int indexSymbole, int indexCCAccu) {
-	double temp = MAX_DOUBLE;
 	int pos1 = -1, pos2 = -1, pos3 = -1, pos4 = -1;
 	double firstmin = MAX_DOUBLE, secmin = MAX_DOUBLE, thirdmin = MAX_DOUBLE, fourthmin = MAX_DOUBLE;
 
 	for (int j = 0; j < matriceCompClassifier.at(indexSymbole).size(); j++)
 	{
-		if (temp > Mat_distances[indexSymbole][indexCCAccu][j] && Mat_distances[indexSymbole][indexCCAccu][j] != -1) {
-			temp = Mat_distances[indexSymbole][indexCCAccu][j];
-			pos1 = j;
-		}
-
 		if (Mat_distances[indexSymbole][indexCCAccu][j] < firstmin && Mat_distances[indexSymbole][indexCCAccu][j] != -1)
 		{
 			fourthmin = thirdmin;
 			thirdmin = secmin;
 			secmin = firstmin;
 			firstmin = Mat_distances[indexSymbole][indexCCAccu][j];
+			pos4 = pos3;
+			pos3 = pos2;
+			pos2 = pos1;
 			pos1 = j;
 		}
 
@@ -708,12 +703,15 @@ int* near_4Composantes(int indexSymbole, int indexCCAccu) {
 			fourthmin = thirdmin;
 			thirdmin = secmin;
 			secmin = Mat_distances[indexSymbole][indexCCAccu][j];
+			pos4 = pos3;
+			pos3 = pos2;
 			pos2 = j;
 		}
 
 		else if (Mat_distances[indexSymbole][indexCCAccu][j] < thirdmin && Mat_distances[indexSymbole][indexCCAccu][j] != -1) {
 			fourthmin = thirdmin;
 			thirdmin = Mat_distances[indexSymbole][indexCCAccu][j];
+			pos4 = pos3;
 			pos3 = j;
 		}
 		else if (Mat_distances[indexSymbole][indexCCAccu][j] < fourthmin && Mat_distances[indexSymbole][indexCCAccu][j] != -1) {
@@ -753,25 +751,30 @@ double distance2CC(CC& CC1, CC& CC2) {
 	int dx_p_debut_CC2 = CC2.getdX();
 	int dy_p_debut_CC2 = CC2.getdY();
 
-	Point p_fin_cc2_h = Point(p_debut_CC2.x + dx_p_debut_CC2, p_debut_CC2.y);
-	Point p_fin_cc2_v = Point(p_debut_CC2.x, p_debut_CC2.y + dy_p_debut_CC2);
-	Point p_fin_cc2_hv = Point(p_debut_CC2.x + dx_p_debut_CC2, p_debut_CC2.y + dy_p_debut_CC2);
+	Point p_fin_cc2_h = Point(p_debut_CC2.y + dx_p_debut_CC2, p_debut_CC2.x);
+	Point p_fin_cc2_v = Point(p_debut_CC2.y, p_debut_CC2.x + dy_p_debut_CC2);
+	Point p_fin_cc2_hv = Point(p_debut_CC2.y + dx_p_debut_CC2, p_debut_CC2.x + dy_p_debut_CC2);
 
-	Point p_fin_cc1_h = Point(p_debut_CC1.x + dx_p_debut_CC1, p_debut_CC1.y);
-	Point p_fin_cc1_v = Point(p_debut_CC1.x, p_debut_CC1.y + dy_p_debut_CC1);
-	Point p_fin_cc1_hv = Point(p_debut_CC1.x + dx_p_debut_CC1, p_debut_CC1.y + dy_p_debut_CC1);
+	Point p_fin_cc1_h = Point(p_debut_CC1.y + dx_p_debut_CC1, p_debut_CC1.x);
+	Point p_fin_cc1_v = Point(p_debut_CC1.y, p_debut_CC1.x + dy_p_debut_CC1);
+	Point p_fin_cc1_hv = Point(p_debut_CC1.y + dx_p_debut_CC1, p_debut_CC1.x + dy_p_debut_CC1);
 
 	double tab[8];
 
 	tab[0] = distance(p_debut_CC1, p_fin_cc2_h);
+
 	tab[1] = distance(p_debut_CC1, p_fin_cc2_v);
+
 	tab[2] = distance(p_fin_cc1_v, p_fin_cc2_hv);
+
 	tab[3] = distance(p_fin_cc1_v, p_debut_CC2);
 
 	tab[4] = distance(p_fin_cc1_h, p_debut_CC2);
+
 	tab[5] = distance(p_fin_cc1_h, p_fin_cc2_hv);
 
 	tab[6] = distance(p_fin_cc1_hv, p_fin_cc2_v);
+
 	tab[7] = distance(p_fin_cc1_hv, p_fin_cc2_h);
 
 	return *min_element(tab, tab + 8);
@@ -783,8 +786,11 @@ void fill_mat_distances(int index) {
 		for (int j = 0; j < matriceCompClassifier.at(index).size(); j++)
 		{
 			Mat_distances[index][i][j] = -1;
-			if (i != j)
+			if (i != j) {
+				//if (i == 1) {
 				Mat_distances[index][i][j] = distance2CC(matriceCompClassifier.at(index).at(i), matriceCompClassifier.at(index).at(j));
+				//}
+			}
 		}
 	}
 }
@@ -795,9 +801,7 @@ void fill_Vector_mat_distances() {
 	}
 }
 
-bool exist(vector<bool>& vect_composants, int indexCC, int symbole) {
-	if (indexCC == -1) return false;
-	if (indexCC > vect_composants.size()) return false;
+bool exist(vector<bool>& vect_composants, int indexCC) {
 	return vect_composants.at(indexCC);
 }
 
@@ -817,15 +821,16 @@ void classifier_ligne(int indexCC, int symbole) {
 	int cpt = 0;
 
 	do {
-		if (exist(existance, indexCC, symbole)) {
+		if (exist(existance, indexCC)) {
 			int* arry = near_4Composantes(symbole, indexCC);
 
 			int b = -1, c = -1;
 
-			if (arry[0] != -1 && arry[1] != -1)
-				if (exist(existance, arry[0], symbole) && exist(existance, arry[1], symbole)) { b = arry[0]; c = arry[1]; }
+			if (arry[0] != -1 && arry[1] != -1) {
+				if (exist(existance, arry[0]) && exist(existance, arry[1])) { b = arry[0]; c = arry[1]; }
 				else if (arry[2] != -1 && arry[3] != -1)
-					if (exist(existance, arry[2], symbole) && exist(existance, arry[3], symbole)) { b = arry[2]; c = arry[3]; }
+					if (exist(existance, arry[2]) && exist(existance, arry[3])) { b = arry[2]; c = arry[3]; }
+			}
 
 			if (b == -1 || c == -1) goto check;
 
@@ -904,32 +909,32 @@ int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int
 	//priority to b
 
 	if (Mat_distances[symbole][B][arry_1[0]] < Mat_distances[symbole][C][arry_2[0]]) {
-		if (exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole)) {
+		if (exist(vect_composants, arry_1[0]) && exist(vect_composants, arry_1[1])) {
 			b = arry_1[0]; c = arry_1[1];
 		}
-		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole)) {
+		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2]) && exist(vect_composants, arry_1[3])) {
 			b = arry_1[2]; c = arry_1[3];
 		}
-		else if (arry_2[0] != -1 && arry_2[1] != -1 && exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole)) {
+		else if (arry_2[0] != -1 && arry_2[1] != -1 && exist(vect_composants, arry_2[0]) && exist(vect_composants, arry_2[1])) {
 			b = arry_2[0]; c = arry_2[1];
 		}
-		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole)) {
+		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2]) && exist(vect_composants, arry_2[3])) {
 			b = arry_2[2]; c = arry_2[3];
 		}
 		else  return 0;
 	}
 	//priority to c
 	else {
-		if (exist(vect_composants, arry_2[0], symbole) && exist(vect_composants, arry_2[1], symbole)) {
+		if (exist(vect_composants, arry_2[0]) && exist(vect_composants, arry_2[1])) {
 			b = arry_2[0]; c = arry_2[1];
 		}
-		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2], symbole) && exist(vect_composants, arry_2[3], symbole)) {
+		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2]) && exist(vect_composants, arry_2[3])) {
 			b = arry_2[2]; c = arry_2[3];
 		}
-		else if (arry_1[0] != -1 && arry_1[1] != -1 && exist(vect_composants, arry_1[0], symbole) && exist(vect_composants, arry_1[1], symbole)) {
+		else if (arry_1[0] != -1 && arry_1[1] != -1 && exist(vect_composants, arry_1[0]) && exist(vect_composants, arry_1[1])) {
 			b = arry_1[0]; c = arry_1[1];
 		}
-		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2], symbole) && exist(vect_composants, arry_1[3], symbole)) {
+		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2]) && exist(vect_composants, arry_1[3])) {
 			b = arry_1[2]; c = arry_1[3];
 		}
 		else return 0;
