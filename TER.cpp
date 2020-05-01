@@ -745,11 +745,11 @@ double distance2CC(CC& CC1, CC& CC2) {
 	if (CC1.getMat().empty() || CC2.getMat().empty()) return -1.0;
 	Point p_debut_CC1 = CC1.getPtr_debut();
 	Point p_debut_CC2 = CC2.getPtr_debut();
-	int dx_p_debut_CC1 = CC1.getdX();
-	int dy_p_debut_CC1 = CC1.getdY();
+	int dx_p_debut_CC1 = CC1.getdY();
+	int dy_p_debut_CC1 = CC1.getdX();
 
-	int dx_p_debut_CC2 = CC2.getdX();
-	int dy_p_debut_CC2 = CC2.getdY();
+	int dx_p_debut_CC2 = CC2.getdY();
+	int dy_p_debut_CC2 = CC2.getdX();
 
 	Point p_fin_cc2_h = Point(p_debut_CC2.y + dx_p_debut_CC2, p_debut_CC2.x);
 	Point p_fin_cc2_v = Point(p_debut_CC2.y, p_debut_CC2.x + dy_p_debut_CC2);
@@ -787,9 +787,7 @@ void fill_mat_distances(int index) {
 		{
 			Mat_distances[index][i][j] = -1;
 			if (i != j) {
-				//if (i == 1) {
 				Mat_distances[index][i][j] = distance2CC(matriceCompClassifier.at(index).at(i), matriceCompClassifier.at(index).at(j));
-				//}
 			}
 		}
 	}
@@ -871,9 +869,7 @@ void classifier_ligne(int indexCC, int symbole) {
 				string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
 				imwrite(path + name_image + ".pgm", image, compression_params);
 
-				cout << "classifier_ligne";
 				int p = propagation(existance, name_image, b, c, symbole);
-				cout << "classifier_ligne";
 			}
 		}
 
