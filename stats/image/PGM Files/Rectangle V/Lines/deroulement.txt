@@ -1,0 +1,567 @@
+search 4 nearest neighbors of Rectangle V_1
+histogram calculationRectangle V_3&Rectangle V_1
+save to Rectangle V_3&Rectangle V_1.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V[1_2_3].jpg
+transform to Rectangle V[1_2_3].pgm
+search 4 nearest neighbors of Rectangle V_2
+search 4 nearest neighbors of Rectangle V_3
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculationRectangle V_5&Rectangle V_Rectangle V[1_2_3]
+save to Rectangle V_5&Rectangle V_Rectangle V[1_2_3].txt
+0.000000<0.500000 => Stop
+1.000000<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_11
+histogram calculationRectangle V_12&Rectangle V_11
+save to Rectangle V_12&Rectangle V_11.txt
+similaritey ratio = 0.725374>0.500000
+save to Rectangle V[11_4_12].jpg
+transform to Rectangle V[11_4_12].pgm
+search 4 nearest neighbors of Rectangle V_4
+search 4 nearest neighbors of Rectangle V_12
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.725374<0.500000 => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

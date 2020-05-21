@@ -13,8 +13,6 @@
 #define _CRT_SECURE_NO_DEPRECATE
 #define M_PI 3.14159265358979323846
 #define  MAX_DOUBLE 99999999999999999
-#define  MAX_WIDTH_PGM 1000
-#define  MAX_HEIGHT_PGM 1000
 
 using namespace std;
 using namespace cv;
@@ -26,13 +24,30 @@ Mat train_labels;
 Mat test_data;
 
 Mat capture_frame, filter_frame, gaussian_frame, threshold_frame, centredImage;
+int WIDTH;
+int HEIGHT;
 
 vector<vector<CC>> matriceCompClassifier;
 
+struct symbo_dist {
+	int symbole;
+	double dist;
+};
+
+struct sizeSymbole {
+	int width;
+	int height;
+};
+bool compareByLength(const symbo_dist& a, const symbo_dist& b)
+{
+	return a.dist < b.dist;
+}
 // vecteur des symoboles
 vector<String> items;
+// vecteurs des tailles des symboles
+vector<vector<sizeSymbole>> symboleSizeTAB;
 // vecteur des distnaces
-vector<double> distances;
+vector<symbo_dist> distances;
 //matrice avec des labels des composants connexes
 Mat Matlabled;
 
@@ -55,8 +70,9 @@ int block_size = 3;
 int c = 0;
 double segma = 0;
 double Seuil = 100;
-int Seuil_distance = 100;
+
 int connexité = 8;
+double RadiusSize = 7;
 
 int numberOfDirections = 180;
 
@@ -71,10 +87,10 @@ int M = 4;
 int N = 9;
 // en moin 1 composant clasifier comme symbole qlq
 int C = 1;
-int NmbrSymbole = 4;
-int numImagesMaxParSymbole = 3;
+int NmbrSymbole = 18;
+int numImagesMaxParSymbole = 52;
 //
-string path_image = "testRapide1.tif";
+string path_image = "FUN.tif";
 
 void capture(Mat& capture_frame, string path);
 inline bool exists(const std::string& name);
@@ -85,6 +101,7 @@ void filterNonInv(Mat& capture_frame, Mat& threshold_frame);
 void filter(Mat& capture_frame, Mat& threshold_frame);
 double distance(Point& p1, Point& p2);
 double ManhattanDistance(vector<float>& a, vector<float>& b);
+double euclidienneDistance(vector<float>& a, vector<float>& b);
 void circshift(Mat& out, const Point& delta);
 Point GetCentroid(Mat& img);
 void centreObject(Mat& img, Mat& centredImage);
@@ -93,6 +110,7 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants);
 double GetExtrema(Mat& img, Point& center);
 vector<double> linspace(double min, double max, int n);
 void generate_Mat_distances();
+bool checkSizeCoherence(Size x, int symbole);
 
 void drawComposant_ligne(CC& composant, Mat& sub, int r, int g, int b);
 
@@ -105,7 +123,7 @@ void classification();
 void clean_SomeShit();
 void CC2PGM(CC& composant, String path);
 vector<double>::iterator closest(std::vector<double>& vec, double value);
-int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int b, int c, int symbole);
+int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_without_Ex, int b, int c, int symbole);
 
 void CompClassifier2PGM(string path, string symbolename, vector<CC>& composantsDejaclassifier);
 
@@ -117,14 +135,18 @@ double similarity_ratio(double* histo1, double* histo2);
 double distance2CC(CC& CC1, CC& CC2);
 void funcGenerale();
 
+std::ofstream out("./resultat.txt");
 int main()
 {
 	clean_SomeShit();
 
-	readOrLoad(M, N, ".png");
+	readOrLoad(M, N, ".jpg");
 
 	capture(capture_frame, path_image);
 	filter(capture_frame, threshold_frame);
+
+	WIDTH = capture_frame.size().width;
+	HEIGHT = capture_frame.size().height;
 
 	connectedComponentsVector(threshold_frame, composants);
 
@@ -133,26 +155,15 @@ int main()
 	classification();
 
 	funcGenerale();
-
-	/*	int index = 2;
-		for (int i = 0; i < matriceCompClassifier.at(index).size(); i++)
-		{
-			cout << endl;
-			for (int j = 0; j < matriceCompClassifier.at(index).size(); j++)
-			{
-				cout << Mat_distances[index][i][j] << " ";
-			}
-		}*/
-
 	waitKey(0);
 
 	return 0;
 }
 
 double* calcul_Histogram(string path_res, string path_image1, string path_image2) {
-	char res[100];
-	char image1[100];
-	char image2[100];
+	char res[500];
+	char image1[500];
+	char image2[500];
 
 	strcpy(res, path_res.c_str());
 	strcpy(image1, path_image1.c_str());
@@ -237,6 +248,29 @@ double ManhattanDistance(vector<float>& a, vector<float>& b) {
 	while (j < b.size())
 	{
 		dist += abs(b.at(j));
+		j++;
+	}
+
+	return dist;
+}
+
+double euclidienneDistance(vector<float>& a, vector<float>& b) {
+	double dist = 0;
+	int i;
+	for (i = 0; i < min(a.size(), b.size()); i++)
+	{
+		dist += sqrt((a.at(i) - b.at(i)) * (a.at(i) - b.at(i)));
+	}
+	int j = i;
+	while (i < a.size())
+	{
+		dist += a.at(i);
+		i++;
+	}
+
+	while (j < b.size())
+	{
+		dist += b.at(j);
 		j++;
 	}
 
@@ -386,6 +420,9 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 
 	Mat m;
 	composants.clear();
+
+	out << "numbre CCs detected (background including): " << stats.rows << endl;
+	cout << "numbre CCs detected (background including) : " << stats.rows << endl;
 	for (int i = 0; i < stats.rows; i++)
 	{
 		CC composant;
@@ -397,10 +434,10 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 		composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
 
 		CcToMat(composant, m);
-
+		copyMakeBorder(m, m, 2, 2, 2, 2, BORDER_CONSTANT, 0);
 		composant.setMat(m);
 
-		imwrite("./CCs/composant_" + to_string(i) + ".jpg", composant.getMat());
+		imwrite("./CCs/Component_" + to_string(i) + ".jpg", composant.getMat());
 		composants.push_back(composant);
 	}
 }
@@ -414,7 +451,7 @@ double GetExtrema(Mat& img, Point& center) {
 
 	//cnts = imutils.grab_contours(cnts);
 	//auto c = std::max(cnts, contourArea);
-	if (cnts.size() > 1) cout << "plusieurs contours";
+	if (cnts.size() > 1) cout << "several contours" << endl;
 
 	/*int min_x = cnts.at(0).at(0).x;
 	int max_x = min_x;
@@ -562,7 +599,7 @@ void CalculateGfdAndPushAllVectsCar(int m, int n) {
 	// i=0 => background
 	for (int i = 1; i < composants.size(); i++)
 	{
-		cout << "calcul GFD Composant_" + to_string(i) << endl;
+		cout << "calculation GFD Component_" + to_string(i) << endl;
 		GFD(composants.at(i), centredImage, m, n);
 
 		//namedWindow("composantCentred : " + i, WINDOW_NORMAL);
@@ -601,35 +638,39 @@ void drawComposantsClassifier(vector<CC>& composantsDejaclassifier, Mat& sub) {
 
 	sub = sub.t();
 }
-
+bool checkSizeCoherence(Size x, int symbole) {
+	for (int i = 0; i < symboleSizeTAB.at(symbole).size(); i++)
+	{
+		if (abs(x.width - symboleSizeTAB.at(symbole).at(i).width) < RadiusSize && abs(x.height - symboleSizeTAB.at(symbole).at(i).height) < RadiusSize) return true;
+	}
+	return false;
+}
 void classification() {
-	std::ofstream out("./resultat.txt");
-
 	double min = MAX_DOUBLE;
 	int symbole;
-	double max = -MAX_DOUBLE;
+	//double max = -MAX_DOUBLE;
 	double dist = MAX_DOUBLE;
 
 	matriceCompClassifier.clear();
 	int N = vecteursCarPrim.size();
-	matriceCompClassifier.resize(N, std::vector<CC>(C));
+	matriceCompClassifier.resize(N + 1, std::vector<CC>(C));
 
 	for (int i = 0; i < vecteursCar.size(); i++)
 	{
-		cout << "composant_" << i + 1 << " =>";
-		out << "composant_" << i + 1 << " =>";
+		cout << "Component_" << i + 1 << " =>";
+		out << "Component_" << i + 1 << " =>";
 		distances.clear();
 		symbole = 0;
 
 		for (int it = 0; it < vecteursCarPrim.at(0).size(); it++)
 		{
-			dist = std::min(dist, ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(0).at(it)));
+			dist = std::min(dist, euclidienneDistance(vecteursCar.at(i), vecteursCarPrim.at(0).at(it)));
 		}
 
 		cout << items.at(0) << " " << dist << " | ";
 		out << items.at(0) << " " << dist << " | ";
-		distances.emplace_back(dist);
-		max = dist;
+		distances.push_back({ symbole,dist });
+		//max = dist;
 		min = dist;
 
 		for (int j = 1; j < vecteursCarPrim.size(); j++) {
@@ -637,47 +678,66 @@ void classification() {
 
 			for (int it = 0; it < vecteursCarPrim.at(j).size(); it++)
 			{
-				dist = std::min(dist, ManhattanDistance(vecteursCar.at(i), vecteursCarPrim.at(j).at(it)));
+				dist = std::min(dist, euclidienneDistance(vecteursCar.at(i), vecteursCarPrim.at(j).at(it)));
 			}
 
-			if (dist <= min) {
+			if (dist < min) {
 				min = dist;
 				symbole = j;
 			}
-			if (max <= dist) {
+			/*if (max <= dist) {
 				max = dist;
-			}
+			}*/
 
 			cout << items.at(j) << " " << dist << " | ";
 			out << items.at(j) << " " << dist << " | ";
-			distances.emplace_back(dist);
+			//distances.push_back({ j,dist });
 		}
-		std::sort(distances.begin(), distances.end());
-		vector<double>::iterator itelt = closest(distances, min + ((100 - Seuil_distance) * max / 100));
-		cout << " => " << *itelt;
-		out << " => " << *itelt;
+		//std::sort(distances.begin(), distances.end(), compareByLength);
+		//vector<double>::iterator itelt = closest(distances, min + ((100 - Seuil_distance) * (max) / 100));
+		cout << " => " << min;
+		out << " => " << min;
 
-		cout << " => " << items.at((Seuil_distance != 100) ? (itelt - distances.begin()) : symbole);
-		out << " => " << items.at((Seuil_distance != 100) ? (itelt - distances.begin()) : symbole);
+		if (checkSizeCoherence(composants.at(i + 1).getMat().size(), symbole)) {
+			cout << " => " << items.at(symbole);
+			out << " => " << items.at(symbole);
+			matriceCompClassifier.at(symbole).emplace_back(composants.at(i + 1));
+		}
+		else {
+			cout << " => classe  rejet => size format different";
+			out << " => classe  rejet => size format different";
+			matriceCompClassifier.at(N).emplace_back(composants.at(i + 1));
+		}
 
 		cout << endl;
 		out << endl;
-
-		matriceCompClassifier.at(symbole).emplace_back(composants.at(i + 1));
 	}
 
-	Mat image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
-	for (int i = 0; i < matriceCompClassifier.size(); i++)
+	Mat image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC1);
+	for (int i = 0; i < matriceCompClassifier.size() - 1; i++)
 	{
+		cout << "transfers classified components " << items.at(i) << " to .pgm in PGM Files directory" << endl;
+
 		string path = "PGM Files/" + items.at(i);
 		string path2 = path + "/Lines/";
 		fs::create_directories(path);
 		fs::create_directories(path2);
 		CompClassifier2PGM(path, items.at(i), matriceCompClassifier.at(i));
-		image = cv::Mat::zeros(capture_frame.size().width, capture_frame.size().height, CV_8UC1);
+
+		cout << "save classified components " << items.at(i) << " to " << items.at(i) << ".jpg in  CCs Classifier directory" << endl;
+		image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC1);
 		drawComposantsClassifier(matriceCompClassifier.at(i), image);
 		imwrite("./CCs Classifier/" + items.at(i) + ".jpg", image);
+		cout << "number classified components as " << items.at(i) << " :" << matriceCompClassifier.at(i).size() - 1 << endl;
+		out << "number classified components as " << items.at(i) << " :" << matriceCompClassifier.at(i).size() - 1 << endl;
 	}
+
+	cout << "save rejected components to Classe Rejet.jpg in CCs Classifier directory" << endl;
+	image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC1);
+	drawComposantsClassifier(matriceCompClassifier.at(N), image);
+	imwrite("./CCs Classifier/Classe Rejet.jpg", image);
+	cout << "nombre composants rejeter :" << matriceCompClassifier.at(N).size() - 1 << endl;
+	out << "nombre composants rejeter :" << matriceCompClassifier.at(N).size() - 1 << endl;
 }
 
 int* near_4Composantes(int indexSymbole, int indexCCAccu) {
@@ -811,15 +871,18 @@ int countTrue(vector<bool>& list) {
 	}
 	return sum;
 }
+
 void classifier_ligne(int indexCC, int symbole) {
-	cout << "classifier_ligne";
 	vector<CC> vect_composants = matriceCompClassifier.at(symbole);
 	vector<bool> existance(vect_composants.size(), true);
 
 	int cpt = 0;
+	std::ofstream der("./PGM Files/" + items.at(symbole) + "/" + "Lines/deroulement.txt");
 
 	do {
 		if (exist(existance, indexCC)) {
+			cout << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(indexCC) << endl;
+			der << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(indexCC) << endl;
 			int* arry = near_4Composantes(symbole, indexCC);
 
 			int b = -1, c = -1;
@@ -830,25 +893,38 @@ void classifier_ligne(int indexCC, int symbole) {
 					if (exist(existance, arry[2]) && exist(existance, arry[3])) { b = arry[2]; c = arry[3]; }
 			}
 
-			if (b == -1 || c == -1) goto check;
+			if (b == -1 || c == -1) {
+				cout << "no neighbors or already taken => Stop" << endl;
+				der << "no neighbors or already taken => Stop" << endl;
+				goto check;
+			}
 
-			string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
-			string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt";
+			string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
+
+			string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt";
+
 			string path_image_1 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(indexCC) + ".pgm";
 			string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
 			string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
 
 			double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
 			double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
+			cout << "histogram calculation " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) << endl;
+			cout << "save to " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt" << endl;
+			der << "histogram calculation" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) << endl;
+			der << "save to " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt" << endl;
 			double d = similarity_ratio(histo_1, histo_2);
 			if (d >= Seuil_similarity_ratio) {
+				cout << "similaritey ratio = " + to_string(d) + ">" + to_string(Seuil_similarity_ratio) << endl;
+				der << "similaritey ratio = " + to_string(d) + ">" + to_string(Seuil_similarity_ratio) << endl;
+
 				existance.at(indexCC) = false;
 
 				existance.at(b) = false;
 
 				existance.at(c) = false;
 
-				Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+				Mat image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC3);
 
 				// draw 3 composants
 				drawComposant_ligne(matriceCompClassifier.at(symbole).at(indexCC), image, 0, 255, 0);
@@ -861,6 +937,9 @@ void classifier_ligne(int indexCC, int symbole) {
 				string name_image = items.at(symbole) + "[" + to_string(indexCC) + "_" + to_string(b) + "_" + to_string(c) + "]";
 				imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
 
+				cout << "save to " << name_image + ".jpg" << endl;
+				der << "save to " << name_image + ".jpg" << endl;;
+
 				//save .pgm
 				vector<int> compression_params;
 				compression_params.push_back(IMWRITE_PXM_BINARY);
@@ -869,41 +948,53 @@ void classifier_ligne(int indexCC, int symbole) {
 				string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
 				imwrite(path + name_image + ".pgm", image, compression_params);
 
-				int p = propagation(existance, name_image, b, c, symbole);
+				cout << "transform to " << name_image + ".pgm" << endl;
+				der << "transform to " << name_image + ".pgm" << endl;
+
+				int p = propagation(der, existance, name_image, b, c, symbole);
 			}
+			cout << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+			der << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
 		}
 
 	check:
+		cout << "look for other lines" << endl;
+		der << "look for other lines" << endl;
 		if (indexCC == vect_composants.size() - 1) {
 			indexCC = 1; cpt++;
 		}
 		else indexCC++;
 
 		if (cpt == nombre_iteration || countTrue(existance) <= 3) {
-			for (int i = 1; i < existance.size(); i++) {
+			cout << "No lines => Stop" << endl;
+			der << "No lines => Stop" << endl;
+			/*for (int i = 1; i < existance.size(); i++) {
 				if (existance.at(i)) {
-					Mat image = cv::Mat::zeros(MAX_WIDTH_PGM, MAX_HEIGHT_PGM, CV_8UC3);
+					Mat image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC3);
 					drawComposant_ligne(matriceCompClassifier.at(symbole).at(i), image, 0, 255, 0);
 					image = image.t();
 					//save .jpg
 					string name_image = items.at(symbole) + "_" + to_string(i);
-					imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
+					imwrite("./PGM Files/" + items.at(symbole) + "/Lines/ " + name_image + ".jpg", image);
 				}
-			}
+			}*/
 			return;
 		}
 	} while (countTrue(existance) >= 4);
 }
 
-int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int B, int C, int symbole) {
-	cout << "prog";
+int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_without_Ex, int B, int C, int symbole) {
+	cout << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(B) << endl;
+	der << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(B) << endl;
+	cout << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(C) << endl;
+	der << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(C) << endl;
 	int* arry_1 = near_4Composantes(symbole, B);
 	int* arry_2 = near_4Composantes(symbole, C);
 	int b = -1, c = -1;
-
-	string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
+	string* path = new String("./PGM Files/" + items.at(symbole) + "/Lines/");
 	//priority to b
-
+	cout << "propagate the nearest neighbors of A (first nearest) or B(second nearest) " << endl;
+	der << "propagate the nearest neighbors of A (first nearest) or B(second nearest) " << endl;
 	if (Mat_distances[symbole][B][arry_1[0]] < Mat_distances[symbole][C][arry_2[0]]) {
 		if (exist(vect_composants, arry_1[0]) && exist(vect_composants, arry_1[1])) {
 			b = arry_1[0]; c = arry_1[1];
@@ -917,7 +1008,11 @@ int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int
 		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2]) && exist(vect_composants, arry_2[3])) {
 			b = arry_2[2]; c = arry_2[3];
 		}
-		else  return 0;
+		else {
+			cout << "no neighbors or already taken => Stop" << endl;
+			der << "no neighbors or already taken => Stop" << endl;
+			return 0;
+		}
 	}
 	//priority to c
 	else {
@@ -933,13 +1028,23 @@ int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int
 		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2]) && exist(vect_composants, arry_1[3])) {
 			b = arry_1[2]; c = arry_1[3];
 		}
-		else return 0;
+		else {
+			cout << "no neighbors or already taken => Stop" << endl;
+			der << "no neighbors or already taken => Stop" << endl;
+			return 0;
+		}
 	}
 
-	if (b == -1 || c == -1) return 0;
+	if (b == -1 || c == -1) {
+		cout << "no neighbors or already taken => Stop" << endl;
+		der << "no neighbors or already taken => Stop" << endl;
+		return 0;
+	}
 
-	string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
-	string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt";
+	string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
+
+	string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt";
+
 	string path_image_1 = "./PGM Files/" + items.at(symbole) + "/Lines/" + name_image_without_Ex + ".pgm";
 	string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
 	string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
@@ -947,12 +1052,18 @@ int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int
 	double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
 	double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
 	double d = similarity_ratio(histo_1, histo_2);
-
+	cout << "histogram calculation " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) << endl;
+	cout << "save to " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt" << endl;
+	der << "histogram calculation" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex << endl;
+	der << "save to " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt" << endl;
 	if (d >= Seuil_similarity_ratio) {
+		cout << "similaritey ratio = " + to_string(d) + ">" + to_string(Seuil_similarity_ratio) << endl;
+		der << "similaritey ratio = " + to_string(d) + ">" + to_string(Seuil_similarity_ratio) << endl;
 		//vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)), vect_composants.end());
 		vect_composants.at(b) = false;
 		vect_composants.at(c) = false;
-		Mat image = imread(path + name_image_without_Ex + ".jpg");
+		cout << "-------------------------" + *path + name_image_without_Ex << endl;
+		Mat image = imread(*path + name_image_without_Ex + ".jpg");
 		image = image.t();
 
 		//mzl
@@ -965,19 +1076,25 @@ int propagation(vector<bool>& vect_composants, string name_image_without_Ex, int
 		image = image.t();
 
 		//save .jpg
-		string name_image = items.at(symbole) + "[" + name_image_without_Ex + "_" + to_string(b) + "_" + to_string(c) + "]";
-		imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image + ".jpg", image);
+		name_image_without_Ex = items.at(symbole) + "[" + name_image_without_Ex + "_" + to_string(b) + "_" + to_string(c) + "]";
+		imwrite("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image_without_Ex + ".jpg", image);
+		cout << "save to " << name_image_without_Ex + ".jpg" << endl;
+		der << "save to " << name_image_without_Ex + ".jpg" << endl;
 
 		//save .pgm
 		vector<int> compression_params;
 		compression_params.push_back(IMWRITE_PXM_BINARY);
 		compression_params.push_back(0);
 		cvtColor(image, image, COLOR_RGB2GRAY);
-		string path = "./PGM Files/" + items.at(symbole) + "/Lines/";
-		imwrite(path + name_image + ".pgm", image, compression_params);
 
-		propagation(vect_composants, name_image, b, c, symbole);
+		imwrite(*path + name_image_without_Ex + ".pgm", image, compression_params);
+		cout << "transform to " << name_image_without_Ex + ".pgm" << endl;
+		der << "transform to " << name_image_without_Ex + ".pgm" << endl;
+		delete path;
+		propagation(der, vect_composants, name_image_without_Ex, b, c, symbole);
 	}
+	cout << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+	der << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
 }
 void drawComposant_ligne(CC& composant, Mat& sub, int r, int g, int b) {
 	for (int x = composant.getPtr_debut().x; x < composant.getPtr_debut().x + composant.getdX(); ++x)
@@ -1010,7 +1127,7 @@ void CC2PGM(CC& composant, String path) {
 	compression_params.push_back(0);
 	Mat dst;
 	if (!composant.getMat().empty()) {
-		Size size(MAX_WIDTH_PGM, MAX_HEIGHT_PGM);
+		Size size(WIDTH, HEIGHT);
 		resize(composant.getMat(), dst, size);
 
 		imwrite(path, dst, compression_params);
@@ -1018,16 +1135,13 @@ void CC2PGM(CC& composant, String path) {
 }
 
 vector<double>::iterator closest(std::vector<double>& vec, double value) {
-	vector<double>::iterator ite = std::find(vec.begin(), vec.end(), value);
+	auto  itee = std::find(vec.begin(), vec.end(), value);
+	if (itee != vec.end()) return itee;
+	auto  ite = std::lower_bound(vec.begin(), vec.end(), value);
 	if (ite != vec.end()) return ite;
-	auto const it = std::lower_bound(vec.begin(), vec.end(), value);
-	if (it == vec.end()) {
-		auto const it = std::upper_bound(vec.begin(), vec.end(), value);
-		if (it != vec.end()) return it;
-		return it;
-	}
-
-	return it;
+	auto  it = std::upper_bound(vec.begin(), vec.end(), value);
+	if (it != vec.end()) return it;
+	return vec.begin();
 }
 
 void readOrLoad(int m, int n, String Extension) {
@@ -1035,15 +1149,21 @@ void readOrLoad(int m, int n, String Extension) {
 	String numS;
 	String path;
 	vecteursCarPrim.clear();
+	symboleSizeTAB.clear();
 	vecteursCarPrim.resize(NmbrSymbole, vector<std::vector<float>>(C));
+	symboleSizeTAB.resize(NmbrSymbole, vector<sizeSymbole>(C));
 	for (auto& p : fs::directory_iterator("Symboles")) {
 		items.push_back(p.path().filename().string());
 		for (int num = 0; num < numImagesMaxParSymbole; num++)
 		{
-			numS = "_" + to_string(num);
+			numS = " (" + to_string(num + 1) + ")";
 			path = "Symboles/" + p.path().filename().string() + "\/" + p.path().filename().string() + numS;
 
 			if (!exists(path + Extension)) continue;
+			Mat symbole;
+			capture(symbole, path + Extension);
+			symboleSizeTAB.at(items.size() - 1).push_back({ symbole.size().width,symbole.size().height });
+
 			if (exists(path + ".txt")) {
 				std::ifstream file(path + ".txt");
 
@@ -1080,7 +1200,7 @@ void readOrLoad(int m, int n, String Extension) {
 					Mat symbole;
 					capture(symbole, path + Extension);
 
-					cout << "calcul GFD du Symbole " + items.at(items.size() - 1) << endl;
+					cout << "calculation GFD of Symbol " + items.at(items.size() - 1) << endl;
 					symbolTocomposantGfd(symbole, m, n);
 
 					String str;
@@ -1102,10 +1222,10 @@ void readOrLoad(int m, int n, String Extension) {
 				int b = 0;
 				outfile << m << " " << n << std::endl;
 
-				Mat symbole;
-				capture(symbole, path + Extension);
+				//Mat symbole;
+				//capture(symbole, path + Extension);
 
-				cout << "calcul GFD du Symbole " + items.at(items.size() - 1) << endl;
+				cout << "calculation GFD of Symbol " + items.at(items.size() - 1) << endl;
 				symbolTocomposantGfd(symbole, m, n);
 
 				String str;
