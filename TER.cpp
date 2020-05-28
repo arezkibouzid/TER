@@ -88,7 +88,7 @@ int M = 4;
 int N = 9;
 // en moin 1 composant clasifier comme symbole qlq
 int C = 1;
-int NmbrSymbole = 34;
+int NmbrSymbole = 35;
 int numImagesMaxParSymbole = 80;
 //
 string path_image = "FUN.tif";

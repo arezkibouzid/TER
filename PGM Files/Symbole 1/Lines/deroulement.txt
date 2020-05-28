@@ -1,0 +1,365 @@
+search 4 nearest neighbors of Symbole 1_1
+histogram calculation Symbole 1_1&Symbole 1_2
+save to Symbole 1_1&Symbole 1_2.txt
+histogram calculationSymbole 1_3&Symbole 1_1
+save to Symbole 1_3&Symbole 1_1.txt
+similaritey ratio = 0.990175>0.500000
+save to Symbole 1[1_2_3].jpg
+transform to Symbole 1[1_2_3].pgm
+search 4 nearest neighbors of Symbole 1_2
+search 4 nearest neighbors of Symbole 1_3
+propagate the nearest neighbors of A or B 
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_4
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_4.txt
+save to Symbole 1_5&Symbole 1_Symbole 1[1_2_3].txt
+0.228878<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_1
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_1.txt
+save to Symbole 1_3&Symbole 1_Symbole 1[1_2_3].txt
+0.230476<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_4
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_4.txt
+save to Symbole 1_5&Symbole 1_Symbole 1[1_2_3].txt
+0.228878<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_1
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_1.txt
+save to Symbole 1_3&Symbole 1_Symbole 1[1_2_3].txt
+0.230476<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_4
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_4.txt
+save to Symbole 1_5&Symbole 1_Symbole 1[1_2_3].txt
+0.228878<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_1
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_1.txt
+save to Symbole 1_3&Symbole 1_Symbole 1[1_2_3].txt
+0.230476<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[1_2_3]&Symbole 1_4
+save to Symbole 1_Symbole 1[1_2_3]&Symbole 1_4.txt
+save to Symbole 1_5&Symbole 1_Symbole 1[1_2_3].txt
+0.228878<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_8
+histogram calculation Symbole 1_8&Symbole 1_12
+save to Symbole 1_8&Symbole 1_12.txt
+histogram calculationSymbole 1_9&Symbole 1_8
+save to Symbole 1_9&Symbole 1_8.txt
+similaritey ratio = 0.994810>0.500000
+save to Symbole 1[8_12_9].jpg
+transform to Symbole 1[8_12_9].pgm
+search 4 nearest neighbors of Symbole 1_12
+search 4 nearest neighbors of Symbole 1_9
+propagate the nearest neighbors of A or B 
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_10
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_10.txt
+save to Symbole 1_11&Symbole 1_Symbole 1[8_12_9].txt
+0.295028<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_13
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_13.txt
+save to Symbole 1_14&Symbole 1_Symbole 1[8_12_9].txt
+0.290543<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_8
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_8.txt
+save to Symbole 1_9&Symbole 1_Symbole 1[8_12_9].txt
+0.289290<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_10
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_10.txt
+save to Symbole 1_11&Symbole 1_Symbole 1[8_12_9].txt
+0.295028<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_8
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_8.txt
+save to Symbole 1_9&Symbole 1_Symbole 1[8_12_9].txt
+0.289290<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_13
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_13.txt
+save to Symbole 1_14&Symbole 1_Symbole 1[8_12_9].txt
+0.290543<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_8
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_8.txt
+save to Symbole 1_9&Symbole 1_Symbole 1[8_12_9].txt
+0.289290<0.500000 => Stop
+histogram calculation Symbole 1_Symbole 1[8_12_9]&Symbole 1_10
+save to Symbole 1_Symbole 1[8_12_9]&Symbole 1_10.txt
+save to Symbole 1_11&Symbole 1_Symbole 1[8_12_9].txt
+0.295028<0.500000 => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_10
+histogram calculation Symbole 1_10&Symbole 1_13
+save to Symbole 1_10&Symbole 1_13.txt
+histogram calculationSymbole 1_14&Symbole 1_10
+save to Symbole 1_14&Symbole 1_10.txt
+similaritey ratio = 0.995384>0.500000
+save to Symbole 1[10_13_14].jpg
+transform to Symbole 1[10_13_14].pgm
+search 4 nearest neighbors of Symbole 1_13
+search 4 nearest neighbors of Symbole 1_14
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 1_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_11
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 1_15
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop
