@@ -1,1 +1,0 @@
-search 4 nearest neighbors of Symbole 2_1
