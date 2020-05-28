@@ -1,0 +1,204 @@
+search 4 nearest neighbors of Rectangle Empty trou bottom_1
+histogram calculation Rectangle Empty trou bottom_1&Rectangle Empty trou bottom_2
+save to Rectangle Empty trou bottom_1&Rectangle Empty trou bottom_2.txt
+histogram calculationRectangle Empty trou bottom_3&Rectangle Empty trou bottom_1
+save to Rectangle Empty trou bottom_3&Rectangle Empty trou bottom_1.txt
+0.384320<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_2
+histogram calculation Rectangle Empty trou bottom_2&Rectangle Empty trou bottom_1
+save to Rectangle Empty trou bottom_2&Rectangle Empty trou bottom_1.txt
+histogram calculationRectangle Empty trou bottom_3&Rectangle Empty trou bottom_2
+save to Rectangle Empty trou bottom_3&Rectangle Empty trou bottom_2.txt
+0.384320<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_3
+histogram calculation Rectangle Empty trou bottom_3&Rectangle Empty trou bottom_1
+save to Rectangle Empty trou bottom_3&Rectangle Empty trou bottom_1.txt
+histogram calculationRectangle Empty trou bottom_2&Rectangle Empty trou bottom_3
+save to Rectangle Empty trou bottom_2&Rectangle Empty trou bottom_3.txt
+similaritey ratio = 0.986565>0.500000
+save to Rectangle Empty trou bottom[3_1_2].jpg
+transform to Rectangle Empty trou bottom[3_1_2].pgm
+search 4 nearest neighbors of Rectangle Empty trou bottom_1
+search 4 nearest neighbors of Rectangle Empty trou bottom_2
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle Empty trou bottom_Rectangle Empty trou bottom[3_1_2]&Rectangle Empty trou bottom_4
+save to Rectangle Empty trou bottom_Rectangle Empty trou bottom[3_1_2]&Rectangle Empty trou bottom_4.txt
+save to Rectangle Empty trou bottom_5&Rectangle Empty trou bottom_Rectangle Empty trou bottom[3_1_2].txt
+similaritey ratio = 0.597886>0.500000
+save to Rectangle Empty trou bottom[Rectangle Empty trou bottom[3_1_2]_4_5].jpg
+transform to Rectangle Empty trou bottom[Rectangle Empty trou bottom[3_1_2]_4_5].pgm
+search 4 nearest neighbors of Rectangle Empty trou bottom_4
+search 4 nearest neighbors of Rectangle Empty trou bottom_5
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou bottom_9
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

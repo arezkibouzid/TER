@@ -1,0 +1,220 @@
+search 4 nearest neighbors of Rectangle V_1
+histogram calculation Rectangle V_1&Rectangle V_2
+save to Rectangle V_1&Rectangle V_2.txt
+histogram calculationRectangle V_3&Rectangle V_1
+save to Rectangle V_3&Rectangle V_1.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V[1_2_3].jpg
+transform to Rectangle V[1_2_3].pgm
+search 4 nearest neighbors of Rectangle V_2
+search 4 nearest neighbors of Rectangle V_3
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[1_2_3]&Rectangle V_4
+save to Rectangle V_Rectangle V[1_2_3]&Rectangle V_4.txt
+save to Rectangle V_5&Rectangle V_Rectangle V[1_2_3].txt
+0.070489<0.500000 => Stop
+1.000000<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_4
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_11
+histogram calculation Rectangle V_11&Rectangle V_14
+save to Rectangle V_11&Rectangle V_14.txt
+histogram calculationRectangle V_15&Rectangle V_11
+save to Rectangle V_15&Rectangle V_11.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V[11_14_15].jpg
+transform to Rectangle V[11_14_15].pgm
+search 4 nearest neighbors of Rectangle V_14
+search 4 nearest neighbors of Rectangle V_15
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+1.000000<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_12
+histogram calculation Rectangle V_12&Rectangle V_18
+save to Rectangle V_12&Rectangle V_18.txt
+histogram calculationRectangle V_38&Rectangle V_12
+save to Rectangle V_38&Rectangle V_12.txt
+similaritey ratio = 0.996504>0.500000
+save to Rectangle V[12_18_38].jpg
+transform to Rectangle V[12_18_38].pgm
+search 4 nearest neighbors of Rectangle V_18
+search 4 nearest neighbors of Rectangle V_38
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[12_18_38]&Rectangle V_39
+save to Rectangle V_Rectangle V[12_18_38]&Rectangle V_39.txt
+save to Rectangle V_37&Rectangle V_Rectangle V[12_18_38].txt
+0.275641<0.500000 => Stop
+0.996504<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_13
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V_17
+histogram calculation Rectangle V_17&Rectangle V_19
+save to Rectangle V_17&Rectangle V_19.txt
+histogram calculationRectangle V_20&Rectangle V_17
+save to Rectangle V_20&Rectangle V_17.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V[17_19_20].jpg
+transform to Rectangle V[17_19_20].pgm
+search 4 nearest neighbors of Rectangle V_19
+search 4 nearest neighbors of Rectangle V_20
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[17_19_20]&Rectangle V_22
+save to Rectangle V_Rectangle V[17_19_20]&Rectangle V_22.txt
+save to Rectangle V_21&Rectangle V_Rectangle V[17_19_20].txt
+similaritey ratio = 0.826043>0.500000
+save to Rectangle V[Rectangle V[17_19_20]_22_21].jpg
+transform to Rectangle V[Rectangle V[17_19_20]_22_21].pgm
+search 4 nearest neighbors of Rectangle V_22
+search 4 nearest neighbors of Rectangle V_21
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[17_19_20]_22_21]&Rectangle V_197
+save to Rectangle V_Rectangle V[Rectangle V[17_19_20]_22_21]&Rectangle V_197.txt
+save to Rectangle V_198&Rectangle V_Rectangle V[Rectangle V[17_19_20]_22_21].txt
+similaritey ratio = 0.826450>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198].pgm
+search 4 nearest neighbors of Rectangle V_197
+search 4 nearest neighbors of Rectangle V_198
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198]&Rectangle V_200
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198]&Rectangle V_200.txt
+save to Rectangle V_201&Rectangle V_Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198].txt
+similaritey ratio = 0.822811>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198]_200_201].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[17_19_20]_22_21]_197_198]_200_201].pgm
+search 4 nearest neighbors of Rectangle V_200
+search 4 nearest neighbors of Rectangle V_201
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.822811<0.500000 => Stop
+0.826450<0.500000 => Stop
+0.826043<0.500000 => Stop
+1.000000<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V_23
+histogram calculation Rectangle V_23&Rectangle V_25
+save to Rectangle V_23&Rectangle V_25.txt
+histogram calculationRectangle V_24&Rectangle V_23
+save to Rectangle V_24&Rectangle V_23.txt
+similaritey ratio = 0.999669>0.500000
+save to Rectangle V[23_25_24].jpg
+transform to Rectangle V[23_25_24].pgm
+search 4 nearest neighbors of Rectangle V_25
+search 4 nearest neighbors of Rectangle V_24
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[23_25_24]&Rectangle V_175
+save to Rectangle V_Rectangle V[23_25_24]&Rectangle V_175.txt
+save to Rectangle V_176&Rectangle V_Rectangle V[23_25_24].txt
+similaritey ratio = 0.805239>0.500000
+save to Rectangle V[Rectangle V[23_25_24]_175_176].jpg
+transform to Rectangle V[Rectangle V[23_25_24]_175_176].pgm
+search 4 nearest neighbors of Rectangle V_175
+search 4 nearest neighbors of Rectangle V_176
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[23_25_24]_175_176]&Rectangle V_37
+save to Rectangle V_Rectangle V[Rectangle V[23_25_24]_175_176]&Rectangle V_37.txt
+save to Rectangle V_45&Rectangle V_Rectangle V[Rectangle V[23_25_24]_175_176].txt
+similaritey ratio = 0.883694>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45].pgm
+search 4 nearest neighbors of Rectangle V_37
+search 4 nearest neighbors of Rectangle V_45
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]&Rectangle V_40
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]&Rectangle V_40.txt
+save to Rectangle V_41&Rectangle V_Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45].txt
+similaritey ratio = 0.899400>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41].pgm
+search 4 nearest neighbors of Rectangle V_40
+search 4 nearest neighbors of Rectangle V_41
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]&Rectangle V_46
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]&Rectangle V_46.txt
+save to Rectangle V_47&Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41].txt
+similaritey ratio = 0.937665>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47].pgm
+search 4 nearest neighbors of Rectangle V_46
+search 4 nearest neighbors of Rectangle V_47
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]&Rectangle V_43
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]&Rectangle V_43.txt
+save to Rectangle V_50&Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47].txt
+similaritey ratio = 0.872445>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50].pgm
+search 4 nearest neighbors of Rectangle V_43
+search 4 nearest neighbors of Rectangle V_50
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]&Rectangle V_55
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]&Rectangle V_55.txt
+save to Rectangle V_63&Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50].txt
+similaritey ratio = 0.905141>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63].pgm
+search 4 nearest neighbors of Rectangle V_55
+search 4 nearest neighbors of Rectangle V_63
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]&Rectangle V_42
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]&Rectangle V_42.txt
+save to Rectangle V_62&Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63].txt
+similaritey ratio = 0.933458>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62].pgm
+search 4 nearest neighbors of Rectangle V_42
+search 4 nearest neighbors of Rectangle V_62
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]&Rectangle V_57
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]&Rectangle V_57.txt
+save to Rectangle V_61&Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62].txt
+similaritey ratio = 0.963140>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61].pgm
+search 4 nearest neighbors of Rectangle V_57
+search 4 nearest neighbors of Rectangle V_61
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61]&Rectangle V_56
+save to Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61]&Rectangle V_56.txt
+save to Rectangle V_52&Rectangle V_Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61].txt
+similaritey ratio = 0.953755>0.500000
+save to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61]_56_52].jpg
+transform to Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[Rectangle V[23_25_24]_175_176]_37_45]_40_41]_46_47]_43_50]_55_63]_42_62]_57_61]_56_52].pgm
+search 4 nearest neighbors of Rectangle V_56
+search 4 nearest neighbors of Rectangle V_52
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 

@@ -1,0 +1,15 @@
+search 4 nearest neighbors of diode H_1
+histogram calculation diode H_1&diode H_2
+save to diode H_1&diode H_2.txt
+histogram calculationdiode H_3&diode H_1
+save to diode H_3&diode H_1.txt
+similaritey ratio = 0.841723>0.500000
+save to diode H[1_2_3].jpg
+transform to diode H[1_2_3].pgm
+search 4 nearest neighbors of diode H_2
+search 4 nearest neighbors of diode H_3
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.841723<0.500000 => Stop
+look for other lines
+No lines => Stop

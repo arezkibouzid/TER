@@ -1,0 +1,1417 @@
+search 4 nearest neighbors of Rectangle H_1
+histogram calculation Rectangle H_1&Rectangle H_2
+save to Rectangle H_1&Rectangle H_2.txt
+histogram calculationRectangle H_3&Rectangle H_1
+save to Rectangle H_3&Rectangle H_1.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle H[1_2_3].jpg
+transform to Rectangle H[1_2_3].pgm
+search 4 nearest neighbors of Rectangle H_2
+search 4 nearest neighbors of Rectangle H_3
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_5&Rectangle H_Rectangle H[1_2_3].txt
+0.038665<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_1
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_1.txt
+save to Rectangle H_3&Rectangle H_Rectangle H[1_2_3].txt
+0.038901<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_50&Rectangle H_Rectangle H[1_2_3].txt
+0.038901<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_1
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_1.txt
+save to Rectangle H_3&Rectangle H_Rectangle H[1_2_3].txt
+0.038901<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_5&Rectangle H_Rectangle H[1_2_3].txt
+0.038665<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_1
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_1.txt
+save to Rectangle H_3&Rectangle H_Rectangle H[1_2_3].txt
+0.038901<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_50&Rectangle H_Rectangle H[1_2_3].txt
+0.038901<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_4
+histogram calculation Rectangle H_4&Rectangle H_6
+save to Rectangle H_4&Rectangle H_6.txt
+histogram calculationRectangle H_7&Rectangle H_4
+save to Rectangle H_7&Rectangle H_4.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle H[4_6_7].jpg
+transform to Rectangle H[4_6_7].pgm
+search 4 nearest neighbors of Rectangle H_6
+search 4 nearest neighbors of Rectangle H_7
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle H_Rectangle H[4_6_7]&Rectangle H_8
+save to Rectangle H_Rectangle H[4_6_7]&Rectangle H_8.txt
+save to Rectangle H_9&Rectangle H_Rectangle H[4_6_7].txt
+similaritey ratio = 0.588233>0.500000
+save to Rectangle H[Rectangle H[4_6_7]_8_9].jpg
+transform to Rectangle H[Rectangle H[4_6_7]_8_9].pgm
+search 4 nearest neighbors of Rectangle H_8
+search 4 nearest neighbors of Rectangle H_9
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_52
+histogram calculation Rectangle H_52&Rectangle H_24
+save to Rectangle H_52&Rectangle H_24.txt
+histogram calculationRectangle H_25&Rectangle H_52
+save to Rectangle H_25&Rectangle H_52.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle H[52_24_25].jpg
+transform to Rectangle H[52_24_25].pgm
+search 4 nearest neighbors of Rectangle H_24
+search 4 nearest neighbors of Rectangle H_25
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_5
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_20
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_23
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle H_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_40
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_41
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_42
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_43
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_44
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle H_51
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+No lines => Stop

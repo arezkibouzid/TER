@@ -1,0 +1,902 @@
+search 4 nearest neighbors of Rectangle V Empty_1
+histogram calculation Rectangle V Empty_1&Rectangle V Empty_2
+save to Rectangle V Empty_1&Rectangle V Empty_2.txt
+histogram calculationRectangle V Empty_3&Rectangle V Empty_1
+save to Rectangle V Empty_3&Rectangle V Empty_1.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V Empty[1_2_3].jpg
+transform to Rectangle V Empty[1_2_3].pgm
+search 4 nearest neighbors of Rectangle V Empty_2
+search 4 nearest neighbors of Rectangle V Empty_3
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle V Empty_Rectangle V Empty[1_2_3]&Rectangle V Empty_4
+save to Rectangle V Empty_Rectangle V Empty[1_2_3]&Rectangle V Empty_4.txt
+save to Rectangle V Empty_5&Rectangle V Empty_Rectangle V Empty[1_2_3].txt
+similaritey ratio = 0.508115>0.500000
+save to Rectangle V Empty[Rectangle V Empty[1_2_3]_4_5].jpg
+transform to Rectangle V Empty[Rectangle V Empty[1_2_3]_4_5].pgm
+search 4 nearest neighbors of Rectangle V Empty_4
+search 4 nearest neighbors of Rectangle V Empty_5
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_17
+histogram calculation Rectangle V Empty_17&Rectangle V Empty_18
+save to Rectangle V Empty_17&Rectangle V Empty_18.txt
+histogram calculationRectangle V Empty_19&Rectangle V Empty_17
+save to Rectangle V Empty_19&Rectangle V Empty_17.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V Empty[17_18_19].jpg
+transform to Rectangle V Empty[17_18_19].pgm
+search 4 nearest neighbors of Rectangle V Empty_18
+search 4 nearest neighbors of Rectangle V Empty_19
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle V Empty_Rectangle V Empty[17_18_19]&Rectangle V Empty_20
+save to Rectangle V Empty_Rectangle V Empty[17_18_19]&Rectangle V Empty_20.txt
+save to Rectangle V Empty_21&Rectangle V Empty_Rectangle V Empty[17_18_19].txt
+similaritey ratio = 0.644120>0.500000
+save to Rectangle V Empty[Rectangle V Empty[17_18_19]_20_21].jpg
+transform to Rectangle V Empty[Rectangle V Empty[17_18_19]_20_21].pgm
+search 4 nearest neighbors of Rectangle V Empty_20
+search 4 nearest neighbors of Rectangle V Empty_21
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_32
+histogram calculation Rectangle V Empty_32&Rectangle V Empty_33
+save to Rectangle V Empty_32&Rectangle V Empty_33.txt
+histogram calculationRectangle V Empty_34&Rectangle V Empty_32
+save to Rectangle V Empty_34&Rectangle V Empty_32.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle V Empty[32_33_34].jpg
+transform to Rectangle V Empty[32_33_34].pgm
+search 4 nearest neighbors of Rectangle V Empty_33
+search 4 nearest neighbors of Rectangle V Empty_34
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35.txt
+save to Rectangle V Empty_36&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482518<0.500000 => Stop
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_32
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_32.txt
+save to Rectangle V Empty_34&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482469<0.500000 => Stop
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35.txt
+save to Rectangle V Empty_36&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482518<0.500000 => Stop
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_32
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_32.txt
+save to Rectangle V Empty_34&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482469<0.500000 => Stop
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35.txt
+save to Rectangle V Empty_36&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482518<0.500000 => Stop
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_32
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_32.txt
+save to Rectangle V Empty_34&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482469<0.500000 => Stop
+histogram calculation Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35
+save to Rectangle V Empty_Rectangle V Empty[32_33_34]&Rectangle V Empty_35.txt
+save to Rectangle V Empty_36&Rectangle V Empty_Rectangle V Empty[32_33_34].txt
+0.482518<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle V Empty_36
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

@@ -1,0 +1,62 @@
+search 4 nearest neighbors of Symbole 6_1
+histogram calculation Symbole 6_1&Symbole 6_2
+save to Symbole 6_1&Symbole 6_2.txt
+histogram calculationSymbole 6_3&Symbole 6_1
+save to Symbole 6_3&Symbole 6_1.txt
+similaritey ratio = 0.504140>0.500000
+save to Symbole 6[1_2_3].jpg
+transform to Symbole 6[1_2_3].pgm
+search 4 nearest neighbors of Symbole 6_2
+search 4 nearest neighbors of Symbole 6_3
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+0.504140<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 6_4
+histogram calculation Symbole 6_4&Symbole 6_5
+save to Symbole 6_4&Symbole 6_5.txt
+histogram calculationSymbole 6_6&Symbole 6_4
+save to Symbole 6_6&Symbole 6_4.txt
+0.437708<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 6_5
+histogram calculation Symbole 6_5&Symbole 6_6
+save to Symbole 6_5&Symbole 6_6.txt
+histogram calculationSymbole 6_4&Symbole 6_5
+save to Symbole 6_4&Symbole 6_5.txt
+0.134478<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 6_6
+histogram calculation Symbole 6_6&Symbole 6_5
+save to Symbole 6_6&Symbole 6_5.txt
+histogram calculationSymbole 6_4&Symbole 6_6
+save to Symbole 6_4&Symbole 6_6.txt
+0.417938<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 6_7
+histogram calculation Symbole 6_7&Symbole 6_9
+save to Symbole 6_7&Symbole 6_9.txt
+histogram calculationSymbole 6_8&Symbole 6_7
+save to Symbole 6_8&Symbole 6_7.txt
+similaritey ratio = 0.537167>0.500000
+save to Symbole 6[7_9_8].jpg
+transform to Symbole 6[7_9_8].pgm
+search 4 nearest neighbors of Symbole 6_9
+search 4 nearest neighbors of Symbole 6_8
+propagate the nearest neighbors of A or B 
+histogram calculation Symbole 6_Symbole 6[7_9_8]&Symbole 6_6
+save to Symbole 6_Symbole 6[7_9_8]&Symbole 6_6.txt
+save to Symbole 6_5&Symbole 6_Symbole 6[7_9_8].txt
+similaritey ratio = 0.768861>0.500000
+save to Symbole 6[Symbole 6[7_9_8]_6_5].jpg
+transform to Symbole 6[Symbole 6[7_9_8]_6_5].pgm
+search 4 nearest neighbors of Symbole 6_6
+search 4 nearest neighbors of Symbole 6_5
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+0.768861<0.500000 => Stop
+0.537167<0.500000 => Stop
+look for other lines
+No lines => Stop

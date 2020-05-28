@@ -1,0 +1,646 @@
+search 4 nearest neighbors of diode V_1
+histogram calculation diode V_1&diode V_2
+save to diode V_1&diode V_2.txt
+histogram calculationdiode V_6&diode V_1
+save to diode V_6&diode V_1.txt
+similaritey ratio = 0.963495>0.500000
+save to diode V[1_2_6].jpg
+transform to diode V[1_2_6].pgm
+search 4 nearest neighbors of diode V_2
+search 4 nearest neighbors of diode V_6
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation diode V_diode V[1_2_6]&diode V_9
+save to diode V_diode V[1_2_6]&diode V_9.txt
+save to diode V_15&diode V_diode V[1_2_6].txt
+0.356160<0.500000 => Stop
+0.963495<0.500000 => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_3
+histogram calculation diode V_3&diode V_4
+save to diode V_3&diode V_4.txt
+histogram calculationdiode V_5&diode V_3
+save to diode V_5&diode V_3.txt
+similaritey ratio = 0.988640>0.500000
+save to diode V[3_4_5].jpg
+transform to diode V[3_4_5].pgm
+search 4 nearest neighbors of diode V_4
+search 4 nearest neighbors of diode V_5
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation diode V_diode V[3_4_5]&diode V_7
+save to diode V_diode V[3_4_5]&diode V_7.txt
+save to diode V_8&diode V_diode V[3_4_5].txt
+0.402054<0.500000 => Stop
+0.988640<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_10
+histogram calculation diode V_10&diode V_11
+save to diode V_10&diode V_11.txt
+histogram calculationdiode V_13&diode V_10
+save to diode V_13&diode V_10.txt
+similaritey ratio = 0.935380>0.500000
+save to diode V[10_11_13].jpg
+transform to diode V[10_11_13].pgm
+search 4 nearest neighbors of diode V_11
+search 4 nearest neighbors of diode V_13
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.935380<0.500000 => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_9
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of diode V_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of diode V_16
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

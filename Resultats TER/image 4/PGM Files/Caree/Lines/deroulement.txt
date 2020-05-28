@@ -1,0 +1,2054 @@
+search 4 nearest neighbors of Caree_1
+histogram calculation Caree_1&Caree_7
+save to Caree_1&Caree_7.txt
+histogram calculationCaree_24&Caree_1
+save to Caree_24&Caree_1.txt
+similaritey ratio = 0.982700>0.500000
+save to Caree[1_7_24].jpg
+transform to Caree[1_7_24].pgm
+search 4 nearest neighbors of Caree_7
+search 4 nearest neighbors of Caree_24
+propagate the nearest neighbors of A or B 
+histogram calculation Caree_Caree[1_7_24]&Caree_19
+save to Caree_Caree[1_7_24]&Caree_19.txt
+save to Caree_20&Caree_Caree[1_7_24].txt
+similaritey ratio = 0.939912>0.500000
+save to Caree[Caree[1_7_24]_19_20].jpg
+transform to Caree[Caree[1_7_24]_19_20].pgm
+search 4 nearest neighbors of Caree_19
+search 4 nearest neighbors of Caree_20
+propagate the nearest neighbors of A or B 
+histogram calculation Caree_Caree[Caree[1_7_24]_19_20]&Caree_22
+save to Caree_Caree[Caree[1_7_24]_19_20]&Caree_22.txt
+save to Caree_23&Caree_Caree[Caree[1_7_24]_19_20].txt
+similaritey ratio = 0.887883>0.500000
+save to Caree[Caree[Caree[1_7_24]_19_20]_22_23].jpg
+transform to Caree[Caree[Caree[1_7_24]_19_20]_22_23].pgm
+search 4 nearest neighbors of Caree_22
+search 4 nearest neighbors of Caree_23
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_2
+histogram calculation Caree_2&Caree_3
+save to Caree_2&Caree_3.txt
+histogram calculationCaree_4&Caree_2
+save to Caree_4&Caree_2.txt
+similaritey ratio = 1.000000>0.500000
+save to Caree[2_3_4].jpg
+transform to Caree[2_3_4].pgm
+search 4 nearest neighbors of Caree_3
+search 4 nearest neighbors of Caree_4
+propagate the nearest neighbors of A or B 
+histogram calculation Caree_Caree[2_3_4]&Caree_5
+save to Caree_Caree[2_3_4]&Caree_5.txt
+save to Caree_6&Caree_Caree[2_3_4].txt
+similaritey ratio = 0.747469>0.500000
+save to Caree[Caree[2_3_4]_5_6].jpg
+transform to Caree[Caree[2_3_4]_5_6].pgm
+search 4 nearest neighbors of Caree_5
+search 4 nearest neighbors of Caree_6
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_40
+histogram calculation Caree_40&Caree_41
+save to Caree_40&Caree_41.txt
+histogram calculationCaree_42&Caree_40
+save to Caree_42&Caree_40.txt
+similaritey ratio = 1.000000>0.500000
+save to Caree[40_41_42].jpg
+transform to Caree[40_41_42].pgm
+search 4 nearest neighbors of Caree_41
+search 4 nearest neighbors of Caree_42
+propagate the nearest neighbors of A or B 
+histogram calculation Caree_Caree[40_41_42]&Caree_43
+save to Caree_Caree[40_41_42]&Caree_43.txt
+save to Caree_44&Caree_Caree[40_41_42].txt
+similaritey ratio = 0.739810>0.500000
+save to Caree[Caree[40_41_42]_43_44].jpg
+transform to Caree[Caree[40_41_42]_43_44].pgm
+search 4 nearest neighbors of Caree_43
+search 4 nearest neighbors of Caree_44
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_61
+histogram calculation Caree_61&Caree_62
+save to Caree_61&Caree_62.txt
+histogram calculationCaree_63&Caree_61
+save to Caree_63&Caree_61.txt
+similaritey ratio = 1.000000>0.500000
+save to Caree[61_62_63].jpg
+transform to Caree[61_62_63].pgm
+search 4 nearest neighbors of Caree_62
+search 4 nearest neighbors of Caree_63
+propagate the nearest neighbors of A or B 
+histogram calculation Caree_Caree[61_62_63]&Caree_64
+save to Caree_Caree[61_62_63]&Caree_64.txt
+save to Caree_65&Caree_Caree[61_62_63].txt
+similaritey ratio = 0.655766>0.500000
+save to Caree[Caree[61_62_63]_64_65].jpg
+transform to Caree[Caree[61_62_63]_64_65].pgm
+search 4 nearest neighbors of Caree_64
+search 4 nearest neighbors of Caree_65
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_12
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_13
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_14
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_18
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_21
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_31
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_32
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_33
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_34
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_35
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_36
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_37
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_38
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_39
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_45
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_46
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_47
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_48
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_49
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_50
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_51
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_52
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_53
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_54
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_55
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_56
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_57
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_58
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_59
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_60
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Caree_66
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_67
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_68
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_69
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_70
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_71
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_72
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_73
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_74
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_75
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_76
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_77
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_78
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_79
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Caree_80
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

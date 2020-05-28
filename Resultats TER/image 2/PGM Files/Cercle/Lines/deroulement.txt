@@ -1,0 +1,1223 @@
+search 4 nearest neighbors of Cercle_1
+histogram calculation Cercle_1&Cercle_8
+save to Cercle_1&Cercle_8.txt
+histogram calculationCercle_2&Cercle_1
+save to Cercle_2&Cercle_1.txt
+similaritey ratio = 0.982893>0.500000
+save to Cercle[1_8_2].jpg
+transform to Cercle[1_8_2].pgm
+search 4 nearest neighbors of Cercle_8
+search 4 nearest neighbors of Cercle_2
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Cercle_Cercle[1_8_2]&Cercle_3
+save to Cercle_Cercle[1_8_2]&Cercle_3.txt
+save to Cercle_4&Cercle_Cercle[1_8_2].txt
+similaritey ratio = 0.563677>0.500000
+save to Cercle[Cercle[1_8_2]_3_4].jpg
+transform to Cercle[Cercle[1_8_2]_3_4].pgm
+search 4 nearest neighbors of Cercle_3
+search 4 nearest neighbors of Cercle_4
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.563677<0.500000 => Stop
+0.982893<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_7
+histogram calculation Cercle_7&Cercle_9
+save to Cercle_7&Cercle_9.txt
+histogram calculationCercle_10&Cercle_7
+save to Cercle_10&Cercle_7.txt
+similaritey ratio = 0.931199>0.500000
+save to Cercle[7_9_10].jpg
+transform to Cercle[7_9_10].pgm
+search 4 nearest neighbors of Cercle_9
+search 4 nearest neighbors of Cercle_10
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.931199<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_11
+histogram calculation Cercle_11&Cercle_12
+save to Cercle_11&Cercle_12.txt
+histogram calculationCercle_13&Cercle_11
+save to Cercle_13&Cercle_11.txt
+similaritey ratio = 0.971506>0.500000
+save to Cercle[11_12_13].jpg
+transform to Cercle[11_12_13].pgm
+search 4 nearest neighbors of Cercle_12
+search 4 nearest neighbors of Cercle_13
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Cercle_Cercle[11_12_13]&Cercle_14
+save to Cercle_Cercle[11_12_13]&Cercle_14.txt
+save to Cercle_16&Cercle_Cercle[11_12_13].txt
+similaritey ratio = 0.924521>0.500000
+save to Cercle[Cercle[11_12_13]_14_16].jpg
+transform to Cercle[Cercle[11_12_13]_14_16].pgm
+search 4 nearest neighbors of Cercle_14
+search 4 nearest neighbors of Cercle_16
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.924521<0.500000 => Stop
+0.971506<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_15
+histogram calculation Cercle_15&Cercle_17
+save to Cercle_15&Cercle_17.txt
+histogram calculationCercle_18&Cercle_15
+save to Cercle_18&Cercle_15.txt
+similaritey ratio = 0.984564>0.500000
+save to Cercle[15_17_18].jpg
+transform to Cercle[15_17_18].pgm
+search 4 nearest neighbors of Cercle_17
+search 4 nearest neighbors of Cercle_18
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+histogram calculation Cercle_Cercle[15_17_18]&Cercle_19
+save to Cercle_Cercle[15_17_18]&Cercle_19.txt
+save to Cercle_20&Cercle_Cercle[15_17_18].txt
+similaritey ratio = 0.942808>0.500000
+save to Cercle[Cercle[15_17_18]_19_20].jpg
+transform to Cercle[Cercle[15_17_18]_19_20].pgm
+search 4 nearest neighbors of Cercle_19
+search 4 nearest neighbors of Cercle_20
+propagate the nearest neighbors of A (first nearest) or B(second nearest) 
+no neighbors or already taken => Stop
+0.942808<0.500000 => Stop
+0.984564<0.500000 => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_5
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_6
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_21
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_22
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_23
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_24
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_25
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_26
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_27
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_28
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_29
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_30
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Cercle_31
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

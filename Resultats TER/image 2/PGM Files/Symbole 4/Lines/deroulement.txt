@@ -1,0 +1,842 @@
+search 4 nearest neighbors of Symbole 4_1
+histogram calculation Symbole 4_1&Symbole 4_7
+save to Symbole 4_1&Symbole 4_7.txt
+histogram calculationSymbole 4_2&Symbole 4_1
+save to Symbole 4_2&Symbole 4_1.txt
+0.498846<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_2
+histogram calculation Symbole 4_2&Symbole 4_4
+save to Symbole 4_2&Symbole 4_4.txt
+histogram calculationSymbole 4_3&Symbole 4_2
+save to Symbole 4_3&Symbole 4_2.txt
+0.449610<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_3
+histogram calculation Symbole 4_3&Symbole 4_5
+save to Symbole 4_3&Symbole 4_5.txt
+histogram calculationSymbole 4_2&Symbole 4_3
+save to Symbole 4_2&Symbole 4_3.txt
+similaritey ratio = 0.900923>0.500000
+save to Symbole 4[3_5_2].jpg
+transform to Symbole 4[3_5_2].pgm
+search 4 nearest neighbors of Symbole 4_5
+search 4 nearest neighbors of Symbole 4_2
+propagate the nearest neighbors of A or B 
+histogram calculation Symbole 4_Symbole 4[3_5_2]&Symbole 4_4
+save to Symbole 4_Symbole 4[3_5_2]&Symbole 4_4.txt
+save to Symbole 4_6&Symbole 4_Symbole 4[3_5_2].txt
+0.443048<0.500000 => Stop
+0.900923<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_8
+histogram calculation Symbole 4_8&Symbole 4_11
+save to Symbole 4_8&Symbole 4_11.txt
+histogram calculationSymbole 4_12&Symbole 4_8
+save to Symbole 4_12&Symbole 4_8.txt
+0.491407<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_9
+histogram calculation Symbole 4_9&Symbole 4_10
+save to Symbole 4_9&Symbole 4_10.txt
+histogram calculationSymbole 4_8&Symbole 4_9
+save to Symbole 4_8&Symbole 4_9.txt
+similaritey ratio = 0.570316>0.500000
+save to Symbole 4[9_10_8].jpg
+transform to Symbole 4[9_10_8].pgm
+search 4 nearest neighbors of Symbole 4_10
+search 4 nearest neighbors of Symbole 4_8
+propagate the nearest neighbors of A or B 
+histogram calculation Symbole 4_Symbole 4[9_10_8]&Symbole 4_11
+save to Symbole 4_Symbole 4[9_10_8]&Symbole 4_11.txt
+save to Symbole 4_12&Symbole 4_Symbole 4[9_10_8].txt
+0.265308<0.500000 => Stop
+0.570316<0.500000 => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_11
+histogram calculation Symbole 4_11&Symbole 4_13
+save to Symbole 4_11&Symbole 4_13.txt
+histogram calculationSymbole 4_14&Symbole 4_11
+save to Symbole 4_14&Symbole 4_11.txt
+similaritey ratio = 0.514065>0.500000
+save to Symbole 4[11_13_14].jpg
+transform to Symbole 4[11_13_14].pgm
+search 4 nearest neighbors of Symbole 4_13
+search 4 nearest neighbors of Symbole 4_14
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+0.514065<0.500000 => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_1
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_7
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_12
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Symbole 4_15
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_16
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_17
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_18
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Symbole 4_19
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

@@ -1,0 +1,151 @@
+search 4 nearest neighbors of Cercle_1
+histogram calculation Cercle_1&Cercle_2
+save to Cercle_1&Cercle_2.txt
+histogram calculationCercle_3&Cercle_1
+save to Cercle_3&Cercle_1.txt
+similaritey ratio = 0.604880>0.500000
+save to Cercle[1_2_3].jpg
+transform to Cercle[1_2_3].pgm
+search 4 nearest neighbors of Cercle_2
+search 4 nearest neighbors of Cercle_3
+propagate the nearest neighbors of A or B 
+histogram calculation Cercle_Cercle[1_2_3]&Cercle_5
+save to Cercle_Cercle[1_2_3]&Cercle_5.txt
+save to Cercle_6&Cercle_Cercle[1_2_3].txt
+similaritey ratio = 0.695653>0.500000
+save to Cercle[Cercle[1_2_3]_5_6].jpg
+transform to Cercle[Cercle[1_2_3]_5_6].pgm
+search 4 nearest neighbors of Cercle_5
+search 4 nearest neighbors of Cercle_6
+propagate the nearest neighbors of A or B 
+histogram calculation Cercle_Cercle[Cercle[1_2_3]_5_6]&Cercle_10
+save to Cercle_Cercle[Cercle[1_2_3]_5_6]&Cercle_10.txt
+save to Cercle_7&Cercle_Cercle[Cercle[1_2_3]_5_6].txt
+similaritey ratio = 0.683299>0.500000
+save to Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7].jpg
+transform to Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7].pgm
+search 4 nearest neighbors of Cercle_10
+search 4 nearest neighbors of Cercle_7
+propagate the nearest neighbors of A or B 
+histogram calculation Cercle_Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7]&Cercle_8
+save to Cercle_Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7]&Cercle_8.txt
+save to Cercle_9&Cercle_Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7].txt
+similaritey ratio = 0.757848>0.500000
+save to Cercle[Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7]_8_9].jpg
+transform to Cercle[Cercle[Cercle[Cercle[1_2_3]_5_6]_10_7]_8_9].pgm
+search 4 nearest neighbors of Cercle_8
+search 4 nearest neighbors of Cercle_9
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_4
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_11
+histogram calculation Cercle_11&Cercle_12
+save to Cercle_11&Cercle_12.txt
+histogram calculationCercle_30&Cercle_11
+save to Cercle_30&Cercle_11.txt
+similaritey ratio = 0.639764>0.500000
+save to Cercle[11_12_30].jpg
+transform to Cercle[11_12_30].pgm
+search 4 nearest neighbors of Cercle_12
+search 4 nearest neighbors of Cercle_30
+propagate the nearest neighbors of A or B 
+histogram calculation Cercle_Cercle[11_12_30]&Cercle_31
+save to Cercle_Cercle[11_12_30]&Cercle_31.txt
+save to Cercle_32&Cercle_Cercle[11_12_30].txt
+similaritey ratio = 0.643502>0.500000
+save to Cercle[Cercle[11_12_30]_31_32].jpg
+transform to Cercle[Cercle[11_12_30]_31_32].pgm
+search 4 nearest neighbors of Cercle_31
+search 4 nearest neighbors of Cercle_32
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_13
+histogram calculation Cercle_13&Cercle_14
+save to Cercle_13&Cercle_14.txt
+histogram calculationCercle_29&Cercle_13
+save to Cercle_29&Cercle_13.txt
+similaritey ratio = 0.636614>0.500000
+save to Cercle[13_14_29].jpg
+transform to Cercle[13_14_29].pgm
+search 4 nearest neighbors of Cercle_14
+search 4 nearest neighbors of Cercle_29
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_15
+histogram calculation Cercle_15&Cercle_16
+save to Cercle_15&Cercle_16.txt
+histogram calculationCercle_26&Cercle_15
+save to Cercle_26&Cercle_15.txt
+similaritey ratio = 0.648134>0.500000
+save to Cercle[15_16_26].jpg
+transform to Cercle[15_16_26].pgm
+search 4 nearest neighbors of Cercle_16
+search 4 nearest neighbors of Cercle_26
+propagate the nearest neighbors of A or B 
+histogram calculation Cercle_Cercle[15_16_26]&Cercle_28
+save to Cercle_Cercle[15_16_26]&Cercle_28.txt
+save to Cercle_25&Cercle_Cercle[15_16_26].txt
+similaritey ratio = 0.937181>0.500000
+save to Cercle[Cercle[15_16_26]_28_25].jpg
+transform to Cercle[Cercle[15_16_26]_28_25].pgm
+search 4 nearest neighbors of Cercle_28
+search 4 nearest neighbors of Cercle_25
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_17
+histogram calculation Cercle_17&Cercle_18
+save to Cercle_17&Cercle_18.txt
+histogram calculationCercle_19&Cercle_17
+save to Cercle_19&Cercle_17.txt
+similaritey ratio = 0.958256>0.500000
+save to Cercle[17_18_19].jpg
+transform to Cercle[17_18_19].pgm
+search 4 nearest neighbors of Cercle_18
+search 4 nearest neighbors of Cercle_19
+propagate the nearest neighbors of A or B 
+histogram calculation Cercle_Cercle[17_18_19]&Cercle_20
+save to Cercle_Cercle[17_18_19]&Cercle_20.txt
+save to Cercle_21&Cercle_Cercle[17_18_19].txt
+similaritey ratio = 0.661241>0.500000
+save to Cercle[Cercle[17_18_19]_20_21].jpg
+transform to Cercle[Cercle[17_18_19]_20_21].pgm
+search 4 nearest neighbors of Cercle_20
+search 4 nearest neighbors of Cercle_21
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Cercle_22
+histogram calculation Cercle_22&Cercle_23
+save to Cercle_22&Cercle_23.txt
+histogram calculationCercle_24&Cercle_22
+save to Cercle_24&Cercle_22.txt
+similaritey ratio = 0.970537>0.500000
+save to Cercle[22_23_24].jpg
+transform to Cercle[22_23_24].pgm
+search 4 nearest neighbors of Cercle_23
+search 4 nearest neighbors of Cercle_24
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

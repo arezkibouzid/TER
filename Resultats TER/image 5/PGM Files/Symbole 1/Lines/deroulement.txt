@@ -1,0 +1,14 @@
+search 4 nearest neighbors of Symbole 1_1
+histogram calculation Symbole 1_1&Symbole 1_2
+save to Symbole 1_1&Symbole 1_2.txt
+histogram calculationSymbole 1_3&Symbole 1_1
+save to Symbole 1_3&Symbole 1_1.txt
+similaritey ratio = 0.988922>0.500000
+save to Symbole 1[1_2_3].jpg
+transform to Symbole 1[1_2_3].pgm
+search 4 nearest neighbors of Symbole 1_2
+search 4 nearest neighbors of Symbole 1_3
+propagate the nearest neighbors of A or B 
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

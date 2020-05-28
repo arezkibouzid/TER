@@ -72,23 +72,24 @@ double segma = 0;
 double Seuil = 100;
 
 int connexité = 8;
-double RadiusSize = 7;
 
-int numberOfDirections = 180;
+double RadiusSize = 20;
+
+int numberOfDirections = 360;
 
 double rdep = 0.0;
 double rfin = 0.0;
 double rpas = 0.1;
 double Seuil_similarity_ratio = 0.5;
-int nombre_iteration = 20;
+int nombre_iteration = 10;
 
 //
 int M = 4;
 int N = 9;
 // en moin 1 composant clasifier comme symbole qlq
 int C = 1;
-int NmbrSymbole = 18;
-int numImagesMaxParSymbole = 52;
+int NmbrSymbole = 34;
+int numImagesMaxParSymbole = 80;
 //
 string path_image = "FUN.tif";
 
@@ -434,7 +435,7 @@ void connectedComponentsVector(Mat& threshold_frame, vector<CC>& composants) {
 		composant.setPtr_debut(Point(stats.at<int>(i, 0), stats.at<int>(i, 1)));
 
 		CcToMat(composant, m);
-		copyMakeBorder(m, m, 2, 2, 2, 2, BORDER_CONSTANT, 0);
+		//copyMakeBorder(m, m, 2, 2, 2, 2, BORDER_CONSTANT, 0);
 		composant.setMat(m);
 
 		imwrite("./CCs/Component_" + to_string(i) + ".jpg", composant.getMat());
@@ -596,16 +597,53 @@ void GFD(CC& composant, Mat& centredImage, int m, int n)
 void CalculateGfdAndPushAllVectsCar(int m, int n) {
 	vector<float>& ptr_vect = vectC;
 
-	// i=0 => background
-	for (int i = 1; i < composants.size(); i++)
-	{
-		cout << "calculation GFD Component_" + to_string(i) << endl;
-		GFD(composants.at(i), centredImage, m, n);
+	if (!exists("./CCs.txt")) {
+		std::ofstream outfile("./CCs.txt");
+		// i=0 => background
+		for (int i = 1; i < composants.size(); i++)
+		{
+			cout << "calculation GFD Component_" + to_string(i) << endl;
+			GFD(composants.at(i), centredImage, m, n);
 
-		//namedWindow("composantCentred : " + i, WINDOW_NORMAL);
-		//imshow("composantCentred : " + i, centredImage);
+			vecteursCar.push_back(ptr_vect);
 
-		vecteursCar.push_back(ptr_vect);
+			String str = "X ";
+
+			for (int i = 0; i < vectC.size(); i++)
+			{
+				str += to_string(ptr_vect.at(i)) + " ";
+			}
+			outfile << str;
+		}
+		outfile.close();
+	}
+	else {
+		std::ifstream file("./CCs.txt");
+
+		std::string str;
+
+		std::getline(file, str);
+
+		int pos = 0;
+		std::string token;
+		string delimiter = " ";
+		vector<float> vect;
+		while ((pos = str.find(delimiter)) != std::string::npos)
+		{
+			vect.clear();
+			while ((pos = str.find(delimiter)) != std::string::npos) {
+				token = str.substr(0, pos);
+				if (token == "X") {
+					str.erase(0, pos + delimiter.length()); break;
+				}
+				else {
+					vect.push_back(stod(token));
+					str.erase(0, pos + delimiter.length());
+				}
+			}
+			if (vect.size() != 0)
+				vecteursCar.push_back(vect);
+		}
 	}
 }
 
@@ -613,8 +651,8 @@ void clean_SomeShit() {
 	std::error_code errorCode;
 	std::filesystem::path dir = fs::current_path();
 
-	std::filesystem::remove_all(dir / "CCs/", errorCode);
-	std::filesystem::remove_all(dir / "PGM Files/", errorCode);
+	//std::filesystem::remove_all(dir / "CCs/", errorCode);
+	//std::filesystem::remove_all(dir / "PGM Files/", errorCode);
 }
 
 void drawComposant(CC& composant, Mat& sub) {
@@ -698,6 +736,12 @@ void classification() {
 		cout << " => " << min;
 		out << " => " << min;
 
+		/*	if (composants.at(i + 1).getMat().size().width <= 8 && composants.at(i + 1).getMat().size().height <= 8) {
+				cout << " => classe  rejet => small size format";
+				out << " => classe  rejet => small size format";
+				matriceCompClassifier.at(N).emplace_back(composants.at(i + 1));
+			}
+			else {*/
 		if (checkSizeCoherence(composants.at(i + 1).getMat().size(), symbole)) {
 			cout << " => " << items.at(symbole);
 			out << " => " << items.at(symbole);
@@ -708,7 +752,7 @@ void classification() {
 			out << " => classe  rejet => size format different";
 			matriceCompClassifier.at(N).emplace_back(composants.at(i + 1));
 		}
-
+		//}
 		cout << endl;
 		out << endl;
 	}
@@ -716,20 +760,23 @@ void classification() {
 	Mat image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC1);
 	for (int i = 0; i < matriceCompClassifier.size() - 1; i++)
 	{
-		cout << "transfers classified components " << items.at(i) << " to .pgm in PGM Files directory" << endl;
-
-		string path = "PGM Files/" + items.at(i);
-		string path2 = path + "/Lines/";
-		fs::create_directories(path);
-		fs::create_directories(path2);
-		CompClassifier2PGM(path, items.at(i), matriceCompClassifier.at(i));
-
 		cout << "save classified components " << items.at(i) << " to " << items.at(i) << ".jpg in  CCs Classifier directory" << endl;
 		image = cv::Mat::zeros(WIDTH, HEIGHT, CV_8UC1);
 		drawComposantsClassifier(matriceCompClassifier.at(i), image);
 		imwrite("./CCs Classifier/" + items.at(i) + ".jpg", image);
 		cout << "number classified components as " << items.at(i) << " :" << matriceCompClassifier.at(i).size() - 1 << endl;
 		out << "number classified components as " << items.at(i) << " :" << matriceCompClassifier.at(i).size() - 1 << endl;
+
+		if (matriceCompClassifier.at(i).size() >= 4) {
+			cout << "transfers classified components " << items.at(i) << " to .pgm in PGM Files directory" << endl;
+
+			string path = "PGM Files/" + items.at(i);
+			string path2 = path + "/Lines/";
+
+			fs::create_directories(path);
+			fs::create_directories(path2);
+			CompClassifier2PGM(path, items.at(i), matriceCompClassifier.at(i));
+		}
 	}
 
 	cout << "save rejected components to Classe Rejet.jpg in CCs Classifier directory" << endl;
@@ -910,8 +957,12 @@ void classifier_ligne(int indexCC, int symbole) {
 			double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
 			double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
 			cout << "histogram calculation " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) << endl;
+			der << "histogram calculation " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) << endl;
 			cout << "save to " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt" << endl;
+			der << "save to " + items.at(symbole) + "_" + to_string(indexCC) + "&" + items.at(symbole) + "_" + to_string(b) + ".txt" << endl;
+			cout << "histogram calculation" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) << endl;
 			der << "histogram calculation" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) << endl;
+			cout << "save to " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt" << endl;
 			der << "save to " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + to_string(indexCC) + ".txt" << endl;
 			double d = similarity_ratio(histo_1, histo_2);
 			if (d >= Seuil_similarity_ratio) {
@@ -953,8 +1004,10 @@ void classifier_ligne(int indexCC, int symbole) {
 
 				int p = propagation(der, existance, name_image, b, c, symbole);
 			}
-			cout << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
-			der << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+			else {
+				cout << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+				der << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+			}
 		}
 
 	check:
@@ -990,23 +1043,33 @@ int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_
 	der << "search 4 nearest neighbors of " + items.at(symbole) + "_" + to_string(C) << endl;
 	int* arry_1 = near_4Composantes(symbole, B);
 	int* arry_2 = near_4Composantes(symbole, C);
+	bool cas1 = false, cas2 = false, cas3 = false, cas4 = false;
+	int branch = 1;
 	int b = -1, c = -1;
+	int transit = false;
 	string* path = new String("./PGM Files/" + items.at(symbole) + "/Lines/");
 	//priority to b
-	cout << "propagate the nearest neighbors of A (first nearest) or B(second nearest) " << endl;
-	der << "propagate the nearest neighbors of A (first nearest) or B(second nearest) " << endl;
+	cout << "propagate the nearest neighbors of A or B " << endl;
+	der << "propagate the nearest neighbors of A or B " << endl;
 	if (Mat_distances[symbole][B][arry_1[0]] < Mat_distances[symbole][C][arry_2[0]]) {
 		if (exist(vect_composants, arry_1[0]) && exist(vect_composants, arry_1[1])) {
-			b = arry_1[0]; c = arry_1[1];
+		BRANCH1:	b = arry_1[0]; c = arry_1[1];
+			cas1 = true;
 		}
 		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2]) && exist(vect_composants, arry_1[3])) {
+		CAS12:
 			b = arry_1[2]; c = arry_1[3];
+			cas2 = true;
 		}
 		else if (arry_2[0] != -1 && arry_2[1] != -1 && exist(vect_composants, arry_2[0]) && exist(vect_composants, arry_2[1])) {
+		CAS13:
 			b = arry_2[0]; c = arry_2[1];
+			cas3 = true;
 		}
 		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2]) && exist(vect_composants, arry_2[3])) {
+		CAS14:
 			b = arry_2[2]; c = arry_2[3];
+			cas4 = true;
 		}
 		else {
 			cout << "no neighbors or already taken => Stop" << endl;
@@ -1016,17 +1079,25 @@ int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_
 	}
 	//priority to c
 	else {
+		branch = 2;
 		if (exist(vect_composants, arry_2[0]) && exist(vect_composants, arry_2[1])) {
-			b = arry_2[0]; c = arry_2[1];
+		BRANCH2:	b = arry_2[0]; c = arry_2[1];
+			cas1 = true;
 		}
 		else if (arry_2[2] != -1 && arry_2[3] != -1 && exist(vect_composants, arry_2[2]) && exist(vect_composants, arry_2[3])) {
+		CAS22:
 			b = arry_2[2]; c = arry_2[3];
+			cas2 = true;
 		}
 		else if (arry_1[0] != -1 && arry_1[1] != -1 && exist(vect_composants, arry_1[0]) && exist(vect_composants, arry_1[1])) {
+		CAS23:
 			b = arry_1[0]; c = arry_1[1];
+			cas3 = true;
 		}
 		else if (arry_1[2] != -1 && arry_1[3] != -1 && exist(vect_composants, arry_1[2]) && exist(vect_composants, arry_1[3])) {
+		CAS24:
 			b = arry_1[2]; c = arry_1[3];
+			cas4 = true;
 		}
 		else {
 			cout << "no neighbors or already taken => Stop" << endl;
@@ -1036,25 +1107,42 @@ int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_
 	}
 
 	if (b == -1 || c == -1) {
-		cout << "no neighbors or already taken => Stop" << endl;
-		der << "no neighbors or already taken => Stop" << endl;
+		cout << "no neighbors or already taken " << endl;
+		der << "no neighbors or already taken " << endl;
+
+		if (branch == 1) {
+			if (cas1) { cas1 = false; goto CAS12; }
+			else if (cas2) { cas2 = false; goto CAS13; }
+			else if (cas3) { cas3 = false; goto CAS14; }
+			else if (!transit) if (cas4) { transit = true; cas4 = false; cas1 = true; branch = 2; goto BRANCH2; }
+		}
+		else
+		{
+			if (cas1) { cas1 = false; goto CAS22; }
+			else if (cas2) { cas2 = false; goto CAS23; }
+			else if (cas3) { cas3 = false; goto CAS24; }
+			else if (!transit) if (cas4) { transit = true; cas4 = false; cas1 = true; branch = 1; goto BRANCH1; }
+		}
+
 		return 0;
 	}
 
-	string path_res_1 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt";
+	string* path_res_1 = new String("./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt");
 
-	string path_res_2 = "./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt";
+	string* path_res_2 = new String("./PGM Files/" + items.at(symbole) + "/" + "Lines/ " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt");
 
-	string path_image_1 = "./PGM Files/" + items.at(symbole) + "/Lines/" + name_image_without_Ex + ".pgm";
-	string path_image_2 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm";
-	string path_image_3 = "./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm";
+	string* path_image_1 = new String("./PGM Files/" + items.at(symbole) + "/Lines/" + name_image_without_Ex + ".pgm");
+	string* path_image_2 = new String("./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(b) + ".pgm");
+	string* path_image_3 = new String("./PGM Files/" + items.at(symbole) + "/" + items.at(symbole) + "_" + to_string(c) + ".pgm");
 
-	double* histo_1 = calcul_Histogram(path_res_1, path_image_1, path_image_2);
-	double* histo_2 = calcul_Histogram(path_res_2, path_image_3, path_image_1);
+	double* histo_1 = calcul_Histogram(*path_res_1, *path_image_1, *path_image_2);
+	double* histo_2 = calcul_Histogram(*path_res_2, *path_image_3, *path_image_1);
 	double d = similarity_ratio(histo_1, histo_2);
 	cout << "histogram calculation " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) << endl;
+	der << "histogram calculation " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) << endl;
 	cout << "save to " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt" << endl;
-	der << "histogram calculation" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex << endl;
+	der << "save to " + items.at(symbole) + "_" + name_image_without_Ex + "&" + items.at(symbole) + "_" + to_string(b) + ".txt" << endl;
+	cout << "histogram calculation" + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex << endl;
 	der << "save to " + items.at(symbole) + "_" + to_string(c) + "&" + items.at(symbole) + "_" + name_image_without_Ex + ".txt" << endl;
 	if (d >= Seuil_similarity_ratio) {
 		cout << "similaritey ratio = " + to_string(d) + ">" + to_string(Seuil_similarity_ratio) << endl;
@@ -1062,7 +1150,6 @@ int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_
 		//vect_composants.erase(remove(vect_composants.begin(), vect_composants.end(), matriceCompClassifier.at(symbole).at(indexCC)), vect_composants.end());
 		vect_composants.at(b) = false;
 		vect_composants.at(c) = false;
-		cout << "-------------------------" + *path + name_image_without_Ex << endl;
 		Mat image = imread(*path + name_image_without_Ex + ".jpg");
 		image = image.t();
 
@@ -1090,11 +1177,32 @@ int propagation(ofstream& der, vector<bool>& vect_composants, string name_image_
 		imwrite(*path + name_image_without_Ex + ".pgm", image, compression_params);
 		cout << "transform to " << name_image_without_Ex + ".pgm" << endl;
 		der << "transform to " << name_image_without_Ex + ".pgm" << endl;
+
 		delete path;
+		delete path_res_1;
+		delete path_res_2;
+		delete path_image_1;
+		delete path_image_2;
+		delete path_image_3;
 		propagation(der, vect_composants, name_image_without_Ex, b, c, symbole);
 	}
-	cout << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
-	der << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+	else {
+		cout << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+		der << to_string(d) + "<" + to_string(Seuil_similarity_ratio) + " => Stop" << endl;
+		if (branch == 1) {
+			if (cas1) { cas1 = false; goto CAS12; }
+			else if (cas2) { cas2 = false; goto CAS13; }
+			else if (cas3) { cas3 = false; goto CAS14; }
+			else if (!transit) if (cas4) { transit = true; cas4 = false; cas1 = true; branch = 2; goto BRANCH2; }
+		}
+		else
+		{
+			if (cas1) { cas1 = false; goto CAS22; }
+			else if (cas2) { cas2 = false; goto CAS23; }
+			else if (cas3) { cas3 = false; goto CAS24; }
+			else if (!transit) if (cas4) { transit = true; cas4 = false; cas1 = true; branch = 2; goto BRANCH1; }
+		}
+	}
 }
 void drawComposant_ligne(CC& composant, Mat& sub, int r, int g, int b) {
 	for (int x = composant.getPtr_debut().x; x < composant.getPtr_debut().x + composant.getdX(); ++x)
@@ -1109,8 +1217,12 @@ void drawComposant_ligne(CC& composant, Mat& sub, int r, int g, int b) {
 void funcGenerale() {
 	generate_Mat_distances();
 
-	for (int i = 0; i < matriceCompClassifier.size(); i++)
+	for (int i = 0; i < matriceCompClassifier.size() - 1; i++)
 	{
+		Seuil_similarity_ratio = 0.5;
+		if (items.at(i) == "Rectangle Empty trou top") Seuil_similarity_ratio = 0.7;
+		if (items.at(i) == "Rectangle V") Seuil_similarity_ratio = 0.99;
+
 		if (matriceCompClassifier.at(i).size() >= 4)classifier_ligne(1, i);
 	}
 }
@@ -1118,7 +1230,9 @@ void funcGenerale() {
 void CompClassifier2PGM(string path, string symbolename, vector<CC>& composantsDejaclassifier) {
 	for (int i = 0; i < composantsDejaclassifier.size(); i++)
 	{
-		CC2PGM(composantsDejaclassifier.at(i), path + "/" + symbolename + "_" + to_string(i) + ".pgm");
+		if (!exists(path + "/" + symbolename + "_" + to_string(i) + ".pgm")) {
+			CC2PGM(composantsDejaclassifier.at(i), path + "/" + symbolename + "_" + to_string(i) + ".pgm");
+		}
 	}
 }
 void CC2PGM(CC& composant, String path) {

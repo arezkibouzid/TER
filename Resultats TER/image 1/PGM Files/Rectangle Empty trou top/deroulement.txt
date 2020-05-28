@@ -1,0 +1,318 @@
+search 4 nearest neighbors of Rectangle Empty trou top_1
+histogram calculation Rectangle Empty trou top_1&Rectangle Empty trou top_4
+save to Rectangle Empty trou top_1&Rectangle Empty trou top_4.txt
+histogram calculationRectangle Empty trou top_2&Rectangle Empty trou top_1
+save to Rectangle Empty trou top_2&Rectangle Empty trou top_1.txt
+0.686977<0.700000 => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+histogram calculation Rectangle Empty trou top_2&Rectangle Empty trou top_3
+save to Rectangle Empty trou top_2&Rectangle Empty trou top_3.txt
+histogram calculationRectangle Empty trou top_1&Rectangle Empty trou top_2
+save to Rectangle Empty trou top_1&Rectangle Empty trou top_2.txt
+0.517488<0.700000 => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_3
+histogram calculation Rectangle Empty trou top_3&Rectangle Empty trou top_4
+save to Rectangle Empty trou top_3&Rectangle Empty trou top_4.txt
+histogram calculationRectangle Empty trou top_5&Rectangle Empty trou top_3
+save to Rectangle Empty trou top_5&Rectangle Empty trou top_3.txt
+similaritey ratio = 0.999653>0.700000
+save to Rectangle Empty trou top[3_4_5].jpg
+transform to Rectangle Empty trou top[3_4_5].pgm
+search 4 nearest neighbors of Rectangle Empty trou top_4
+search 4 nearest neighbors of Rectangle Empty trou top_5
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6.txt
+save to Rectangle Empty trou top_7&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.579792<0.700000 => Stop
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_3
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_3.txt
+save to Rectangle Empty trou top_5&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.580983<0.700000 => Stop
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6.txt
+save to Rectangle Empty trou top_7&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.579792<0.700000 => Stop
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_3
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_3.txt
+save to Rectangle Empty trou top_5&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.580983<0.700000 => Stop
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6.txt
+save to Rectangle Empty trou top_7&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.579792<0.700000 => Stop
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_3
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_3.txt
+save to Rectangle Empty trou top_5&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.580983<0.700000 => Stop
+histogram calculation Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6
+save to Rectangle Empty trou top_Rectangle Empty trou top[3_4_5]&Rectangle Empty trou top_6.txt
+save to Rectangle Empty trou top_7&Rectangle Empty trou top_Rectangle Empty trou top[3_4_5].txt
+0.579792<0.700000 => Stop
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_1
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_2
+no neighbors or already taken => Stop
+look for other lines
+look for other lines
+look for other lines
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_6
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_7
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_8
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_9
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_10
+no neighbors or already taken => Stop
+look for other lines
+search 4 nearest neighbors of Rectangle Empty trou top_11
+no neighbors or already taken => Stop
+look for other lines
+No lines => Stop

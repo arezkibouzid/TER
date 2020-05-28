@@ -1,0 +1,41 @@
+search 4 nearest neighbors of Rectangle H_1
+histogram calculation Rectangle H_1&Rectangle H_2
+save to Rectangle H_1&Rectangle H_2.txt
+histogram calculationRectangle H_3&Rectangle H_1
+save to Rectangle H_3&Rectangle H_1.txt
+similaritey ratio = 1.000000>0.500000
+save to Rectangle H[1_2_3].jpg
+transform to Rectangle H[1_2_3].pgm
+search 4 nearest neighbors of Rectangle H_2
+search 4 nearest neighbors of Rectangle H_3
+propagate the nearest neighbors of A or B 
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_5&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_1
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_1.txt
+save to Rectangle H_3&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_5&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_1
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_1.txt
+save to Rectangle H_3&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_5&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_1
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_1.txt
+save to Rectangle H_3&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+histogram calculation Rectangle H_Rectangle H[1_2_3]&Rectangle H_4
+save to Rectangle H_Rectangle H[1_2_3]&Rectangle H_4.txt
+save to Rectangle H_5&Rectangle H_Rectangle H[1_2_3].txt
+0.064863<0.500000 => Stop
+look for other lines
+No lines => Stop
